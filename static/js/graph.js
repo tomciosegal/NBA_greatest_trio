@@ -5,6 +5,7 @@ queue()
 function makeGraphs(error, game_stats) {
     var ndx = crossfilter(game_stats);
     show_highest_points(ndx);
+    
     dc.renderAll();
 
 }
@@ -15,7 +16,7 @@ function show_highest_points(ndx) {
 
     var eDim = ndx.dimension(dc.pluck("Season"));
     var seasonDim = ndx.dimension(function (d) {
-        return [Number(d.Season.slice(0, -3)), Number(d.PTS), d.Player];
+        return [new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.PTS), d.Player];
 
     })
     var seasonPlayerGroup = seasonDim.group();
@@ -25,7 +26,7 @@ function show_highest_points(ndx) {
     dc.scatterPlot("#highest-points-per-season")
         .width(800)
         .height(400)
-        .x(d3.scale.linear().domain([minSeason, maxSeason]))
+        .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
