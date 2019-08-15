@@ -9,10 +9,12 @@ function makeGraphs(error, game_stats, salaries, totals) {
     var ndx1 = crossfilter(salaries);
     var ndx2 = crossfilter(totals);
     
-    show_player_selector(ndx)
+    show_player_selector(ndx,ndx1);
     show_highest_points(ndx);
     show_salaries(ndx1);
     show_regular_season_points_vs_playoffs(ndx2);
+    show_teams_played(ndx2);
+    show_points_over_season(ndx2);
     
     dc.renderAll();
 
@@ -21,10 +23,12 @@ function makeGraphs(error, game_stats, salaries, totals) {
 function show_player_selector(ndx,ndx1, ndx2){
     var dim = ndx.dimension(dc.pluck('Player'));
     var group = dim.group();
+    var dim1 = ndx1.dimension(dc.pluck('Player'));
+    var group1 = dim1.group();
     
     dc.selectMenu("#player-selector")
     .dimension(dim)
-    .group(group);
+    .group(group)
 }
 
 function show_highest_points(ndx) {
@@ -66,10 +70,9 @@ function show_salaries(ndx1) {
     var playerColors = d3.scale.ordinal()
         .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
         .range(["red", "blue", "green"]);
-
     var eDim = ndx1.dimension(dc.pluck("Season"));
     var salaryDim = ndx1.dimension(function (d) {
-        console.log([new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player])
+        // console.log([new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player])
         return [new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player];
 
     })
@@ -108,10 +111,160 @@ function show_salaries(ndx1) {
                 .transitionDuration(1500)
                 .dimension(name_dim)
                 .group(total_points_per_player);
-                
-            
  }
+ 
+ function show_teams_played(ndx2) {
+     
+     function teamByPlayers(dimension, team) {
+        return dimension.group().reduce(
+            function (p, v) {
+                p.total++;
+                
+                if(v.Tm == team) {
+                    p.match++;
+                }
+                return p;
+            },
+            function (p, v) {
+                p.total--;
+                if(v.Tm == team) {
+                    p.match--;
+                }
+                return p;
+            },
+            function () {
+                return {total: 0, match: 0};
+            }
+        );
+    }
+    
+    var dim = ndx2.dimension(dc.pluck("Player"));
+    
+     var chi = teamByPlayers(dim, "CHI");
+    var cle = teamByPlayers(dim, "CLE");
+    var lal = teamByPlayers(dim, "LAL");
+    var mia = teamByPlayers(dim, "MIA");
+    var was = teamByPlayers(dim, "WAS");
+    
+    dc.barChart("#show_teams_played")
+        .width(400)
+        .height(300)
+        .dimension(dim)
+        .group(chi, "CHI")
+        .stack(cle, "CLE")
+        .stack(lal, "LAL")
+        .stack(mia, "MIA")
+        .stack(was, "WAS")
+        .valueAccessor(function(d) {
+            if(d.value.total > 0) {
+                return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
+            } else {
+                return 0;
+            }
+        })
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
+        .margins({top: 10, right: 100, bottom: 30, left: 30});
+}
 
+ 
+
+function show_points_over_season(ndx2) {
+    let dim = ndx2.dimension(dc.pluck("Season"));
+    let mj = dim.group().reduceSum(dc.pluck("Michael Jordan"));
+    let kb = dim.group().reduceSum(dc.pluck("Kobe Bryant"));
+    let lj = dim.group().reduceSum(dc.pluck("Lebron James"));
+
+
+    var salaryDim = ndx2.dimension(function (d) {
+        console.log(typeof d.Season);
+         return [new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player];
+    })
+    var salaryPlayerGroup = salaryDim.group();
+    
+    let minDate = dim.bottom(1)[0].Season.slice(0, -3);
+    let maxDate = dim.top(1)[0].Season.slice(0, -3);
+
+    let composite = dc.compositeChart("#show_points_over_season");
+
+    composite
+        .width(840)
+        .height(310)
+        .margins({ top: 10, right: 60, bottom: 50, left: 45 })
+        .dimension(dim)
+        .elasticY(true)
+        .legend(dc.legend().x(230).y(320).itemHeight(15).gap(5)
+            .horizontal(true).itemWidth(100))
+        .x(d3.time.scale().domain([minDate, maxDate]))
+        .y(d3.scale.linear())
+        .transitionDuration(500)
+        .shareTitle(false)
+        .on("renderlet", (function(chart) {
+            chart.selectAll(".dot")
+                .style("cursor", "pointer");
+        }))
+        .on("pretransition", function(chart) {
+            chart.selectAll("g.y text")
+                .style("font-size", "12px");
+            chart.selectAll("g.x text")
+                .style("font-size", "12px");
+            chart.select("svg")
+                .attr("height", "100%")
+                .attr("width", "100%")
+                .attr("viewBox", "0 0 840 340");
+            chart.selectAll(".dc-chart text")
+                .attr("fill", "#E5E5E5");
+            chart.selectAll(".dc-legend-item text")
+                .attr("font-size", "15px")
+                .attr("fill", "#ffffff");
+            chart.selectAll("line")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".domain")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".line")
+                .style("stroke-width", "2.5");
+        })
+        .compose([
+            dc.lineChart(composite)
+            .group(mj, "Michael")
+            .interpolate("monotone")
+            .title(function(d) {
+                let numberWithCommas = d.value.toLocaleString();
+                return numberWithCommas + " accidents";
+            })
+            .colors("#ff7e0e")
+            .dotRadius(10)
+            .renderDataPoints({ radius: 4 }),
+            dc.lineChart(composite)
+            .interpolate("monotone")
+            .group(kb, "Kobe")
+            .title(function(d) {
+                let numberWithCommas = d.value.toLocaleString();
+                return numberWithCommas + " casualties";
+            })
+            .colors("#d95350")
+            .dotRadius(10)
+            .renderDataPoints({ radius: 4 }),
+            dc.lineChart(composite)
+            .group(lj, "Lebron")
+            .interpolate("monotone")
+            .title(function(d) {
+                let numberWithCommas = d.value.toLocaleString();
+                return numberWithCommas + " vehicles involved";
+            })
+            .colors("#1e77b4")
+            .dotRadius(10)
+            .renderDataPoints({ radius: 4 })
+        ])
+        .brushOn(false)
+        .yAxisPadding("5%")
+        .elasticX(true)
+        .xAxisPadding("8%")
+        .xAxis().ticks(12).tickFormat(d3.time.format("%b")).outerTickSize(0);
+
+    composite.yAxis().ticks(5).outerTickSize(0);
+}
 
 
     
