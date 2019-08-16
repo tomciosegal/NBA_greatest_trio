@@ -14,7 +14,7 @@ function makeGraphs(error, game_stats, salaries, totals) {
     show_salaries(ndx1);
     show_regular_season_points_vs_playoffs(ndx2);
     show_teams_played(ndx2);
-    show_points_over_season(ndx2);
+    show_points_over_career(ndx2);
     
     dc.renderAll();
 
@@ -170,7 +170,7 @@ function show_salaries(ndx1) {
 
  
 
-function show_points_over_season(ndx2) {
+function show_points_over_career(ndx2) {
     let dim = ndx2.dimension(dc.pluck("Season"));
     let mj = dim.group().reduceSum(dc.pluck("Michael Jordan"));
     let kb = dim.group().reduceSum(dc.pluck("Kobe Bryant"));
