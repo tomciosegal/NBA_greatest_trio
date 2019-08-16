@@ -72,7 +72,7 @@ function show_salaries(ndx1) {
         .range(["red", "blue", "green"]);
     var eDim = ndx1.dimension(dc.pluck("Season"));
     var salaryDim = ndx1.dimension(function (d) {
-        // console.log([new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player])
+        console.log(typeof d.Season);
         return [new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player];
 
     })
@@ -140,7 +140,7 @@ function show_salaries(ndx1) {
     
     var dim = ndx2.dimension(dc.pluck("Player"));
     
-     var chi = teamByPlayers(dim, "CHI");
+    var chi = teamByPlayers(dim, "CHI");
     var cle = teamByPlayers(dim, "CLE");
     var lal = teamByPlayers(dim, "LAL");
     var mia = teamByPlayers(dim, "MIA");
@@ -177,16 +177,16 @@ function show_points_over_career(ndx2) {
     let lj = dim.group().reduceSum(dc.pluck("Lebron James"));
 
 
-    var salaryDim = ndx2.dimension(function (d) {
-        console.log(typeof d.Season);
-         return [new Date(Number(d.Season.slice(0, -3)), 0, 1), Number(d.Salary.slice(1)), d.Player];
+    var seasonDim = ndx2.dimension(function (d) {
+        
+          return [new Date(Number(d.Season.slice(0, -3)), 0, 1), d.PTS, d.Player];
     })
-    var salaryPlayerGroup = salaryDim.group();
+    // var seasonPlayerGroup = seasonDim.group();
     
-    let minDate = dim.bottom(1)[0].Season.slice(0, -3);
-    let maxDate = dim.top(1)[0].Season.slice(0, -3);
+    let minSeason = dim.bottom(1)[0].Season.slice(0, -3);
+    let maxSeason = dim.top(1)[0].Season.slice(0, -3);
 
-    let composite = dc.compositeChart("#show_points_over_season");
+    let composite = dc.compositeChart("#show_points_over_career");
 
     composite
         .width(840)
@@ -196,7 +196,7 @@ function show_points_over_career(ndx2) {
         .elasticY(true)
         .legend(dc.legend().x(230).y(320).itemHeight(15).gap(5)
             .horizontal(true).itemWidth(100))
-        .x(d3.time.scale().domain([minDate, maxDate]))
+        .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .y(d3.scale.linear())
         .transitionDuration(500)
         .shareTitle(false)
@@ -231,7 +231,7 @@ function show_points_over_career(ndx2) {
             .interpolate("monotone")
             .title(function(d) {
                 let numberWithCommas = d.value.toLocaleString();
-                return numberWithCommas + " accidents";
+                return numberWithCommas + " points";
             })
             .colors("#ff7e0e")
             .dotRadius(10)
@@ -241,7 +241,7 @@ function show_points_over_career(ndx2) {
             .group(kb, "Kobe")
             .title(function(d) {
                 let numberWithCommas = d.value.toLocaleString();
-                return numberWithCommas + " casualties";
+                return numberWithCommas + " points";
             })
             .colors("#d95350")
             .dotRadius(10)
@@ -251,7 +251,7 @@ function show_points_over_career(ndx2) {
             .interpolate("monotone")
             .title(function(d) {
                 let numberWithCommas = d.value.toLocaleString();
-                return numberWithCommas + " vehicles involved";
+                // return numberWithCommas + "points";
             })
             .colors("#1e77b4")
             .dotRadius(10)
@@ -265,6 +265,8 @@ function show_points_over_career(ndx2) {
 
     composite.yAxis().ticks(5).outerTickSize(0);
 }
+
+
 
 
     
