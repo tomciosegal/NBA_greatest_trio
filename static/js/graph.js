@@ -38,7 +38,6 @@ function makeGraphs(error, game_stats, salaries, totals) {
     show_salaries(ndx1);
     show_regular_season_points_vs_playoffs(ndx2);
     show_teams_played(ndx2);
-    show_salary_made_in_each_team(ndx1)
     show_points_over_career_MJ(totalsForMJ);
     show_points_over_career_KB(totalsForKB);
     show_points_over_career_LJ(totalsForLJ);
@@ -205,60 +204,6 @@ function show_salaries(ndx1) {
         .margins({top: 10, right: 100, bottom: 30, left: 30});
 }
 
- function show_salary_made_in_each_team(ndx1) {
-     
-     function teamByPlayers(dimension, team) {
-        return dimension.group().reduce(
-            function (p, v) {
-                p.total++;
-                
-                if(v.Tm == team) {
-                    p.match++;
-                }
-                return p;
-            },
-            function (p, v) {
-                p.total--;
-                if(v.Tm == team) {
-                    p.match--;
-                }
-                return p;
-            },
-            function () {
-                return {total: 0, match: 0};
-            }
-        );
-    }
-    
-    var dim = ndx1.dimension(dc.pluck("Player"));
-    
-    var chi = teamByPlayers(dim, "CHI");
-    var cle = teamByPlayers(dim, "CLE");
-    var lal = teamByPlayers(dim, "LAL");
-    var mia = teamByPlayers(dim, "MIA");
-    var was = teamByPlayers(dim, "WAS");
-    
-    dc.barChart("#salary_made_in_each_team")
-        .width(400)
-        .height(300)
-        .dimension(dim)
-        .group(chi, "CHI")
-        .stack(cle, "CLE")
-        .stack(lal, "LAL")
-        .stack(mia, "MIA")
-        .stack(was, "WAS")
-        .valueAccessor(function(d) {
-            if(d.value.total > 0) {
-                return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
-            } else {
-                return 0;
-            }
-        })
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 30, left: 30});
-}
 
 function show_points_over_career_MJ(totalsForMJ) {
 
