@@ -82,8 +82,8 @@ function show_highest_points(ndx) {
     var maxSeason = Number(eDim.top(1)[0].Season.slice(0, -3));
 
     dc.scatterPlot("#highest-points-per-season")
-        .width(800)
-        .height(400)
+        .width(550)
+        .height(350)
         .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
@@ -117,8 +117,8 @@ function show_salaries(ndx1) {
     var maxSeason = eDim.top(1)[0].Season.slice(0, -3);
 
     dc.scatterPlot("#salary-vs-season")
-        .width(800)
-        .height(400)
+        .width(550)
+        .height(350)
         .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
@@ -142,8 +142,8 @@ function show_salaries(ndx1) {
             var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'));
              
             dc.pieChart('#points-season-playoffs')
-                .height(600)
-                .radius(400)
+                .height(500)
+                .radius(300)
                 .transitionDuration(1500)
                 .dimension(name_dim)
                 .group(total_points_per_player);

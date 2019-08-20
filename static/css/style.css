@@ -1,0 +1,38 @@
+/*---------------------------------NAVBAR-----------------------------------*/
+/*#navbar {*/
+/*  background-color: #1a1616  !important;*/
+/*  cursor: pointer;*/
+/*}*/
+
+#navHome{
+    width: 2vh;
+    
+}
+
+.img-fluid {
+    width: 130px;
+}
+
+.content-container{
+    background-color: #C4CAD0;
+}
+/*---------------------------------CHARTS-----------------------------------*/
+.points-chart{
+ padding-left: 0;   
+}
+
+.salary-chart{
+  padding-right: 0;  
+}
+
+.total-points-piechart{
+    
+}
+.teams-played-stakedchart{
+    
+}
+
+#show_teams_played{
+    padding-top: 150px;
+    padding-left: 120px
+}
