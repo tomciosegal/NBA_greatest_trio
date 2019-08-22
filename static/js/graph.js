@@ -82,8 +82,8 @@ function show_highest_points(ndx) {
     var maxSeason = Number(eDim.top(1)[0].Season.slice(0, -3));
 
     dc.scatterPlot("#highest-points-per-season")
-        .width(550)
-        .height(350)
+        .width(450)
+        .height(300)
         .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
@@ -117,8 +117,8 @@ function show_salaries(ndx1) {
     var maxSeason = eDim.top(1)[0].Season.slice(0, -3);
 
     dc.scatterPlot("#salary-vs-season")
-        .width(550)
-        .height(350)
+        .width(450)
+        .height(300)
         .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
@@ -183,8 +183,8 @@ function show_salaries(ndx1) {
     var was = teamByPlayers(dim, "WAS");
     
     dc.barChart("#show_teams_played")
-        .width(400)
-        .height(300)
+        .width(350)
+        .height(250)
         .dimension(dim)
         .group(chi, "CHI")
         .stack(cle, "CLE")

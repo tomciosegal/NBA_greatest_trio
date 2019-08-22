@@ -8,46 +8,22 @@ $(document).ready(function () {
         $(".dashboard-container").hide();
     });
 
-    // Upon clicking upon the first tab, hide the landing page and show the first dashboard.
+    // Upon clicking upon the landing page button, should show the stats
 
     $(function () {
-        $("#navGen").on("click", function () {
-            $(".main").hide();
+        $(".stat-button").on("click", function () {
+            $(".loading-page").hide();
             $(".dashboard-container").fadeIn(300);
-           $(".content-container").removeClass("background");
         });
-    });
+    }); 
 
-    // The "Home" button takes the user back to the landing page.
+   // Upon clicking upon the home button, should take to landing page
 
     $(function () {
         $("#navHome").on("click", function () {
             $(".dashboard-container").hide();
-            $(".main").fadeIn(500);
-            $(".content-container").removeClass("background-alt").addClass("background");
+            $(".loading-page").fadeIn(300);
         });
-    });
-
-    // The following prevents the graphs from breaking by clicking on bar labels.
-
-    $(function () {
-        $(".barLabel").on("click", function () {
-            dc.redrawAll();
-        });
-    });
-
-    // ------------------------------------ LANDING PAGE ---------------------------------------
-
-    // The CTA button takes the user to the first dashboard.
-
-    $(function () {
-        $("#main-btn").on("click", function () {
-                $(".main").hide();
-                $(".dashboard-container").fadeIn(500);
-                $(".content-container").removeClass("background").addClass("background-alt");
-                // The following line starts intro.js upon click of the main button.
-                introJs().start();
-            });
-        });
+    }); 
 
 })

@@ -20,7 +20,15 @@
     "run": {
         "configs": {
             "@inited": "true",
-            "json()": {}
+            "json()": {
+                "ndx2": {
+                    "command": "static/js/graph.js",
+                    "debug": true,
+                    "name": "ndx2",
+                    "runner": "Node.js",
+                    "toolbar": true
+                }
+            }
         }
     },
     "welcome": {
