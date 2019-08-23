@@ -142,8 +142,8 @@ function show_salaries(ndx1) {
             var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'));
              
             dc.pieChart('#points-season-playoffs')
-                .height(500)
-                .radius(300)
+                .height(600)
+                .radius(400)
                 .transitionDuration(1500)
                 .dimension(name_dim)
                 .group(total_points_per_player);
@@ -183,8 +183,8 @@ function show_salaries(ndx1) {
     var was = teamByPlayers(dim, "WAS");
     
     dc.barChart("#show_teams_played")
-        .width(350)
-        .height(250)
+        .width(500)
+        .height(350)
         .dimension(dim)
         .group(chi, "CHI")
         .stack(cle, "CLE")
@@ -223,7 +223,7 @@ function show_points_over_career_MJ(totalsForMJ) {
     let composite = dc.compositeChart("#show_points_over_career_MJ");
 
     composite
-        .width(840)
+        .width(640)
         .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
@@ -320,7 +320,7 @@ function show_points_over_career_KB(totalsForKB) {
     let composite = dc.compositeChart("#show_points_over_career_KB");
 
     composite
-        .width(840)
+        .width(640)
         .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
@@ -421,7 +421,7 @@ function show_points_over_career_LJ(totalsForLJ) {
     let composite = dc.compositeChart("#show_points_over_career_LJ");
 
     composite
-        .width(840)
+        .width(640)
         .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)

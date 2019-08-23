@@ -1,28 +1,34 @@
 /*---------------------------------NAVBAR-----------------------------------*/
+
 #navbar {
-  background-color: #3959BA  !important;
-  cursor: pointer;
-  height: 90px;
+    background-color: #3959BA !important;
+    cursor: pointer;
+    height: 90px;
 }
 
-#navHome{
+#navHome {
     width: 2vh;
-    
+
 }
 
 .img-fluid {
     width: 80px;
 }
 
-.content-container{
+.content-container {
     background-color: #4B76F4;
 }
 
-.nav-text{
+.nav-text {
     padding-top: 50px;
 }
-.home-img{
+
+.home-img {
     padding-top: 15px;
+}
+
+.title {
+    padding-top: 50px;
 }
 
 .stat-button {
@@ -30,8 +36,9 @@
     position: absolute;
     left: 50%;
     border-color: none;
-    
+
 }
+
 .loading-page-text {
     color: white;
 }
@@ -39,38 +46,54 @@
 .loading-page {
     position: relative;
 }
-.loading-img{
+
+.loading-img {
     width: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
+
+.MJ-quote {
+    position: absolute;
+    color: white;
+    bottom: 400px;
+    right: 16px;
+    font-family: Great Vibes;
+    font-size: x-large;
+}
+
+.MJ-signat{
+    padding-left: 300px;
+}
+
 /*---------------------------------CHARTS-----------------------------------*/
-.points-chart{
- padding-left: 0;   
+
+.points-chart {
+    padding-left: 0;
 }
 
-.salary-chart{
-  padding-right: 0;  
+.salary-chart {
+    padding-right: 0;
 }
 
-.total-points-piechart{
-    
-}
-.teams-played-stakedchart{
-    
-}
+.total-points-piechart {}
 
-#show_teams_played{
-    
+.teams-played-stakedchart {}
+
+#show_teams_played {
+
     padding-left: 120px
 }
 
-.card-body{
-    background-color:#2B98FF;
-    top: 40px;
+.card-body {
+    background-color: #2B98FF;
+    top: 60px;
+    
     padding-top: 0px;
     padding-right: 0px;
 }
 
-.card-header{
+.card-header {
     background-color: #3959BA;
 }
-   

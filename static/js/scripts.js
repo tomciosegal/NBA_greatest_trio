@@ -25,5 +25,11 @@ $(document).ready(function () {
             $(".loading-page").fadeIn(300);
         });
     }); 
+    $("#main-btn").mouseenter(function(){
+  $(this).css ("background-color", "blue");
+});
+$("#main-btn").mouseleave(function(){
+  $(this).css ("background-color", "");
+})
 
 })
