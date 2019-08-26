@@ -36,6 +36,8 @@
     position: absolute;
     left: 50%;
     border-color: none;
+    border-radius: 30%;
+    background-color: #B54213;
 
 }
 
@@ -60,7 +62,7 @@
     bottom: 400px;
     right: 16px;
     font-family: Great Vibes;
-    font-size: x-large;
+    font-size: 30px;
 }
 
 .MJ-signat{
@@ -86,14 +88,43 @@
     padding-left: 120px
 }
 
-.card-body {
+.card-body-highest-points {
     background-color: #2B98FF;
     top: 60px;
-    
+    right:60px;
     padding-top: 0px;
     padding-right: 0px;
 }
 
+.card-body-salary{
+    left: 60px;
+    top: 60px;
+    background-color: #2b98ff;
+ 
+}
+
+
 .card-header {
     background-color: #3959BA;
+}
+.card-body-MJ{
+    background-color: #E22E22;
+    right:40px;
+}
+
+.card-body-KB{
+    background-color: #FFE854;
+}
+.card-body-LJ{
+    background-color: #13A354;
+    left:40px;
+    right: 0;
+}
+/*---------------------------------PLAYERS FACTS-----------------------------------*/
+.MJ-facts{
+    
+}
+/*---------------------------------FOOTER-----------------------------------*/
+.container-fluid-footer{
+  
 }

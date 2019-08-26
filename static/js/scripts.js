@@ -26,7 +26,7 @@ $(document).ready(function () {
         });
     }); 
     $("#main-btn").mouseenter(function(){
-  $(this).css ("background-color", "blue");
+  $(this).css ("background-color", "#E47041");
 });
 $("#main-btn").mouseleave(function(){
   $(this).css ("background-color", "");
