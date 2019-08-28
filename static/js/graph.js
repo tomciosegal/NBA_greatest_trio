@@ -36,11 +36,11 @@ function makeGraphs(error, game_stats, salaries, totals) {
     show_player_selector(ndx,ndx1);
     show_highest_points(ndx);
     show_salaries(ndx1);
-    show_regular_season_points_vs_playoffs(ndx2);
+    show_total_points(ndx2);
     show_teams_played(ndx2);
-    show_points_over_career_MJ(totalsForMJ);
-    show_points_over_career_KB(totalsForKB);
-    show_points_over_career_LJ(totalsForLJ);
+    show_main_stats_career_MJ(totalsForMJ);
+    show_main_stats_career_KB(totalsForKB);
+    show_main_stats_career_LJ(totalsForLJ);
     showTotalNumberOfGamesPlayedMJ(totalsForMJ);
     showTotalNumberOfGamesPlayedKB(totalsForKB);
     showTotalNumberOfGamesPlayedLJ(totalsForLJ);
@@ -137,12 +137,12 @@ function show_salaries(ndx1) {
         .margins({ top: 10, right: 50, bottom: 75, left: 75 });
 }
 
- function show_regular_season_points_vs_playoffs(ndx2) {
+ function show_total_points(ndx2) {
             var name_dim = ndx2.dimension(dc.pluck('Player'));
             var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'));
              
             dc.pieChart('#points-season-playoffs')
-                .height(600)
+                .height(540)
                 .radius(400)
                 .transitionDuration(1500)
                 .dimension(name_dim)
@@ -183,8 +183,8 @@ function show_salaries(ndx1) {
     var was = teamByPlayers(dim, "WAS");
     
     dc.barChart("#show_teams_played")
-        .width(500)
-        .height(350)
+        .width(550)
+        .height(450)
         .dimension(dim)
         .group(chi, "CHI")
         .stack(cle, "CLE")
@@ -205,7 +205,7 @@ function show_salaries(ndx1) {
 }
 
 
-function show_points_over_career_MJ(totalsForMJ) {
+function show_main_stats_career_MJ(totalsForMJ) {
 
     
     var ndx2 = crossfilter(totalsForMJ);
@@ -302,7 +302,7 @@ function show_points_over_career_MJ(totalsForMJ) {
 
 
 
-function show_points_over_career_KB(totalsForKB) {
+function show_main_stats_career_KB(totalsForKB) {
 
     
     var ndx2 = crossfilter(totalsForKB);
@@ -403,7 +403,7 @@ function show_points_over_career_KB(totalsForKB) {
 
 
 
-function show_points_over_career_LJ(totalsForLJ) {
+function show_main_stats_career_LJ(totalsForLJ) {
 
     
     var ndx2 = crossfilter(totalsForLJ);

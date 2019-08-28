@@ -1,8 +1,20 @@
+body {
+    font-family: "Frijole";
+    font-weight: 400;
+    }
+
+
+
+
 /*---------------------------------NAVBAR-----------------------------------*/
 
 #navbar {
     background-color: #3959BA !important;
     cursor: pointer;
+    height: 90px;
+}
+
+.container-fluid {
     height: 90px;
 }
 
@@ -16,7 +28,7 @@
 }
 
 .content-container {
-    background-color: #4B76F4;
+    background-color: #4b76f463;
 }
 
 .nav-text {
@@ -46,7 +58,8 @@
 }
 
 .loading-page {
-    position: relative;
+    position: fixed;
+
 }
 
 .loading-img {
@@ -59,13 +72,13 @@
 .MJ-quote {
     position: absolute;
     color: white;
-    bottom: 400px;
+    bottom: 600px;
     right: 16px;
     font-family: Great Vibes;
     font-size: 30px;
 }
 
-.MJ-signat{
+.MJ-signat {
     padding-left: 300px;
 }
 
@@ -79,9 +92,18 @@
     padding-right: 0;
 }
 
-.total-points-piechart {}
+.total-points-piechart {
+    top: 100px;
+    right: 60px;
+    background-color: #2b98ff;
+}
 
-.teams-played-stakedchart {}
+.teams-played-stakedchart {
+    top: 100px;
+    left: 60px;
+    background-color: #2b98ff;
+}
+
 
 #show_teams_played {
 
@@ -90,41 +112,71 @@
 
 .card-body-highest-points {
     background-color: #2B98FF;
-    top: 60px;
-    right:60px;
+    top: 140px;
+    right: 60px;
     padding-top: 0px;
     padding-right: 0px;
 }
 
-.card-body-salary{
+.card-body-salary {
     left: 60px;
-    top: 60px;
+    top: 140px;
     background-color: #2b98ff;
- 
+
 }
 
 
 .card-header {
     background-color: #3959BA;
 }
-.card-body-MJ{
-    background-color: #E22E22;
-    right:40px;
+
+.card-body-MJ {
+    background-color: #e22b22bf;
+    right: 40px;
 }
 
-.card-body-KB{
-    background-color: #FFE854;
+.card-body-KB {
+    background-color: #ffe854b5;
 }
-.card-body-LJ{
-    background-color: #13A354;
-    left:40px;
+
+.card-body-LJ {
+    background-color: #13a3547d;
+    left: 40px;
     right: 0;
 }
+
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
-.MJ-facts{
-    
+
+.MJ-facts {}
+
+.players-row {
+    margin-top: 30px;
 }
+
 /*---------------------------------FOOTER-----------------------------------*/
-.container-fluid-footer{
-  
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    top: 830px;
+    padding-top: 50px;
+     }
+     
+     .footer-container{
+    margin-right: 0px;
+    margin-left: 0;
+     }
+
+/*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/
+
+.horizontal-scroll-wrapper {
+    width: 100px;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.horizontal-scroll-wrapper>div {
+    width: 100px;
+    height: 100px;
 }

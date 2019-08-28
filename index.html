@@ -9,12 +9,12 @@
 
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
-    
+
     <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Frijole|Roboto:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
@@ -24,8 +24,8 @@
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
     <script type="text/javascript" src="static/js/graph.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="static/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/js/scripts.js"></script>
 </head>
 
 <body>
@@ -54,12 +54,12 @@
 
 
                     <li class="active nav-item mr-2 mt-0 mb-0 d-xs-none d-none d-md-block " id="navGen">
-                        <h3 class= "title">NBA Greatest Trio Stats</h3> 
+                        <h3 class="title">NBA Greatest Trio Stats</h3>
                     </li>
 
                     <li class="active nav-item mr-2" id="Navreset">
-                        <a class="hvr-bounce-in btn-lg nav-link active d-inline-block nav-text" href="javascript: dc.filterAll(); dc.redrawAll();" data-step="5" data-intro="All graphs on the entire dashboard are connected. To reset them to default, click the redraw button." aria-pressed="true"
-                            id="resetLink"><i class="fas fa-redo-alt"></i> Reset Graphs</a>
+                        <a class="hvr-bounce-in btn-lg nav-link active d-inline-block nav-text" href="javascript: dc.filterAll(); dc.redrawAll();" data-step="5" data-intro="All graphs on the entire dashboard are connected. To reset them to default, click the redraw button."
+                            aria-pressed="true" id="resetLink"><i class="fas fa-redo-alt"></i> Reset Graphs</a>
                     </li>
                 </ul>
             </div>
@@ -67,69 +67,84 @@
         </nav>
     </div>
 
-<!-- start of loading page -->
-<div class="loading-page">
-    <div class="MJ-quote">“I’ve missed more than 9000 shots in my career. <br>
-                                    I’ve lost almost 300 games. <br>
-                          26 times, I’ve been trusted to take the game winning shot and missed. <br>
-                                      I’ve failed over and over<br>
-                          and over again in my life. And that is why I succeed.”<br>
-                          <br>
-                                                                          <span class ="MJ-signat">Michael Jordan</span></div> 
-                        <img src="static/images/basketball-bg.jpg" class="loading-img" alt="basketball-logo">
-                        
-                  
-                
-<div class="stat-button">
-                            <!--- Main button that directs to the dashboard section -->
-                            <button type="button" class="btn flicker-in-1 hvr-bounce-in mx-auto d-block" id="main-btn"><img src="static/images/show-dashboard-button.jpg"
+    <!-- start of loading page -->
+    <div class="loading-page">
+        <div class="MJ-quote">“I’ve missed more than 9000 shots in my career. <br> I’ve lost almost 300 games. <br> 26 times, I’ve been trusted to take the game winning shot and missed. <br> I’ve failed over and over<br> and over again in my life. And that is why I succeed.”<br>
+            <br>
+            <span class="MJ-signat">Michael Jordan</span></div>
+        <img src="static/images/basketball-bg.jpg" class="loading-img" alt="basketball-logo">
+
+
+
+        <div class="stat-button">
+            <!--- Main button that directs to the dashboard section -->
+            <button type="button" class="btn flicker-in-1 hvr-bounce-in mx-auto d-block" id="main-btn"><img src="static/images/show-dashboard-button.jpg"
                                     class="img-fluid winter-pic rounded mx-auto d-block"
                                     alt="linktofirstdashboard" /><h3 class="loading-page-text">Go To Stats</h3></button>
-</div>
-          
- </div> 
+        </div>
 
-<!-- end of loading page -->
+    </div>
+
+    <!-- end of loading page -->
     <!-- BEGIN LANDING PAGE -->
 
     <div class="content-container background dashboard-container">
 
         <section class="main">
 
-     
+
 
             <div class="container">
                 <div class="row">
-                    <h1 class="header">NBA Greatest Trio</h1>
+                    
                 </div>
                 <div class="row">
                     <div class="col-md-offset-5" id="player-selector"></div>
                 </div>
 
                 <div>
-                    <h3>Numbers Of Games Played</h3>
+                    <h3 align="center">Players Portfolio</h3>
                 </div>
-                <div class="row">
-                    
+            <div class="row players-row">
+
                     <div class="col-md-4 card-body-MJ" id="totalNumberOfGamesPlayedMJ">
-                        <div><span class= "MJ-facts">Micheal Jordan<br>Date of Birth:February 17, 1963 (age 56)
-                        <br> New York City, New York<br>
+                        <div><span class="MJ-facts">Micheal Jordan<br>Date of Birth:February 17, 1963 
+                            <br> New York City, New York<br>
+                            Teams Played: 1996–2016	Los Angeles Lakers<br>
+                            <img src="static/images/jordan.jpg" alt="jordan" width="100" height="160"/>
+                    </div>
+                        
+                        </div>
+                    <div class="col-md-4 card-body-KB" id="totalNumberOfGamesPlayedKB">
+                    <div><span class="KB-facts">Kobe Bryant<br>August 23,  1978 
+                        <br> Philadelphia, Pennsylvania<br>
                         Teams Played: 1984-93 Chicago Bulls<br>
                         1995-98 Chicago Bulls<br>
-                        2001–2003	Washington Wizards </span></div>
-                        <img src="static/images/jordan.jpg" alt="jordan" width="100" height="160"/>
-                        
+                        2001–2003	Washington Wizards </span>
                     </div>
-                    <div class="col-md-4 card-body-KB" id="totalNumberOfGamesPlayedKB">
-                    <div><span>Kobe Bryant</span></div>
                         <img src="static/images/kobe.jpg" alt="jordan" width="100" height="160" </img>
                     </div>
                     <div class="col-md-4 card-body-LJ" id="totalNumberOfGamesPlayedLJ">
-                        <div><span>James Lebron</span></div>
+                        <div><span class="LJ-facts">Kobe Bryant<br>December 30 1984 
+                         
+                        <br> Akron, Ohio<br>
+                        Teams Played: 2003–2010	Cleveland Cavaliers<br>
+                        2010–2014	Miami Heat<br>
+                        2001–2003	Washington Wizards </span>
+                        </div>
                         <img src="static/images/james.jpg" alt="jordan" width="100" height="160" </img>
                     </div>
+            </div>
+                    
+                <div class="row">
+                    <div class="col-md-6 total-points-piechart card-body" id="points-season-playoffs">
+                        <div class="card-header">Total Points Scorred </div>
+                    </div>
+                    <div class="col-md-6 teams-played-stakedchart card-body" id="show_teams_played">
+                        <div class="card-header">Team Played By Player </div>
+                    </div>
                 </div>
-
+                
                 <div class="row">
                     <div class="col-md-6 points-chart card-body-highest-points" id="highest-points-per-season">
                         <div class="card-header">Highest points in season </div>
@@ -137,45 +152,40 @@
                     <div class="col-md-6 salary-chart card-body-salary" id="salary-vs-season">
                         <div class="card-header">Salary earned in season </div>
                     </div>
-                    
+
                 </div>
 
-                <!--<div class="row">-->
-                <!--    <div class="col-md-6 total-points-piechart card-body" id="points-season-playoffs">-->
-                <!--        <div class="card-header">Highest points in season </div>-->
-                <!--    </div>-->
-                <!--    <div class="col-md-6 teams-played-stakedchart card-body" id="show_teams_played">-->
-                <!--        <div class="card-header">Highest points in season </div>-->
-                <!--    </div>-->
-                <!--</div>-->
+                
 
             </div>
-            </section>
-    
+        </section>
 
-    <div class="row">
-        <div class="col-md-12 total-points-piechart card-body" id="show_points_over_career_MJ">
-            <div class="card-header">Highest points in season </div>
+
+        <div class="horizontal-scroll-wrapper">
+        <div class="row">
+            <div class="col-md-12 total-points-piechart card-body-MJ" id="show_points_over_career_MJ">
+                <div class="card-header">Micheal Jordan Total Assists, Blocks, Steals </div>
+            </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12 total-points-piechart card-body-KB" id="show_points_over_career_KB">
+                <div class="card-header">>Kobe Bryant Total Assists, Blocks, Steals </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 total-points-piechart card-body-LJ" id="show_points_over_career_LJ">
+                <div class="card-header">>James Lebron Total Assists, Blocks, Steals </div>
+            </div>
+        </div>
+
+    </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12 total-points-piechart card-body" id="show_points_over_career_KB">
-            <div class="card-header">Highest points in season </div>
-        </div>
-    </div>
+    <div class="container footer-container">
+        <footer class="container-fluid footer">
 
-    <div class="row">
-        <div class="col-md-12 total-points-piechart card-body" id="show_points_over_career_LJ">
-            <div class="card-header">Highest points in season </div>
-        </div>
-    </div>
-
-</div>
-
-    <div class="container">
-    <footer class="container-fluid footer">
-        
 
 
             <!--- Copyright -->
@@ -196,11 +206,11 @@
 
                 <div class="col-xs-12 col-sm-4">
                     <div>Original unmodified dataset sourced from <span><a
-                                href="https://www.kaggle.com/dasbootstrapping/game-of-thrones-episode-data/version/1"
+                                href="https://www.kaggle.com/xvivancos/michael-jordan-kobe-bryant-and-lebron-james-stats#totals_stats.csv"
                                 target="_blank">kaggle</a></span>.</div>
                 </div>
             </div>
-        </div>
+    </div>
 
 
 </body>
