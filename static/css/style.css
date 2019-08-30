@@ -9,7 +9,7 @@ body {
 /*---------------------------------NAVBAR-----------------------------------*/
 
 #navbar {
-    background-color: #3959BA !important;
+    background-color: #164a7b !important;
     cursor: pointer;
     height: 90px;
 }
@@ -106,14 +106,15 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 60px;
+    top: 100px;
     background-color: #2b98ff7a;
 }
 
 
-#show_teams_played {
+/*#show_teams_played {*/
 
-    padding-left: 120px
-}
+/*    padding-left: 120px*/
+/*}*/
 
 .card-body-highest-points {
     background-color: #2b98ff7a;
@@ -171,7 +172,7 @@ body {
 
 .footer {
   height: auto;
-  background-color: #1a1616;
+  background-color: #164a7b;
   color: #7FB7BE;
 }
 
@@ -214,17 +215,15 @@ body {
 
 /*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/
 
-/* .horizontal-scroll-wrapper {
-    width: 100px;
-    height: 300px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
+ .horizontal-scroll-wrapper {
+     top: 100px
+ }
+  
+     
+ 
 
-.horizontal-scroll-wrapper>div {
-    width: 100px;
-    height: 100px;
-}*/
+
+
 div.horizontal-scroll-wrapper {
   overflow: auto;
   white-space: nowrap;
