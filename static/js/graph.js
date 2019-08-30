@@ -70,7 +70,7 @@ function show_player_selector(ndx,ndx1, ndx2){
 function show_highest_points(ndx) {
     var playerColors = d3.scale.ordinal()
         .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
-        .range(["red", "blue", "green"]);
+        .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
 
     var eDim = ndx.dimension(dc.pluck("Season"));
     var seasonDim = ndx.dimension(function (d) {
@@ -105,7 +105,7 @@ function show_highest_points(ndx) {
 function show_salaries(ndx1) {
     var playerColors = d3.scale.ordinal()
         .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
-        .range(["red", "blue", "green"]);
+        .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
     var eDim = ndx1.dimension(dc.pluck("Season"));
     var salaryDim = ndx1.dimension(function (d) {
         
@@ -140,13 +140,21 @@ function show_salaries(ndx1) {
  function show_total_points(ndx2) {
             var name_dim = ndx2.dimension(dc.pluck('Player'));
             var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'));
-             
+            var playerColors = d3.scale.ordinal()
+                .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
+                .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
+               
+                
+                
             dc.pieChart('#points-season-playoffs')
                 .height(540)
                 .radius(400)
+                .colors(playerColors)
                 .transitionDuration(1500)
                 .dimension(name_dim)
                 .group(total_points_per_player);
+                
+                
  }
  
  function show_teams_played(ndx2) {
@@ -500,10 +508,10 @@ function show_main_stats_career_LJ(totalsForLJ) {
     
 
  
-function showTotalNumberOfGamesPlayedMJ(totalsForMJ) {
-    let ndx2 = crossfilter(totalsForMJ);
-    let dim = ndx2.dimension(dc.pluck("Player"));
-    let totalGames = dim.group().reduceSum(dc.pluck("G"));
+        function showTotalNumberOfGamesPlayedMJ(totalsForMJ) {
+        let ndx2 = crossfilter(totalsForMJ);
+        let dim = ndx2.dimension(dc.pluck("Player"));
+        let totalGames = dim.group().reduceSum(dc.pluck("G"));
 
     dc.numberDisplay("#totalNumberOfGamesPlayedMJ")
         .formatNumber(d3.format(",.0f"))

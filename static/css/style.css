@@ -28,7 +28,10 @@ body {
 }
 
 .content-container {
-    background-color: #4b76f463;
+   /* background-color: #4b76f463; */
+   background-image: url("../images/basketball-bg.jpg");
+   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .nav-text {
@@ -49,7 +52,7 @@ body {
     left: 50%;
     border-color: none;
     border-radius: 30%;
-    background-color: #B54213;
+    background-color: #b5421369;
 
 }
 
@@ -66,6 +69,7 @@ body {
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size:cover;
 
 }
 
@@ -95,13 +99,14 @@ body {
 .total-points-piechart {
     top: 100px;
     right: 60px;
-    background-color: #2b98ff;
+    background-color: #2b98ff7a;
 }
 
 .teams-played-stakedchart {
-    top: 100px;
-    left: 60px;
-    background-color: #2b98ff;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+    background-color: #2b98ff7a;
 }
 
 
@@ -111,7 +116,7 @@ body {
 }
 
 .card-body-highest-points {
-    background-color: #2B98FF;
+    background-color: #2b98ff7a;
     top: 140px;
     right: 60px;
     padding-top: 0px;
@@ -121,7 +126,7 @@ body {
 .card-body-salary {
     left: 60px;
     top: 140px;
-    background-color: #2b98ff;
+    background-color: #2b98ff7a;
 
 }
 
@@ -144,6 +149,13 @@ body {
     left: 40px;
     right: 0;
 }
+.profile {
+    min-height: 380px; 
+}
+
+.portfolio-header{
+    color:white;
+}
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
 
@@ -153,23 +165,56 @@ body {
     margin-top: 30px;
 }
 
-/*---------------------------------FOOTER-----------------------------------*/
+
+
+/* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
 .footer {
-    position: absolute;
-    bottom: 0px;
-    top: 830px;
-    padding-top: 50px;
-     }
+  height: auto;
+  background-color: #1a1616;
+  color: #7FB7BE;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+.github-logo {
+  color:  #7FB7BE;
+  font-size: 2em;
+  transition: all .2s ease-in-out
+}
+
+.github-logo:focus,
+.github-logo:hover {
+  color: #3959ba;
+}
+
+@media (min-width: 768px) {
+  .github-logo {
+      font-size: 2em;
+  }
+}
+/*---------------------------------FOOTER-----------------------------------*/
+
+/*.footer {*/
+/*    position: absolute;*/
+/*    bottom: 0px;*/
+/*    top: 830px;*/
+/*    padding-top: 50px;*/
+/*     }*/
      
-     .footer-container{
-    margin-right: 0px;
-    margin-left: 0;
-     }
+/*     .footer-container{*/
+/*    margin-right: 0px;*/
+/*    margin-left: 0;*/
+/*     }*/
 
 /*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/
 
-.horizontal-scroll-wrapper {
+/* .horizontal-scroll-wrapper {
     width: 100px;
     height: 300px;
     overflow-y: auto;
@@ -179,4 +224,17 @@ body {
 .horizontal-scroll-wrapper>div {
     width: 100px;
     height: 100px;
+}*/
+div.horizontal-scroll-wrapper {
+  overflow: auto;
+  white-space: nowrap;
 }
+
+div.horizontal-scroll-wrapper .a {
+  display: inline-block;
+  width: 100%;
+}
+#more {display: none}
+#more1{display: none}
+#more2{display: none}
+
