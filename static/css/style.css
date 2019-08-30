@@ -99,7 +99,10 @@ body {
 .total-points-piechart {
     top: 100px;
     right: 60px;
+    width: 70%;
     background-color: #2b98ff7a;
+    padding-left: 0; 
+    padding-right: 0;
 }
 
 .teams-played-stakedchart {
@@ -200,23 +203,25 @@ body {
   }
 }
 /*---------------------------------FOOTER-----------------------------------*/
-
-/*.footer {*/
-/*    position: absolute;*/
-/*    bottom: 0px;*/
-/*    top: 830px;*/
-/*    padding-top: 50px;*/
-/*     }*/
+.footer-landing-page{
+    /*top:800px*/
+}
+.footer {
+    height: auto;
+     }
      
-/*     .footer-container{*/
-/*    margin-right: 0px;*/
-/*    margin-left: 0;*/
-/*     }*/
+container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 /*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/
 
  .horizontal-scroll-wrapper {
-     top: 100px
+     margin-top: 200px;
  }
   
      
@@ -229,10 +234,14 @@ div.horizontal-scroll-wrapper {
   white-space: nowrap;
 }
 
-div.horizontal-scroll-wrapper .a {
+div.horizontal-scroll-wrapper .scroll-chart {
   display: inline-block;
-  width: 100%;
+  width: 70%;
+  padding-bottom: 40px;
 }
+
+
+
 #more {display: none}
 #more1{display: none}
 #more2{display: none}
