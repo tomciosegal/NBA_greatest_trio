@@ -177,17 +177,19 @@ body {
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
 .footer {
-    height: auto;
-    background-color: #164a7b;
-    color: #7FB7BE;
+   position: fixed;
+  bottom: 0;
+  left: 0;
+  background: hotpink;
+  width: 100%;
 }
 
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-}
+/*.footer-content {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*}*/
 
 .github-logo {
     color: #7FB7BE;
@@ -206,26 +208,22 @@ body {
     }
 }
 
-/*---------------------------------FOOTER-----------------------------------*/
+/*.footer-container {*/
+/*    position: fixed;*/
+/*    bottom: 20px;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    position: fixed;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*}*/
 
-.footer-landing-page {
-    /*top:800px*/
-}
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background: hotpink;
-    width: 100%;
-}
+  
 
-.footer-container {
-    position: fixed;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-}
+
+
 
 
 /*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/

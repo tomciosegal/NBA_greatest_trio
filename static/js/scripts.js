@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    // ------------------------------------- NAVBAR ------------------------------------
-
     // Hide all sections apart from the main one.
 
     $(function () {
@@ -33,8 +31,22 @@ $("#main-btn").mouseleave(function(){
 })
 
 
+ //footer will hide on loading page
+  
+//   $('footer').load('.loading-page', function() {
+//       $(this).hide();})
+      
+//       $('#main-btn').click(function(){
+//       $('footer').show(); 
+       
+    //   $('#navHome').click(function(){
+    //   $('footer').hide();
+      
+    });
 
-})
+
+
+// })
 
 function myFunction() {
   var mj

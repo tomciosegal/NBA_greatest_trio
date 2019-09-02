@@ -139,7 +139,7 @@ function show_salaries(ndx1) {
 
  function show_total_points(ndx2) {
             var name_dim = ndx2.dimension(dc.pluck('Player'));
-            var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'));
+            var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'))+"points";
             var playerColors = d3.scale.ordinal()
                 .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
                 .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
