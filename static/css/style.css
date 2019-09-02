@@ -1,7 +1,7 @@
 body {
     font-family: "Frijole";
     font-weight: 400;
-    }
+}
 
 
 
@@ -28,10 +28,10 @@ body {
 }
 
 .content-container {
-   /* background-color: #4b76f463; */
-   background-image: url("../images/basketball-bg.jpg");
-   background-repeat: no-repeat;
-  background-attachment: fixed;
+    /* background-color: #4b76f463; */
+    background-image: url("../images/basketball-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .nav-text {
@@ -69,7 +69,7 @@ body {
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size:cover;
+    background-size: cover;
 
 }
 
@@ -101,8 +101,9 @@ body {
     right: 60px;
     width: 70%;
     background-color: #2b98ff7a;
-    padding-left: 0; 
+    padding-left: 0;
     padding-right: 0;
+    border-color: azure;
 }
 
 .teams-played-stakedchart {
@@ -111,26 +112,27 @@ body {
     padding-top: 60px;
     top: 100px;
     background-color: #2b98ff7a;
+    border-color: azure;
 }
 
 
-/*#show_teams_played {*/
 
-/*    padding-left: 120px*/
-/*}*/
 
 .card-body-highest-points {
     background-color: #2b98ff7a;
     top: 140px;
-    right: 60px;
     padding-top: 0px;
     padding-right: 0px;
+    right: 120px;
+    border-color: azure;
+    height: 400px;
 }
 
 .card-body-salary {
     left: 60px;
     top: 140px;
     background-color: #2b98ff7a;
+    border-color: azure;
 
 }
 
@@ -153,12 +155,13 @@ body {
     left: 40px;
     right: 0;
 }
+
 .profile {
-    min-height: 380px; 
+    min-height: 400px;
 }
 
-.portfolio-header{
-    color:white;
+.portfolio-header {
+    color: white;
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
@@ -174,75 +177,113 @@ body {
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
 .footer {
-  height: auto;
-  background-color: #164a7b;
-  color: #7FB7BE;
+    height: auto;
+    background-color: #164a7b;
+    color: #7FB7BE;
 }
 
 .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
 }
 
 .github-logo {
-  color:  #7FB7BE;
-  font-size: 2em;
-  transition: all .2s ease-in-out
+    color: #7FB7BE;
+    font-size: 2em;
+    transition: all .2s ease-in-out
 }
 
 .github-logo:focus,
 .github-logo:hover {
-  color: #3959ba;
+    color: #3959ba;
 }
 
 @media (min-width: 768px) {
-  .github-logo {
-      font-size: 2em;
-  }
+    .github-logo {
+        font-size: 2em;
+    }
 }
+
 /*---------------------------------FOOTER-----------------------------------*/
-.footer-landing-page{
+
+.footer-landing-page {
     /*top:800px*/
 }
+
 .footer {
-    height: auto;
-     }
-     
-container-fluid {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: hotpink;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
 }
+
+.footer-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+
 
 /*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/
 
- .horizontal-scroll-wrapper {
-     margin-top: 200px;
- }
-  
-     
- 
+.horizontal-scroll-wrapper {
+    margin-top: 200px;
+}
+
+
+
 
 
 
 div.horizontal-scroll-wrapper {
-  overflow: auto;
-  white-space: nowrap;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 div.horizontal-scroll-wrapper .scroll-chart {
-  display: inline-block;
-  width: 70%;
-  padding-bottom: 40px;
+    display: inline-block;
+    width: 70%;
+    padding-bottom: 40px;
+}
+
+.read-more-btn {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #164a7b;
+    padding: 20px;
+    width: 200px;
+    height: 70px;
+    border-radius: 0px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+.read-more-btn:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    background-color: #2b98ff7a;
+    letter-spacing: 3px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
 }
 
 
 
-#more {display: none}
-#more1{display: none}
-#more2{display: none}
 
+#more {
+    display: none
+}
+
+#more1 {
+    display: none
+}
+
+#more2 {
+    display: none
+}
