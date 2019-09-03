@@ -157,7 +157,11 @@ body {
 }
 
 .profile {
-    min-height: 400px;
+    min-height: 450px;
+    
+    min-width:350px;
+    max-width: 350px;
+   display: inline-block;
 }
 
 .portfolio-header {

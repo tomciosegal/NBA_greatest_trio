@@ -139,7 +139,7 @@ function show_salaries(ndx1) {
 
  function show_total_points(ndx2) {
             var name_dim = ndx2.dimension(dc.pluck('Player'));
-            var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'))+"points";
+            var total_points_per_player = name_dim.group().reduceSum(dc.pluck('PTS'));
             var playerColors = d3.scale.ordinal()
                 .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
                 .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
@@ -303,7 +303,7 @@ function show_main_stats_career_MJ(totalsForMJ) {
         .yAxisPadding("5%")
         .elasticX(true)
         .xAxisPadding("8%")
-        .xAxis().ticks(12).tickFormat(d3.time.format("%b")).outerTickSize(0);
+        
 
     composite.yAxis().ticks(5).outerTickSize(0);
 }
@@ -400,7 +400,7 @@ function show_main_stats_career_KB(totalsForKB) {
         .yAxisPadding("5%")
         .elasticX(true)
         .xAxisPadding("8%")
-        .xAxis().ticks(12).tickFormat(d3.time.format("%b")).outerTickSize(0);
+        
 
     composite.yAxis().ticks(5).outerTickSize(0);
 }
@@ -501,7 +501,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
         .yAxisPadding("5%")
         .elasticX(true)
         .xAxisPadding("8%")
-        .xAxis().ticks(12).tickFormat(d3.time.format("%b")).outerTickSize(0);
+        
 
     composite.yAxis().ticks(5).outerTickSize(0);
 }

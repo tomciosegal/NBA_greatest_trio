@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    // ------------------------------------- NAVBAR ------------------------------------
+
     // Hide all sections apart from the main one.
 
     $(function () {
@@ -28,25 +30,19 @@ $(document).ready(function () {
 });
 $("#main-btn").mouseleave(function(){
   $(this).css ("background-color", "");
-})
-
-
- //footer will hide on loading page
-  
-//   $('footer').load('.loading-page', function() {
-//       $(this).hide();})
+});
+$('footer').load('.loading-page', function() {
+      $(this).hide();})
       
-//       $('#main-btn').click(function(){
-//       $('footer').show(); 
-       
-    //   $('#navHome').click(function(){
-    //   $('footer').hide();
+      $('#main-btn').click(function(){
+       $('footer').show();   
       
     });
+    
 
 
 
-// })
+});
 
 function myFunction() {
   var mj
@@ -100,6 +96,10 @@ function myFunction2() {
 }
 
 
+
+
+
+
 // set up text to print, each item in array is new line
 var aText = new Array(
 
@@ -117,6 +117,8 @@ var iTextPos = 0; // initialise text position
 var sContents = ''; // initialise contents variable
 var iRow; // initialise current row
  
+
+
 
 
 function typewriter()
@@ -143,9 +145,3 @@ function typewriter()
 
 
 typewriter();
-
-
-
-
-
-
