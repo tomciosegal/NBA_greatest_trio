@@ -152,26 +152,85 @@ function show_salaries(ndx1) {
                 .colors(playerColors)
                 .transitionDuration(1500)
                 .dimension(name_dim)
-                .group(total_points_per_player);
+                .group(total_points_per_player)
+                .title(function (d) {
+            return d.key + ': ' + d.value + ' Points';
+        });
                 
                 
  }
  
+//  function show_teams_played(ndx2) {
+     
+//      function teamByPlayers(dimension, team) {
+//         return dimension.group().reduce(
+//             function (p, v) {
+//                 p.total++;
+                
+//                 if(v.Tm == team) {
+//                     p.match++;
+//                 }
+//                 return p;
+//             },
+//             function (p, v) {
+//                 p.total--;
+//                 if(v.Tm == team) {
+//                     p.match--;
+//                 }
+//                 return p;
+//             },
+//             function () {
+//                 return {total: 0, match: 0};
+//             }
+//         );
+//     }
+    
+//     var dim = ndx2.dimension(dc.pluck("Player"));
+    
+//     var chi = teamByPlayers(dim, "CHI");
+//     var cle = teamByPlayers(dim, "CLE");
+//     var lal = teamByPlayers(dim, "LAL");
+//     var mia = teamByPlayers(dim, "MIA");
+//     var was = teamByPlayers(dim, "WAS");
+    
+//     dc.barChart("#show_teams_played")
+//         .width(550)
+//         .height(450)
+//         .dimension(dim)
+//         .group(chi, "CHI")
+//         .stack(cle, "CLE")
+//         .stack(lal, "LAL")
+//         .stack(mia, "MIA")
+//         .stack(was, "WAS")
+//         .valueAccessor(function(d) {
+//             if(d.value.total > 0) {
+//                 return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
+//             } else {
+//                 return 0;
+//             }
+//         })
+//         .x(d3.scale.ordinal())
+//         .xUnits(dc.units.ordinal)
+//         .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
+//         .margins({top: 10, right: 100, bottom: 30, left: 30});
+// }
+
+
  function show_teams_played(ndx2) {
      
-     function teamByPlayers(dimension, team) {
+     function teamByPlayers(dimension, player) {
         return dimension.group().reduce(
             function (p, v) {
                 p.total++;
                 
-                if(v.Tm == team) {
+                if(v.Player == player) {
                     p.match++;
                 }
                 return p;
             },
             function (p, v) {
                 p.total--;
-                if(v.Tm == team) {
+                if(v.Player == player) {
                     p.match--;
                 }
                 return p;
@@ -182,23 +241,25 @@ function show_salaries(ndx1) {
         );
     }
     
-    var dim = ndx2.dimension(dc.pluck("Player"));
+     var playerColors = d3.scale.ordinal()
+                .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
+                .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
     
-    var chi = teamByPlayers(dim, "CHI");
-    var cle = teamByPlayers(dim, "CLE");
-    var lal = teamByPlayers(dim, "LAL");
-    var mia = teamByPlayers(dim, "MIA");
-    var was = teamByPlayers(dim, "WAS");
+    var dim = ndx2.dimension(dc.pluck("Tm"));
+    
+    var mj = teamByPlayers(dim, "Michael Jordan");
+    var kb = teamByPlayers(dim, "Kobe Bryant");
+    var lj = teamByPlayers(dim, "Lebron James");
+    
     
     dc.barChart("#show_teams_played")
         .width(550)
         .height(450)
+        .colors(playerColors)
         .dimension(dim)
-        .group(chi, "CHI")
-        .stack(cle, "CLE")
-        .stack(lal, "LAL")
-        .stack(mia, "MIA")
-        .stack(was, "WAS")
+        .group(mj, "Micheal Jordan")
+        .stack(kb, "Kobe Bryant")
+        .stack(lj, "Lebron James")
         .valueAccessor(function(d) {
             if(d.value.total > 0) {
                 return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
@@ -211,7 +272,6 @@ function show_salaries(ndx1) {
         .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
         .margins({top: 10, right: 100, bottom: 30, left: 30});
 }
-
 
 function show_main_stats_career_MJ(totalsForMJ) {
 
