@@ -95,13 +95,14 @@ section
 
 .salary-chart {
     padding-right: 0;
+    background-color: #151307c2;
 }
 
 .total-points-piechart {
     top: 100px;
     right: 60px;
-    width: 70%;
-    background-color: #2b98ff7a;
+    width: 100%;
+    background-color: #151307c2;
     padding-left: 0;
     padding-right: 0;
     border-color: azure;
@@ -112,7 +113,7 @@ section
     padding-right: 40px;
     padding-top: 60px;
     top: 100px;
-    background-color: #2b98ff7a;
+    background-color: #151307c2;
     border-color: azure;
 }
 
@@ -120,7 +121,7 @@ section
 
 
 .card-body-highest-points {
-    background-color: #2b98ff7a;
+    background-color: #151307c2;
     top: 140px;
     padding-top: 0px;
     padding-right: 0px;
@@ -132,7 +133,7 @@ section
 .card-body-salary {
     left: 60px;
     top: 140px;
-    background-color: #2b98ff7a;
+    background-color: #151307c2;
     border-color: azure;
 
 }
@@ -143,16 +144,16 @@ section
 }
 
 .card-body-MJ {
-    background-color: #e22b22bf;
+    background-color: #151307c2;
     right: 40px;
 }
 
 .card-body-KB {
-    background-color: #ffe854b5;
+    background-color: #151307c2;
 }
 
 .card-body-LJ {
-    background-color: #13a3547d;
+    background-color: #151307c2;
     left: 40px;
     right: 0;
 }
@@ -177,7 +178,28 @@ section
     margin-top: 30px;
 }
 
+.portfolio-MJ{
+  background-color: #e22b22bf;  
+}
 
+.portfolio-KB{
+  background-color: #ffe854b5;
+}
+
+.portfolio-LJ{
+   background-color: #13a3547d;
+   left: 40px;
+   right: 0;
+}
+
+.portfolio-row{
+  margin-top: 100px;
+}
+
+.portfolio-names{
+  color:white;
+  margin-bottom: 20px;
+}
 
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
@@ -208,7 +230,7 @@ section
 
 
 
-/*---------------------------------HORIZONTAL WRAPPER-----------------------------------*/
+/*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------*/
 
 .horizontal-scroll-wrapper {
     margin-top: 200px;
@@ -268,6 +290,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
     display: none
 }
 
+/*---------------------------------TYPEWRITER FOR MJ QUOTE ON LANDING PAGE-----------------------------------*/
+
 .css-typing p {
   border-right: .15em solid orange;
   font-size: 30px;
@@ -276,8 +300,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
 }
 .css-typing p:nth-child(1) {
   width: 100%;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
+  -webkit-animation: type 3s steps(40, end);
+  animation: type 3s steps(40, end);
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -285,10 +309,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(2) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+  -webkit-animation: type2 3s steps(40, end);
+  animation: type2 3s steps(40, end);
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -296,10 +320,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(3) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type3 2s steps(40, end);
-  animation: type3 2s steps(40, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
+  -webkit-animation: type3 3s steps(40, end);
+  animation: type3 3s steps(40, end);
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -307,10 +331,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(4) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type3 2s steps(40, end);
-  animation: type3 2s steps(40, end);
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
+  -webkit-animation: type3 3s steps(40, end);
+  animation: type3 3s steps(40, end);
+  -webkit-animation-delay: 10.5s;
+  animation-delay: 10.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -318,10 +342,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(5) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type3 2s steps(40, end);
-  animation: type3 2s steps(40, end);
-  -webkit-animation-delay: 8s;
-  animation-delay: 8s;
+  -webkit-animation: type3 3s steps(40, end);
+  animation: type3 3s steps(40, end);
+  -webkit-animation-delay: 12.5s;
+  animation-delay: 12.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -329,10 +353,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(6) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type6 2s steps(40, end);
-  animation: type6 2s steps(40, end);
-  -webkit-animation-delay: 10s;
-  animation-delay: 10s;
+  -webkit-animation: type6 4s steps(40, end);
+  animation: type6 4s steps(40, end);
+  -webkit-animation-delay: 16.5s;
+  animation-delay: 16.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }

@@ -313,13 +313,13 @@ function show_main_stats_career_MJ(totalsForMJ) {
                 .style("font-size", "12px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "100%")
+                .attr("width", "130%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
                 .attr("font-size", "15px")
-                .attr("fill", "black");
+                .attr("fill", "white");
             chart.selectAll("line")
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".domain")
@@ -410,13 +410,13 @@ function show_main_stats_career_KB(totalsForKB) {
                 .style("font-size", "12px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "100%")
+                .attr("width", "130%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
                 .attr("font-size", "15px")
-                .attr("fill", "black");
+                .attr("fill", "white");
             chart.selectAll("line")
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".domain")
@@ -511,13 +511,13 @@ function show_main_stats_career_LJ(totalsForLJ) {
                 .style("font-size", "12px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "100%")
+                .attr("width", "130%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
                 .attr("font-size", "15px")
-                .attr("fill", "black");
+                .attr("fill", "white");
             chart.selectAll("line")
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".domain")
