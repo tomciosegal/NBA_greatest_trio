@@ -1,14 +1,15 @@
 body {
-    font-family: "Frijole";
-    font-weight: 400;
-    background-image: url("../images/basketball-bg.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  font-family: "Frijole";
+  font-weight: 400;
+  background-image: url("../images/basketball-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  }
+
+section {
+  width: 100%;
 }
-section
-{
-    width: 100%;
-    }
 
 
 
@@ -16,158 +17,159 @@ section
 /*---------------------------------NAVBAR-----------------------------------*/
 
 #navbar {
-    background-color: #164a7b !important;
-    cursor: pointer;
-    height: 90px;
+  background-color: #164a7b !important;
+  cursor: pointer;
+  height: 90px;
 }
 
 .container-fluid {
-    height: 90px;
+  height: 90px;
 }
 
 #navHome {
-    width: 2vh;
+  width: 2vh;
 
 }
 
 .img-fluid {
-    width: 80px;
+  width: 80px;
 }
 
 
 .nav-text {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .home-img {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 .title {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .stat-button {
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    border-color: none;
-    border-radius: 30%;
-    background-color: #b5421369;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  border-color: none;
+  border-radius: 30%;
+  background-color: #b5421369;
 
 }
 
 .loading-page-text {
-    color: white;
+  color: white;
 }
 
 .loading-page {
-    position: fixed;
+  position: fixed;
 
 }
 
 .loading-img {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
 }
 
 .MJ-quote {
-    position: absolute;
-    color: white;
-    bottom: 600px;
-    right: 16px;
-    font-family: Great Vibes;
-    font-size: 30px;
+  position: absolute;
+  color: white;
+  bottom: 600px;
+  right: 16px;
+  font-family: Great Vibes;
+  font-size: 30px;
 }
 
 .MJ-signat {
-    padding-left: 300px;
+  padding-left: 300px;
 }
 
 /*---------------------------------CHARTS-----------------------------------*/
 
 .points-chart {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .salary-chart {
-    padding-right: 0;
-    background-color: #151307c2;
+  padding-right: 0;
+  background-color: #151307c2;
 }
 
 .total-points-piechart {
-    top: 100px;
-    right: 60px;
-    width: 100%;
-    background-color: #151307c2;
-    padding-left: 0;
-    padding-right: 0;
-    border-color: azure;
+  top: 100px;
+  right: 60px;
+  width: 100%;
+  background-color: #151307c2;
+  padding-left: 0;
+  padding-right: 0;
+  border-color: azure;
 }
 
 .teams-played-stakedchart {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 60px;
-    top: 100px;
-    background-color: #151307c2;
-    border-color: azure;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 60px;
+  top: 100px;
+  background-color: #151307c2;
+  border-color: azure;
 }
 
 
 
 
 .card-body-highest-points {
-    background-color: #151307c2;
-    top: 140px;
-    padding-top: 0px;
-    padding-right: 0px;
-    right: 120px;
-    border-color: azure;
-    height: 400px;
+  background-color: #151307c2;
+  top: 140px;
+  padding-top: 0px;
+  padding-right: 0px;
+  right: 120px;
+  border-color: azure;
+  height: 400px;
+  
 }
 
 .card-body-salary {
-    left: 60px;
-    top: 140px;
-    background-color: #151307c2;
-    border-color: azure;
+  left: 60px;
+  top: 140px;
+  background-color: #151307c2;
+  border-color: azure;
 
 }
 
 
 .card-header {
-    background-color: #3959BA;
+  background-color: #3959BA;
 }
 
 .card-body-MJ {
-    background-color: #151307c2;
-    right: 40px;
+  background-color: #151307c2;
+  right: 40px;
 }
 
 .card-body-KB {
-    background-color: #151307c2;
+  background-color: #151307c2;
 }
 
 .card-body-LJ {
-    background-color: #151307c2;
-    left: 40px;
-    right: 0;
+  background-color: #151307c2;
+  left: 40px;
+  right: 0;
 }
 
 .profile {
-    min-height: 450px;
-    
-    min-width:350px;
-    max-width: 350px;
-   display: inline-block;
+  min-height: 450px;
+
+  min-width: 350px;
+  max-width: 350px;
+  display: inline-block;
 }
 
 .portfolio-header {
-    color: white;
+  color: white;
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
@@ -175,57 +177,57 @@ section
 .MJ-facts {}
 
 .players-row {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
-.portfolio-MJ{
-  background-color: #e22b22bf;  
+.portfolio-MJ {
+  background-color: #e22b22bf;
 }
 
-.portfolio-KB{
+.portfolio-KB {
   background-color: #ffe854b5;
 }
 
-.portfolio-LJ{
-   background-color: #13a3547d;
-   left: 40px;
-   right: 0;
+.portfolio-LJ {
+  background-color: #13a3547d;
+  left: 40px;
+  right: 0;
 }
 
-.portfolio-row{
+.portfolio-row {
   margin-top: 100px;
 }
 
-.portfolio-names{
-  color:white;
+.portfolio-names {
+  color: white;
   margin-bottom: 20px;
 }
 
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
 .footer-container {
- bottom: 0;
+  bottom: 0;
   left: 0;
-  background-color:  #164a7b;
+  background-color: #164a7b;
   width: 100%;
 }
 
 
 .github-logo {
-    color: #7FB7BE;
-    font-size: 2em;
-    transition: all .2s ease-in-out
+  color: #7FB7BE;
+  font-size: 2em;
+  transition: all .2s ease-in-out
 }
 
 .github-logo:focus,
 .github-logo:hover {
-    color: #3959ba;
+  color: #3959ba;
 }
 
 @media (min-width: 768px) {
-    .github-logo {
-        font-size: 2em;
-    }
+  .github-logo {
+    font-size: 2em;
+  }
 }
 
 
@@ -233,7 +235,7 @@ section
 /*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------*/
 
 .horizontal-scroll-wrapper {
-    margin-top: 200px;
+  margin-top: 200px;
 }
 
 
@@ -242,52 +244,52 @@ section
 
 
 div.horizontal-scroll-wrapper {
-    overflow: auto;
-    white-space: nowrap;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 div.horizontal-scroll-wrapper .scroll-chart {
-    display: inline-block;
-    width: 70%;
-    padding-bottom: 40px;
+  display: inline-block;
+  width: 70%;
+  padding-bottom: 40px;
 }
 
 .read-more-btn {
-    color: #fff !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: #164a7b;
-    padding: 20px;
-    width: 200px;
-    height: 70px;
-    border-radius: 0px;
-    display: inline-block;
-    border: none;
-    transition: all 0.4s ease 0s;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #164a7b;
+  padding: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 0px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
 }
 
 .read-more-btn:hover {
-    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-    background-color: #2b98ff7a;
-    letter-spacing: 3px;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-    transition: all 0.4s ease 0s;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  background-color: #2b98ff7a;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 
 
 
 #more {
-    display: none
+  display: none
 }
 
 #more1 {
-    display: none
+  display: none
 }
 
 #more2 {
-    display: none
+  display: none
 }
 
 /*---------------------------------TYPEWRITER FOR MJ QUOTE ON LANDING PAGE-----------------------------------*/
@@ -298,6 +300,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   white-space: nowrap;
   overflow: hidden;
 }
+
 .css-typing p:nth-child(1) {
   width: 100%;
   -webkit-animation: type 3s steps(40, end);
@@ -392,7 +395,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -408,7 +411,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -424,7 +427,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -440,7 +443,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -456,7 +459,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -472,7 +475,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -488,7 +491,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -504,7 +507,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -520,7 +523,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -536,7 +539,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   1% {
     opacity: 1;
   }
-   0% {
+  0% {
     border-right: none;
   }
   100% {
@@ -544,5 +547,73 @@ div.horizontal-scroll-wrapper .scroll-chart {
     border: none;
   }
 }
+/*----------------- MEDIA QUERIES -----------------*/
+
+/* ------------ SMALL DEVICES ----------*/
+@media screen and (min-width: 350px) and (max-width: 700px) {
+  
+  
+  .stat-button {
+    top: 500px;
+    left: 45px;
+    position: fixed;
+    right: 60px;
+  }
+  .title {
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+  }
+  .body {
+    background-image: url("../images/mobile-bg.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+  }
+  
+  /*.mobile-bg {*/
+  /*  background-image: url("../images/mobile-bg.jpg");*/
+  /*  position: relative;*/
+  /*  height: 50vh;*/
+  /*  background-repeat: no-repeat;*/
+  /*  -webkit-background-size: cover;*/
+  /*  background-size: cover;*/
+
+  /*  background-position: center 25%;*/
+  /*  z-index: 1;*/
+
+  .mobile-bg{
+    width: 440px;
+    height: 670px;
+    padding-right: 60px;
+    position: fixed;
+  }
+  
+  .fixed-top {
+    position: absolute;
+    
+  }
+.profile{
+  min-height: 450px;
+    min-width: 372px;
+}
+
+.card-body-highest-points {
+ overflow-x: scroll; 
+}
+.footer-container{
+  width: 110%;
+}
+.footer-copyright{
+  text-align: center;
+}
+.github-logo{
+  padding-left: 160px;
+}
+.data-source-footer{
+  text-align: center;
+}
 
 
+}
