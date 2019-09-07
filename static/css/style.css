@@ -581,20 +581,19 @@ body{
            background: url('../images/mobile-bg.jpg') no-repeat center center fixed;
            background-size: cover;
            height: 100%;
+           background-attachment: fixed;
+           
          }
 
   .fixed-top {
-    position: fixed;
+    position: absolute;
 
   }
-  .profile {
-    min-height: 450px;
-    min-width: 372px;
-  }
+  /*.profile {*/
+  /*  min-height: 450px;*/
+  /*  min-width: 372px;*/
+  /*}*/
 
-  .card-body-highest-points {
-    overflow-x: scroll;
-  }
   .footer-container {
     width: 110%;
   }
@@ -634,12 +633,3 @@ body{
   }
 }
 
-/* ------------ LARGE DEVICES ----------*/
-
-@media only screen and (min-width: 901px) {
-  .body{
-  background-image: url("../images/basketball-bg.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  }
-}
