@@ -100,7 +100,24 @@ function show_highest_points(ndx) {
         .colors(playerColors)
         .dimension(seasonDim)
         .group(seasonPlayerGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 });
+        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+        .on("pretransition", function(chart) {
+            chart.selectAll("g.y text")
+                .style("font-size", "12px");
+            chart.selectAll("g.x text")
+                .style("font-size", "12px");
+            chart.selectAll(".dc-chart text")
+                .attr("fill", "#E5E5E5");
+            chart.selectAll(".dc-legend-item text")
+                .attr("font-size", "15px")
+                .attr("fill", "white");
+            chart.selectAll("line")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".domain")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".line")
+                .style("stroke-width", "2.5");
+        });
 }
 
 function show_salaries(ndx1) {
@@ -135,7 +152,24 @@ function show_salaries(ndx1) {
         .colors(playerColors)
         .dimension(salaryDim)
         .group(salaryPlayerGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 });
+        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+         .on("pretransition", function(chart) {
+            chart.selectAll("g.y text")
+                .style("font-size", "12px");
+            chart.selectAll("g.x text")
+                .style("font-size", "12px");
+            chart.selectAll(".dc-chart text")
+                .attr("fill", "#E5E5E5");
+            chart.selectAll(".dc-legend-item text")
+                .attr("font-size", "15px")
+                .attr("fill", "white");
+            chart.selectAll("line")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".domain")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".line")
+                .style("stroke-width", "2.5");
+        });
 }
 
 function show_total_points(ndx2) {
@@ -262,6 +296,27 @@ function show_teams_played(ndx2) {
         .group(mj, "Micheal Jordan")
         .stack(kb, "Kobe Bryant")
         .stack(lj, "Lebron James")
+        .on("pretransition", function(chart) {
+            chart.selectAll("g.y text")
+                .style("font-size", "12px");
+            chart.selectAll("g.x text")
+                .style("font-size", "12px");
+            chart.select("svg")
+                .attr("height", "100%")
+                .attr("width", "130%")
+                .attr("viewBox", "0 0 840 340");
+            chart.selectAll(".dc-chart text")
+                .attr("fill", "#E5E5E5");
+            chart.selectAll(".dc-legend-item text")
+                .attr("font-size", "15px")
+                .attr("fill", "white");
+            chart.selectAll("line")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".domain")
+                .style("stroke", "#E5E5E5");
+            chart.selectAll(".line")
+                .style("stroke-width", "2.5");
+        })
         
 
 
@@ -275,10 +330,10 @@ function show_teams_played(ndx2) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5)
+        .legend(dc.legend().x(470).y(10).itemHeight(15).gap(5)
         )
         
-        .margins({ top: 10, right: 100, bottom: 30, left: 30 })
+        .margins({ top: 10, right: 100, bottom: 30, left: 0 })
         
 
     ;
