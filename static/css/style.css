@@ -8,6 +8,12 @@ body {
 
 }
 
+/*.row, */
+/*.container {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
 /*section {*/
 
 /*  width: 100%;*/
@@ -104,6 +110,7 @@ body {
 .salary-chart {
   padding-right: 0;
   background-color: #151307c2;
+  overflow-x: scroll;
 }
 
 .total-points-piechart {
@@ -113,16 +120,15 @@ body {
   background-color: #151307c2;
   padding-left: 0;
   padding-right: 0;
-  border-color: azure;
+  padding-top: 0px;
+  
 }
 
 .teams-played-stakedchart {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 60px;
+ padding: 0px;
   top: 100px;
   background-color: #151307c2;
-  border-color: azure;
+  padding-bottom: 80px;
 }
 
 
@@ -131,10 +137,8 @@ body {
 .card-body-highest-points {
   background-color: #151307c2;
   top: 140px;
-  /*padding-top: 0px;*/
-  /*padding-right: 0px;*/
   right: 40px;
-  height:700px;
+  
 
 }
 
@@ -184,7 +188,7 @@ body {
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
 
-.MJ-facts {}
+
 
 .players-row {
   margin-top: 30px;
@@ -226,7 +230,8 @@ body {
 .github-logo {
   color: #7FB7BE;
   font-size: 2em;
-  transition: all .2s ease-in-out
+  transition: all .2s ease-in-out;
+  padding-left: 80px;
 }
 
 .github-logo:focus,
@@ -256,6 +261,7 @@ body {
 div.horizontal-scroll-wrapper {
   overflow: auto;
   white-space: nowrap;
+  width: fit-content;
 }
 
 div.horizontal-scroll-wrapper .scroll-chart {
@@ -606,6 +612,11 @@ body{
   .data-source-footer {
     text-align: center;
   }
+  .mobile-bg{
+    top: 40px;
+  }
+  .total-points-piechart{
+    width: 100%;
 
 }
 
@@ -613,7 +624,8 @@ body{
 
 /* ------------ MEDIUM DEVICES ----------*/
 
-@media screen and (min-width:751px) and (max-width:900px) {
+ @media screen and (min-width:751px) and (max-width:900px) {
+  
   .title {
     padding-top: 20px;
     text-align: left;;

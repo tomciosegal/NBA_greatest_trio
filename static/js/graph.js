@@ -82,8 +82,8 @@ function show_highest_points(ndx) {
     var maxSeason = Number(eDim.top(1)[0].Season.slice(0, -3));
 
     dc.scatterPlot("#highest-points-per-season")
-        .width(900)
-        .height(600)
+        .width(600)
+        .height(400)
         .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
@@ -100,7 +100,7 @@ function show_highest_points(ndx) {
         .colors(playerColors)
         .dimension(seasonDim)
         .group(seasonPlayerGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+        .margins({ top: 15, right: 40, bottom: 75, left: 120 })
         .on("pretransition", function(chart) {
             chart.selectAll("g.y text")
                 .style("font-size", "12px");
@@ -135,8 +135,8 @@ function show_salaries(ndx1) {
     var maxSeason = eDim.top(1)[0].Season.slice(0, -3);
 
     dc.scatterPlot("#salary-vs-season")
-        .width(900)
-        .height(600)
+        .width(600)
+        .height(400)
         .x(d3.time.scale().domain([new Date(minSeason, 0, 1), new Date(maxSeason, 0, 1)]))
         .brushOn(false)
         .symbolSize(8)
@@ -152,7 +152,7 @@ function show_salaries(ndx1) {
         .colors(playerColors)
         .dimension(salaryDim)
         .group(salaryPlayerGroup)
-        .margins({ top: 10, right: 50, bottom: 75, left: 75 })
+        .margins({ top: 10, right: 50, bottom: 75, left: 140 })
          .on("pretransition", function(chart) {
             chart.selectAll("g.y text")
                 .style("font-size", "12px");
@@ -289,10 +289,11 @@ function show_teams_played(ndx2) {
 
 
     dc.barChart("#show_teams_played")
-        .width(550)
-        .height(450)
+        .width(600)
+        .height(500)
         .colors(playerColors)
         .dimension(dim)
+        .xAxisLabel("Teams")
         .group(mj, "Micheal Jordan")
         .stack(kb, "Kobe Bryant")
         .stack(lj, "Lebron James")
@@ -330,10 +331,10 @@ function show_teams_played(ndx2) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(470).y(10).itemHeight(15).gap(5)
+        .legend(dc.legend().x(400).y(-100).itemHeight(15).gap(20)
         )
         
-        .margins({ top: 10, right: 100, bottom: 30, left: 0 })
+        .margins({ top: 10, right: 100, bottom: 120, left: 40 })
         
 
     ;
@@ -405,8 +406,8 @@ function show_main_stats_career_MJ(totalsForMJ) {
                 return numberWithCommas + " assists";
             })
             .colors("#ff7e0e")
-            .dotRadius(10)
-            .renderDataPoints({ radius: 4 }),
+            .dotRadius(15)
+            .renderDataPoints({ radius: 6 }),
             dc.lineChart(composite)
             .interpolate("monotone")
             .group(stl, "Steal")
@@ -415,8 +416,8 @@ function show_main_stats_career_MJ(totalsForMJ) {
                 return numberWithCommas + " steals";
             })
             .colors("#d95350")
-            .dotRadius(10)
-            .renderDataPoints({ radius: 4 }),
+            .dotRadius(15)
+            .renderDataPoints({ radius: 6 }),
             dc.lineChart(composite)
             .group(blk, "Block")
             .interpolate("monotone")
@@ -425,8 +426,8 @@ function show_main_stats_career_MJ(totalsForMJ) {
                 return numberWithCommas + "blocks";
             })
             .colors("#1e77b4")
-            .dotRadius(10)
-            .renderDataPoints({ radius: 4 })
+            .dotRadius(15)
+            .renderDataPoints({ radius: 6 })
         ])
         .brushOn(false)
         .yAxisPadding("5%")
