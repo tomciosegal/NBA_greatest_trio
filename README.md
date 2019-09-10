@@ -7,6 +7,7 @@ get famialiar with the NBA heroes that developer wanted to present.
 Firstly when you will see loading page
 where css typewriter kicks off and you will see one the most famous Micheal Jordan quotes.
 The See stats button will take u down to actual charts, where all the fun begins.
+A live desktop demo can be found [here](https://tomciosegal.github.io/NBA_greatest_trio/).
 
 
 The goal was to:

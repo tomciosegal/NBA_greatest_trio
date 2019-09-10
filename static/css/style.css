@@ -110,7 +110,7 @@ body {
 .salary-chart {
   padding-right: 0;
   background-color: #151307c2;
-  overflow-x: scroll;
+  
 }
 
 .total-points-piechart {
@@ -251,6 +251,7 @@ body {
 
 .horizontal-scroll-wrapper {
   margin-top: 250px;
+  
 }
 
 
@@ -618,6 +619,13 @@ body{
   .total-points-piechart{
     width: 100%;
 
+}
+.salary-chart{
+  overflow-x: scroll;
+}
+.points-chart{
+  overflow-x: scroll;
+}
 }
 
 
