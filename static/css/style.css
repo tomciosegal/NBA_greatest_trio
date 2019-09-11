@@ -8,11 +8,11 @@ body {
 
 }
 
-/*.row, */
-/*.container {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
+.row, 
+.container {
+    margin: 0;
+    padding: 0;
+}
 
 /*section {*/
 
@@ -65,7 +65,7 @@ body {
 }
 
 .loading-page-text {
-  color: white;
+  color: #FFFFFF;
 }
 
 .loading-page {
@@ -90,7 +90,7 @@ body {
 
 .MJ-quote {
   position: fixed;
-  color: white;
+  color: #FFFFFF;
   top: 150px;
   right: 16px;
   font-family: Great Vibes;
@@ -101,6 +101,10 @@ body {
   padding-left: 300px;
 }
 
+.chart-comments{
+  color:#FFFFFF;
+  text-align: justify;
+}
 /*---------------------------------CHARTS-----------------------------------*/
 
 .points-chart {
@@ -155,7 +159,7 @@ body {
 .card-header {
   background-color: #3959BA;
   text-align: center;
-  color: white;
+  color: #FFFFFF;
 }
 
 .card-body-MJ {
@@ -182,7 +186,7 @@ body {
 }
 
 .portfolio-header {
-  color: white;
+  color: #FFFFFF;
   text-align: center;
 }
 
@@ -213,7 +217,7 @@ body {
 }
 
 .portfolio-names {
-  color: white;
+  color: #FFFFFF;
   margin-bottom: 20px;
 }
 
@@ -249,20 +253,22 @@ body {
 
 /*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------*/
 
-.horizontal-scroll-wrapper {
-  margin-top: 250px;
+/*.horizontal-scroll-wrapper {*/
+/*  margin-top: 250px;*/
   
+/*}*/
+.horizontal-scroll-wrapper {
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+    margin-top: 250px
 }
-
-
-
-
 
 
 div.horizontal-scroll-wrapper {
   overflow: auto;
   white-space: nowrap;
-  width: fit-content;
+  
 }
 
 div.horizontal-scroll-wrapper .scroll-chart {
@@ -271,6 +277,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   padding-bottom: 40px;
 }
 
+/*---------------------------------READ MORE BUTTON-----------------------------------*/
 .read-more-btn {
   color: #fff !important;
   text-transform: uppercase;
@@ -581,7 +588,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   .title {
     text-align: center;
     padding-top: 30px;
-    color: white;
+    color: #FFFFFF;
   }
  
 body{
@@ -650,6 +657,11 @@ body{
     top: 650px;
     right: 20px;
     left: 20px;
+  
   }
+  .portfolio-header{
+    padding-top: 100px; 
+  }
+ 
 }
 

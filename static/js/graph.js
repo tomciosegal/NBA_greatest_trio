@@ -196,120 +196,61 @@ function show_total_points(ndx2) {
 
 }
 
-//  function show_teams_played(ndx2) {
+ function show_teams_played(ndx2) {
 
-//      function teamByPlayers(dimension, team) {
-//         return dimension.group().reduce(
-//             function (p, v) {
-//                 p.total++;
-
-//                 if(v.Tm == team) {
-//                     p.match++;
-//                 }
-//                 return p;
-//             },
-//             function (p, v) {
-//                 p.total--;
-//                 if(v.Tm == team) {
-//                     p.match--;
-//                 }
-//                 return p;
-//             },
-//             function () {
-//                 return {total: 0, match: 0};
-//             }
-//         );
-//     }
-
-//     var dim = ndx2.dimension(dc.pluck("Player"));
-
-//     var chi = teamByPlayers(dim, "CHI");
-//     var cle = teamByPlayers(dim, "CLE");
-//     var lal = teamByPlayers(dim, "LAL");
-//     var mia = teamByPlayers(dim, "MIA");
-//     var was = teamByPlayers(dim, "WAS");
-
-//     dc.barChart("#show_teams_played")
-//         .width(550)
-//         .height(450)
-//         .dimension(dim)
-//         .group(chi, "CHI")
-//         .stack(cle, "CLE")
-//         .stack(lal, "LAL")
-//         .stack(mia, "MIA")
-//         .stack(was, "WAS")
-//         .valueAccessor(function(d) {
-//             if(d.value.total > 0) {
-//                 return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
-//             } else {
-//                 return 0;
-//             }
-//         })
-//         .x(d3.scale.ordinal())
-//         .xUnits(dc.units.ordinal)
-//         .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-//         .margins({top: 10, right: 100, bottom: 30, left: 30});
-// }
-
-
-function show_teams_played(ndx2) {
-
-    function teamByPlayers(dimension, player) {
+     function teamByPlayers(dimension, team) {
         return dimension.group().reduce(
-            function(p, v) {
+            function (p, v) {
                 p.total++;
 
-                if (v.Player == player) {
+                if(v.Tm == team) {
                     p.match++;
                 }
                 return p;
             },
-            function(p, v) {
+            function (p, v) {
                 p.total--;
-                if (v.Player == player) {
+                if(v.Tm == team) {
                     p.match--;
                 }
                 return p;
             },
-            function() {
-                return { total: 0, match: 0 };
+            function () {
+                return {total: 0, match: 0};
             }
         );
     }
 
-    var playerColors = d3.scale.ordinal()
-        .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
-        .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
+    var dim = ndx2.dimension(dc.pluck("Player"));
 
-    var dim = ndx2.dimension(dc.pluck("Tm"));
-
-    var mj = teamByPlayers(dim, "Michael Jordan");
-    var kb = teamByPlayers(dim, "Kobe Bryant");
-    var lj = teamByPlayers(dim, "Lebron James");
-
+    var chi = teamByPlayers(dim, "CHI");
+    var cle = teamByPlayers(dim, "CLE");
+    var lal = teamByPlayers(dim, "LAL");
+    var mia = teamByPlayers(dim, "MIA");
+    var was = teamByPlayers(dim, "WAS");
 
     dc.barChart("#show_teams_played")
-        .width(600)
-        .height(500)
-        .colors(playerColors)
+        .width(650)
+        .height(700)
         .dimension(dim)
-        .xAxisLabel("Teams")
-        .group(mj, "Micheal Jordan")
-        .stack(kb, "Kobe Bryant")
-        .stack(lj, "Lebron James")
+        .group(chi, "CHI")
+        .stack(cle, "CLE")
+        .stack(lal, "LAL")
+        .stack(mia, "MIA")
+        .stack(was, "WAS")
         .on("pretransition", function(chart) {
             chart.selectAll("g.y text")
-                .style("font-size", "12px");
+                .style("font-size", "18px");
             chart.selectAll("g.x text")
-                .style("font-size", "12px");
+                .style("font-size", "18px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "130%")
+                .attr("width", "100%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
-                .attr("font-size", "15px")
+                .attr("font-size", "18px")
                 .attr("fill", "white");
             chart.selectAll("line")
                 .style("stroke", "#E5E5E5");
@@ -317,31 +258,111 @@ function show_teams_played(ndx2) {
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".line")
                 .style("stroke-width", "2.5");
-        })
-        
-
-
-    .valueAccessor(function(d) {
-            if (d.value.total > 0) {
+        })    
+        .valueAccessor(function(d) {
+            if(d.value.total > 0) {
                 return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
-            }
-            else {
+            } else {
                 return 0;
             }
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(400).y(-100).itemHeight(15).gap(20)
-        )
-        
-        .margins({ top: 10, right: 100, bottom: 120, left: 40 })
-        
-
-    ;
-
-
-
+        .legend(dc.legend().x(580).y(-20).itemHeight(25).gap(15))
+        .margins({top: 10, right: 100, bottom: 130, left: 50});
 }
+
+
+// function show_teams_played(ndx2) {
+
+//     function teamByPlayers(dimension, player) {
+//         return dimension.group().reduce(
+//             function(p, v) {
+//                 p.total++;
+
+//                 if (v.Player == player) {
+//                     p.match++;
+//                 }
+//                 return p;
+//             },
+//             function(p, v) {
+//                 p.total--;
+//                 if (v.Player == player) {
+//                     p.match--;
+//                 }
+//                 return p;
+//             },
+//             function() {
+//                 return { total: 0, match: 0 };
+//             }
+//         );
+//     }
+
+//     var playerColors = d3.scale.ordinal()
+//         .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
+//         .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
+
+//     var dim = ndx2.dimension(dc.pluck("Tm"));
+
+//     var mj = teamByPlayers(dim, "Michael Jordan");
+//     var kb = teamByPlayers(dim, "Kobe Bryant");
+//     var lj = teamByPlayers(dim, "Lebron James");
+
+
+//     dc.barChart("#show_teams_played")
+//         .width(600)
+//         .height(500)
+//         .colors(playerColors)
+//         .dimension(dim)
+//         .xAxisLabel("Teams")
+//         .group(mj, "Micheal Jordan")
+//         .stack(kb, "Kobe Bryant")
+//         .stack(lj, "Lebron James")
+//         .on("pretransition", function(chart) {
+//             chart.selectAll("g.y text")
+//                 .style("font-size", "12px");
+//             chart.selectAll("g.x text")
+//                 .style("font-size", "12px");
+//             chart.select("svg")
+//                 .attr("height", "100%")
+//                 .attr("width", "130%")
+//                 .attr("viewBox", "0 0 840 340");
+//             chart.selectAll(".dc-chart text")
+//                 .attr("fill", "#E5E5E5");
+//             chart.selectAll(".dc-legend-item text")
+//                 .attr("font-size", "15px")
+//                 .attr("fill", "white");
+//             chart.selectAll("line")
+//                 .style("stroke", "#E5E5E5");
+//             chart.selectAll(".domain")
+//                 .style("stroke", "#E5E5E5");
+//             chart.selectAll(".line")
+//                 .style("stroke-width", "2.5");
+//         })
+        
+
+
+//     .valueAccessor(function(d) {
+//             if (d.value.total > 0) {
+//                 return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
+//             }
+//             else {
+//                 return 0;
+//             }
+//         })
+//         .x(d3.scale.ordinal())
+//         .xUnits(dc.units.ordinal)
+//         .legend(dc.legend().x(400).y(-100).itemHeight(15).gap(20)
+//         )
+        
+//         .margins({ top: 10, right: 100, bottom: 120, left: 40 })
+        
+
+//     ;
+
+
+
+// }
 
 function show_main_stats_career_MJ(totalsForMJ) {
 
