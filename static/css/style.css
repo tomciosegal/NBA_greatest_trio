@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+}
+
+
 body {
   font-family: "Frijole";
   font-weight: 400;
@@ -70,9 +75,7 @@ body {
   height: 90px;
 }
 
-.container-fluid {
-  height: 90px;
-}
+
 
 #navHome {
   width: 2vh;
@@ -678,14 +681,27 @@ body{
   /*  position: absolute;*/
 
   }
-  /*.profile {*/
-  /*  min-height: 450px;*/
-  /*  min-width: 372px;*/
-  /*}*/
 
-  .footer-container {
-    width: 110%;
+
+  .profile{
+    max-width: 100%;
+    min-width: 100%;
   }
+  
+  .total-points-piechart{
+    right: 0;
+  }
+  
+  #button{
+    right: 10px;
+  }
+
+  .footer-content{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
   .footer-copyright {
     text-align: center;
   }
@@ -708,6 +724,12 @@ body{
 .points-chart{
   overflow-x: scroll;
 }
+
+.card-body-highest-points{
+  right: 0;
+}
+
+
 
 
 
@@ -746,4 +768,6 @@ body{
 }
  
 }
+
+
 

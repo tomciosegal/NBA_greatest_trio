@@ -1,345 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
-        content="Dashboard with statistics on NBA three greatest stars, featuring graphs made using D3, DC.js, and crossfilter.js">
+          content="Dashboard with statistics on NBA three greatest stars, featuring graphs made using D3, DC.js, and crossfilter.js">
     <title>NBA Greatest Hero</title>
-
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
-
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css"/>
     <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Frijole|Roboto:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/style.css" type="text/css"/>
 
-    
     <script type="text/javascript" src="static/js/d3.min.js"></script>
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
     <script type="text/javascript" src="static/js/graph.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="static/js/scripts.js"></script>
 </head>
-
 <body>
-    
-    
-    <!-- Back to top button -->
-  <a id="button"></a>
-  
-  
-    <!-- BEGIN NAVBAR -->
 
-    <div class="container-fluid navbar-container">
-        <nav class="navbar navbar-light bg-light fixed-top navbar-expand" id="navbar">
+<!-- Back to top button -->
+<a id="button"></a>
 
+<!-- BEGIN NAVBAR -->
+<div class="container-fluid navbar-container">
+    <nav class="navbar navbar-light bg-light fixed-top navbar-expand" id="navbar">
 
-            <!-- Dropdown Button -->
+        <!-- Dropdown Button -->
 
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <!-- Navbar Menu Items -->
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav nav-fill w-100" id="menuButtons">
+                <li class="active nav-item mr-2" id="navHome">
+                    <div class="nav-link hvr-bounce-in d-none d-lg-block"><a>
+                        <img src="static/images/basketball.png" class="img-fluid home-img" alt="basketball-icon">
+                        <p>HOME</p></a>
+                    </div>
+                </li>
 
-                <!-- Navbar Menu Items -->
-
-
-                <ul class="navbar-nav nav-fill w-100" id="menuButtons">
-
-                    <li class="active nav-item mr-2" id="navHome">
-                        <div class="nav-link hvr-bounce-in d-none d-lg-block"><a>
-                            <img src="static/images/basketball.png" class="img-fluid home-img" alt="basketball-icon">
-                            <p>HOME</p></a>
-                        </div>
-                    </li>
-
-
-                    <li class="active nav-item mr-2 mt-0 mb-0" id="navGen">
-                        <h3 class="title">NBA Greatest Trio Stats</h3>
-                    </li>
-
-                    <li class="active nav-item mr-2 d-none d-lg-block" id="Navreset">
-                        <a class="hvr-bounce-in btn-lg nav-link active d-inline-block nav-text" href="javascript: dc.filterAll(); dc.redrawAll();" data-step="5" data-intro="All graphs on the entire dashboard are connected. To reset them to default, click the redraw button."
-                            aria-pressed="true" id="resetLink"><i class="fas fa-redo-alt"></i> Reset Graphs</a>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-    
+                <li class="active nav-item mr-2 mt-0 mb-0" id="navGen">
+                    <h3 class="title">NBA Greatest Trio Stats</h3>
+                </li>
+                <li class="active nav-item mr-2 d-none d-lg-block" id="Navreset">
+                    <a class="hvr-bounce-in btn-lg nav-link active d-inline-block nav-text"
+                       href="javascript: dc.filterAll(); dc.redrawAll();" data-step="5"
+                       data-intro="All graphs on the entire dashboard are connected. To reset them to default, click the redraw button."
+                       aria-pressed="true" id="resetLink"><i class="fas fa-redo-alt"></i> Reset Graphs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- start of loading page -->
     <div class="loading-page ">
-    <section>
-    <div class="MJ-quote" id="mj-quote " >
-        <div class="css-typing d-none d-lg-block">
-  <p>
-    “I’ve missed more than 9000 shots in my career.
-  </p>
-  <p >
-    I’ve lost almost 300 games.
-  </p>
-  <p >
-   26 times, I’ve been trusted to take the game winning shot and missed
-  </p>
-  <p >
-    I’ve failed over and over
-  </p>
-  
-  <p>
-    and over again in my life. And that is why I succeed.”
-  </p>
-  
-  <p class="text-right">
-      Michael  Jordan
-  </p>
-  
-  
-</div>
-            
+        <div class="MJ-quote" id="mj-quote ">
+            <div class="css-typing d-none d-lg-block">
+                <p>
+                    “I’ve missed more than 9000 shots in my career.
+                </p>
+                <p>
+                    I’ve lost almost 300 games.
+                </p>
+                <p>
+                    26 times, I’ve been trusted to take the game winning shot and missed
+                </p>
+                <p>
+                    I’ve failed over and over
+                </p>
+                <p>
+                    and over again in my life. And that is why I succeed.”
+                </p>
+                <p class="text-right">
+                    Michael Jordan
+                </p>
+
             </div>
-            
+        </div>
 
         <div class="stat-button">
             <!--- Main button that directs to the dashboard section -->
-            <button type="button" class="btn flicker-in-1 hvr-bounce-in mx-auto d-block" id="main-btn"><img src="static/images/show-dashboard-button.jpg"
-                                    class="img-fluid rounded mx-auto d-block"
-                                    alt="linktofirstdashboard" /><h3 class="loading-page-text">Go To Stats</h3></button>
+            <button type="button" class="btn flicker-in-1 hvr-bounce-in mx-auto d-block" id="main-btn"><img
+                src="static/images/show-dashboard-button.jpg"
+                class="img-fluid rounded mx-auto d-block"
+                alt="linktofirstdashboard"/>
+                <h3 class="loading-page-text">Go To Stats</h3></button>
         </div>
-        
-    
+
     </div>
-
     <!-- end of loading page -->
-    
     <!-- BEGIN LANDING PAGE -->
-    
-    
+
     <section class="main">
-    <div class="content-container background dashboard-container">
-
-        
-
-
+        <div class="content-container background dashboard-container">
 
             <div class="container">
-                                <!--- PLAYERS PORTFOLIO -->
-                
+                <!--- PLAYERS PORTFOLIO -->
                 <div>
-                    <h3 class ="portfolio-header"align="center">Players Portfolio</h3>
+                    <h3 class="portfolio-header" align="center">Players Portfolio</h3>
                 </div>
-            <div class="row players-row ">
-                <div class="col-lg-4 col-md-12 col-sm-12 ">
-                    <div class="portfolio-MJ profile" id="totalNumberOfGamesPlayedMJ">
-                        <div><span class="MJ-facts portfolio-names">Micheal Jordan</span><br>Date of Birth:February 17, 1963 
-                            <br> New York City, New York<br>
-                            Teams Played: 1984-93 Chicago<br>
-                            1995-98 Chicago Bulls<br>
-                            2001–2003	Washington Wizards
-                            <p><span id="MJ-facts">...</span><span id="more">
+                <div class="row players-row ">
+                    <div class="col-lg-4 col-md-12 col-sm-12 ">
+                        <div class="portfolio-MJ profile" id="totalNumberOfGamesPlayedMJ">
+                            <div><span class="MJ-facts portfolio-names">Micheal Jordan</span><br>Date of Birth:February
+                                17, 1963
+                                <br> New York City, New York<br>
+                                Teams Played: 1984-93 Chicago<br>
+                                1995-98 Chicago Bulls<br>
+                                2001–2003 Washington Wizards
+                                <p><span id="MJ-facts">...</span><span id="more">
                                 6× NBA champion (1991–1993, 1996–1998)<br>
                                 6× NBA Finals MVP (1991–1993, 1996–1998)<br>
                                 14× NBA All-Star (1985–1993, 1996–1998, 2002, 2003)
                             </span></p>
-                            <button class= "read-more-btn" onclick="myFunction()" id="mjBtn">More Facts</button>
-                            
-                            
-                    </div>
-                        <img src="static/images/jordan.jpg" alt="jordan" width="100" height="160"/> Games Played:
+                                <button class="read-more-btn" onclick="myFunction()" id="mjBtn">More Facts</button>
+
+                            </div>
+                            <img src="static/images/jordan.jpg" alt="jordan" width="100" height="160"/> Games Played:
                         </div>
-</div>
-    
-    
-    
-    <div class="col-lg-4 col-md-12 col-sm-12 ">
-        
-                    <div class="portfolio-KB profile" id="totalNumberOfGamesPlayedKB">
-                    <div><span class="KB-facts portfolio-names">Kobe Bryant</span><br>Date of Birth:August 23,  1978 
-                        <br> Philadelphia, Pennsylvania<br>
-                        Teams Played:  1996–2016 Los Angeles Lakers<br>
-                        <p></p>
-                        
-                         
-                        <p><span id="KB-facts">...</span><span id="more1">
+                    </div>
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 ">
+                        <div class="portfolio-KB profile" id="totalNumberOfGamesPlayedKB">
+                            <div><span class="KB-facts portfolio-names">Kobe Bryant</span><br>Date of Birth:August 23,
+                                1978
+                                <br> Philadelphia, Pennsylvania<br>
+                                Teams Played: 1996–2016 Los Angeles Lakers<br>
+                                <p></p>
+
+                                <p><span id="KB-facts">...</span><span id="more1">
                             5× NBA champion (2000–2002, 2009, 2010)<br>
                             2× NBA Finals MVP (2009, 2010) <br>
                             18× NBA All-Star (1998, 2000–2016) <br>
-                            
                         </span></p>
-                            <button class= "read-more-btn" onclick="myFunction1()" id="kbBtn">More Facts</button>
+                                <button class="read-more-btn" onclick="myFunction1()" id="kbBtn">More Facts</button>
+                            </div>
+                            <img src="static/images/kobe.jpg" alt="jordan" width="100" height="160" </img> Games Played:
+                        </div>
                     </div>
-                        <img src="static/images/kobe.jpg" alt="jordan" width="100" height="160" </img> Games Played:
-                    </div>
-    </div>                
                     <div class="col-lg-4 col-md-12 col-sm-12 ">
                         <div class="portfolio-LJ profile" id="totalNumberOfGamesPlayedLJ">
-                        <div><span class="LJ-facts portfolio-names">Lebron James</span><br>Date of Birth:December 30 1984 
-                         
-                        <br> Akron, Ohio<br>
-                        Teams Played: 2003–2010	Cleveland Cavaliers<br>
-                        2010–2014	 Miami Heat
-                        
-                        
-                        <p><span id="LJ-facts">...</span><span id="more2">2014–2018	 Cleveland Cavaliers<br>2018–present Los Angeles Lakers<br>
+                            <div><span class="LJ-facts portfolio-names">Lebron James</span><br>Date of Birth:December 30
+                                1984
+                                <br> Akron, Ohio<br>
+                                Teams Played: 2003–2010 Cleveland Cavaliers<br>
+                                2010–2014 Miami Heat
+
+                                <p><span id="LJ-facts">...</span><span id="more2">2014–2018	 Cleveland Cavaliers<br>2018–present Los Angeles Lakers<br>
                         3× NBA champion (2012, 2013, 2016)<br>
                         3× NBA Finals MVP (2012, 2013, 2016)<br>
                         4× NBA Most Valuable Player (2009, 2010, 2012, 2013)<br>
-                      
-                       
-                        
+
                         </span></p>
-                            <button class= "read-more-btn" onclick="myFunction2()" id="ljBtn">More Facts</button>
+                                <button class="read-more-btn" onclick="myFunction2()" id="ljBtn">More Facts</button>
+                            </div>
+                            <img src="static/images/james.jpg" alt="james" width="100" height="160" </img> Games Played:
                         </div>
-                        <img src="static/images/james.jpg" alt="james" width="100" height="160" </img> Games Played:
                     </div>
-                    </div>
-            </div>
-                 
-                 <!--- TOTAL POINTS SCORED CHART -->
-                    
-            <div class="row jusify-content-center my-4">
-                    <div class="col-lg-6 col-md-12 col-sm-12 total-points-piechart card-body" id="points-season-playoffs">
-                        <div class="card-header">Total Points Scorred </div><br>
-                        <div><span></span>
-                        
-                        <p><span id="see-comments"></span><span  class="comments-txt" id="comments">
+                </div>
+                <!--- TOTAL POINTS SCORED CHART -->
+                <div class="row jusify-content-center my-4">
+                    <div class="col-lg-6">
+                        <div class="card-header">Total Points Scorred</div>
+                        <br>
+
+                        <p><span id="see-comments"></span><span class="comments-txt" id="comments">
                         This chart shows total amount of points <br>that every player scored over career.<br>
                         As we can see the best score has Micheal Jordan with his avarage of over 30 points per game <br>then in second place is Lebron James
                         with just over 27 points per game and lastly Kobe Bryant with avarege of over 25 points per game.
                             </span></p>
-                            <button class= "read-more-btn" onclick="commentsFunction()" id="points-comments">See comments</button>
-                            
-                        </div>
-                      
-                      - TEAM PLAYED CHART 
-                        
-                    <div class="col-lg-6 col-md-12 col-sm-12 teams-played-stakedchart card-body" id="show_teams_played">
-                        <div class="card-header">Team Played By Player </div>
-                        
-                        <div><p><span id="see-comments1"></span><span  class="comments-txt" id="comments1">
+                        <div id="points-season-playoffs"></div>
+                        <button class="read-more-btn" onclick="commentsFunction()" id="points-comments">See comments
+                        </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-header">Team Played By Player</div>
+                        <div><p><span id="see-comments1"></span><span class="comments-txt" id="comments1">
                         On this chart we can see percentage of the time players <br>
                         spent in in each team they ever played. We can see Kobe's Bryant loyality to the team<br>
                         as he only played for Los Angeles Lakers.
                             </span></p>
-                            <button class= "read-more-btn" onclick="commentsFunction1()" id="points-comments1">See comments</button>
-                            
-                            
+                            <div id="show_teams_played"></div>
+                            <button class="read-more-btn" onclick="commentsFunction1()" id="points-comments1">See
+                                comments
+                            </button>
+                        </div>
                     </div>
-                        
-                    </div>
-                </div>
-            </div>
-                
-                <!--- HIGHEST POINT CHART -->
-                
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points" id="highest-points-per-season">
-                        <div class="card-header">Highest points in season </div>
-                        <div><p><span id="see-comments2"></span><span  class="comments-txt" id="comments2">
+                    <!--- HIGHEST POINT CHART -->
+                    <div class="row" style="overflow-x: scroll;">
+                        <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points"
+                             id="highest-points-per-season">
+                            <div class="card-header">Highest points in season</div>
+                            <div><p><span id="see-comments2"></span><span class="comments-txt" id="comments2"
+                                                                          style="display:none;">
                         This scattered chart shows players highest points in season.  <br>
                         An abolute winner is Kobe Bryant as he scored staggering 81 points in 2006 against Toronto Raptors.
                             </span></p>
-                            <button class= "read-more-btn" onclick="commentsFunction2()" id="points-comments2">See comments</button>
-                            
-                            
-                    </div>
-                    </div>
-                    
-                    <!--- SALARY  CHART -->
-                    
-                    <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary" id="salary-vs-season">
-                        <div class="card-header">Salary earned in season </div>
-                        
-                            <div><p><span id="see-comments3"></span><span  class="comments-txt" id="comments3">
+                                <button class="read-more-btn" onclick="commentsFunction2()" id="points-comments2">See
+                                    comments
+                                </button>
+
+                            </div>
+                        </div>
+                        <!--- SALARY  CHART -->
+                        <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary">
+                            <div class="card-header">Salary earned in season</div>
+                            <div><p><span id="see-comments3"></span><span class="comments-txt" id="comments3">
                             Here we have very intersting chart showing each player earnings<br>
                             for every season played. Clearly you can see Micheal Jordan was best paid<br>
                             player of all times making over 33 milion dollars in season 97-98.<br>
                             Lebron James salary is very similar but... that is over 20 years later..
                             </span></p>
-                            <button class= "read-more-btn" onclick="commentsFunction3()" id="points-comments3">See comments</button>
-                            
-                            
-                    </div>
-                            
-                        
+                                <div id="salary-vs-season"></div>
+
+                                <button class="read-more-btn" onclick="commentsFunction3()" id="points-comments3">See
+                                    comments
+                                </button>
+
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
+                <!--- MAIN STATS CHART -->
+                <div class="horizontal-scroll-wrapper">
+                    <div class="total-points-piechart card-body-MJ" id="show_points_over_career_MJ">
+                        <div class="card-header">Micheal Jordan Total Assists, Blocks, Steals</div>
+                    </div>
 
-                
+                    <div class="total-points-piechart card-body-KB" id="show_points_over_career_KB">
+                        <div class="card-header">>Kobe Bryant Total Assists, Blocks, Steals</div>
+                    </div>
 
+                    <div class="total-points-piechart card-body-LJ" id="show_points_over_career_LJ">
+                        <div class="card-header">>James Lebron Total Assists, Blocks, Steals</div>
+                    </div>
+
+                </div>
             </div>
-            
-            <!--- MAIN STATS CHART -->
-            
-              <div class="horizontal-scroll-wrapper">
-        
-            <div class="total-points-piechart card-body-MJ" id="show_points_over_career_MJ">
-                <div class="card-header">Micheal Jordan Total Assists, Blocks, Steals </div>
-            </div>
-        
+        </div>
+    </section>
 
-        
-            <div class="total-points-piechart card-body-KB" id="show_points_over_career_KB">
-                <div class="card-header">>Kobe Bryant Total Assists, Blocks, Steals </div>
-            </div>
-        
-
-        
-            <div class="total-points-piechart card-body-LJ" id="show_points_over_career_LJ">
-                <div class="card-header">>James Lebron Total Assists, Blocks, Steals </div>
-            </div>
-        
-
-    </div>
-    </div>
-        </section>
-
-
-      
-    
-       <!--- BEGIN FOOTER -->
-
+    <!--- BEGIN FOOTER -->
     <footer>
         <div class="footer-container">
 
-
             <!--- Copyright -->
-
             <div class="row footer-content">
                 <div class="col-xs-12 col-sm-4">
                     <div class="footer-copyright">&copy;2019 Tomasz Cygal</div>
                 </div>
-
                 <!--- Github link & logo -->
-
                 <div class="col-xs-12 col-sm-4">
-                    <a href="https://github.com/tomciosegal" target="_blank"><i class="fab fa-github github-logo"></i></a>
+                    <a href="https://github.com/tomciosegal" target="_blank"><i
+                        class="fab fa-github github-logo"></i></a>
                 </div>
-
                 <!--- Link to data source from Kaggle -->
-
 
                 <div class="col-xs-12 col-sm-4 data-source-footer">
                     <div>Original unmodified dataset sourced from <span><a
-                                href="https://www.kaggle.com/xvivancos/michael-jordan-kobe-bryant-and-lebron-james-stats#totals_stats.csv"
-                                target="_blank">kaggle</a></span>.</div>
+                        href="https://www.kaggle.com/xvivancos/michael-jordan-kobe-bryant-and-lebron-james-stats#totals_stats.csv"
+                        target="_blank">kaggle</a></span>.
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-
-    </div>
-
 </div>
-</body>
 
+</body>
 </html>
