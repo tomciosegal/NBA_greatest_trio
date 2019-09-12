@@ -16,6 +16,28 @@ $(document).ready(function () {
             $(".dashboard-container").fadeIn(1000);
         });
     }); 
+    
+    
+    
+    // Back to top button
+
+/**
+ * Function implements smooth scrolling back to top after clicking the button
+ */
+    let btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(d) {
+  d.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 
    // Upon clicking upon the home button, should take to landing page
 
@@ -40,7 +62,9 @@ $('footer').load('.loading-page', function() {
     });
     
 
-
+/**
+ * Function read more button
+ */
 
 });
 
@@ -52,11 +76,11 @@ function myFunction() {
 
   if (MJ_facts.style.display === "none") {
     MJ_facts.style.display = "inline";
-    btnText.innerHTML = "Read more"; 
+    btnText.innerHTML = "More facts"; 
     moreText.style.display = "none";
   } else {
     MJ_facts.style.display = "none";
-    btnText.innerHTML = "Read less"; 
+    btnText.innerHTML = "Less Facts"; 
     moreText.style.display = "inline";
   }
 }
@@ -69,11 +93,11 @@ function myFunction1() {
 
   if (KB_facts.style.display === "none") {
     KB_facts.style.display = "inline";
-    btnText1.innerHTML = "Read more"; 
+    btnText1.innerHTML = "More facts"; 
     moreText1.style.display = "none";
   } else {
     KB_facts.style.display = "none";
-    btnText1.innerHTML = "Read less"; 
+    btnText1.innerHTML = "Less Facts"; 
     moreText1.style.display = "inline";
   }
 }
@@ -86,12 +110,86 @@ function myFunction2() {
 
   if (LJ_facts.style.display === "none") {
     LJ_facts.style.display = "inline";
-    btnText2.innerHTML = "Read more"; 
+    btnText2.innerHTML = "More facts"; 
     moreText2.style.display = "none";
   } else {
     LJ_facts.style.display = "none";
-    btnText2.innerHTML = "Read less"; 
+    btnText2.innerHTML = "Less Facts"; 
     moreText2.style.display = "inline";
+  }
+}
+
+
+
+/**
+ * Function see comments button
+ */
+
+function commentsFunction(){
+  
+  var see_comments = document.getElementById("see-comments");
+  var moreComment = document.getElementById("comments");
+  var btnComment = document.getElementById("points-comments");
+
+  if (see_comments.style.display === "none") {
+   see_comments.style.display = "inline";
+    btnComment.innerHTML = "See comments"; 
+    moreComment.style.display = "none";
+  } else {
+    see_comments.style.display = "none";
+    btnComment.innerHTML = "Hide comment"; 
+    moreComment.style.display = "inline";
+  }
+}
+
+function commentsFunction1(){
+  
+  var see_comments1 = document.getElementById("see-comments1");
+  var moreComment1 = document.getElementById("comments1");
+  var btnComment1 = document.getElementById("points-comments1");
+
+  if (see_comments1.style.display === "none") {
+   see_comments1.style.display = "inline";
+    btnComment1.innerHTML = "See comments"; 
+    moreComment1.style.display = "none";
+  } else {
+    see_comments1.style.display = "none";
+    btnComment1.innerHTML = "Hide comment"; 
+    moreComment1.style.display = "inline";
+  }
+}
+
+function commentsFunction2(){
+  
+  var see_comments2 = document.getElementById("see-comments2");
+  var moreComment2 = document.getElementById("comments2");
+  var btnComment2 = document.getElementById("points-comments2");
+
+  if (see_comments2.style.display === "none") {
+   see_comments2.style.display = "inline";
+    btnComment2.innerHTML = "See comments"; 
+    moreComment2.style.display = "none";
+  } else {
+    see_comments2.style.display = "none";
+    btnComment2.innerHTML = "Hide comment"; 
+    moreComment2.style.display = "inline";
+  }
+}
+
+function commentsFunction3(){
+  
+  var see_comments3 = document.getElementById("see-comments3");
+  var moreComment3 = document.getElementById("comments3");
+  var btnComment3 = document.getElementById("points-comments3");
+
+  if (see_comments3.style.display === "none") {
+   see_comments3.style.display = "inline";
+    btnComment3.innerHTML = "See comments"; 
+    moreComment3.style.display = "none";
+  } else {
+    see_comments3.style.display = "none";
+    btnComment3.innerHTML = "Hide comment"; 
+    moreComment3.style.display = "inline";
   }
 }
 
@@ -100,49 +198,5 @@ function myFunction2() {
 
 
 
-// set up text to print, each item in array is new line
-// var aText = new Array(
 
-"“I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times",
-"I’ve been trusted to take the game winning shot and missed.I’ve failed over and over",
-"and over again in my life. And that is why I succeed.“",
-
-// );
-// var iSpeed = 100; // time delay of print out
-// var iIndex = 0; // start printing array at this posision
-// var iArrLength = aText[0].length; // the length of the text array
-// var iScrollAt = 20; // start scrolling up at this many lines
- 
-// var iTextPos = 0; // initialise text position
-// var sContents = ''; // initialise contents variable
-// var iRow; // initialise current row
- 
-
-
-
-
-// function typewriter()
-// {
-//  sContents =  ' ';
-//  iRow = Math.max(0, iIndex-iScrollAt);
-//  var destination = document.getElementsByClassName("MJ-quote");
-//  while ( iRow < iIndex ) {
-//   sContents += aText[iRow++] + '<br />';
-//  }
- document.getElementsByClassName("MJ-quote").innerHTML = "Lorem ipsum dolor sit amet, consect";
- /*if ( iTextPos++ == iArrLength ) {
-  console.log('>>>>>', iTextPos)
-  iTextPos = 0;
-  iIndex++;
-  if ( iIndex != aText.length ) {
-   iArrLength = aText[iIndex].length;
-   setTimeout(typewriter(), 500);
-  }
- } else {
-  setTimeout(typewriter(), iSpeed);
- }*/
-// }
-
-
-// typewriter();
 

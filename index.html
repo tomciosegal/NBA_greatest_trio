@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="description"
+        content="Dashboard with statistics on NBA three greatest stars, featuring graphs made using D3, DC.js, and crossfilter.js">
+    <title>NBA Greatest Hero</title>
 
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
@@ -29,6 +31,12 @@
 </head>
 
 <body>
+    
+    
+    <!-- Back to top button -->
+  <a id="button"></a>
+  
+  
     <!-- BEGIN NAVBAR -->
 
     <div class="container-fluid navbar-container">
@@ -193,40 +201,74 @@
                     </div>
                     </div>
             </div>
+                 
+                 <!--- TOTAL POINTS SCORED CHART -->
                     
-                <div class="row jusify-content-center my-4">
+            <div class="row jusify-content-center my-4">
                     <div class="col-lg-6 col-md-12 col-sm-12 total-points-piechart card-body" id="points-season-playoffs">
                         <div class="card-header">Total Points Scorred </div><br>
-                        <p class= "chart-comments">This chart shows total amount of points <br>that every player scored over career.<br>
-                        As we can see the best scored Micheal Jordan as he an avarage over 30 points per game <br>then second place is Lebron James
+                        <div><span></span>
+                        
+                        <p><span id="see-comments"></span><span  class="comments-txt" id="comments">
+                        This chart shows total amount of points <br>that every player scored over career.<br>
+                        As we can see the best score has Micheal Jordan with his avarage of over 30 points per game <br>then in second place is Lebron James
                         with just over 27 points per game and lastly Kobe Bryant with avarege of over 25 points per game.
-                        Kobe Bryant as he played over thousand games more than Michael Jordan scoring only </p>
-                    </div>
-                    
-                    
+                            </span></p>
+                            <button class= "read-more-btn" onclick="commentsFunction()" id="points-comments">See comments</button>
+                            
+                        </div>
+                      
+                      - TEAM PLAYED CHART 
+                        
                     <div class="col-lg-6 col-md-12 col-sm-12 teams-played-stakedchart card-body" id="show_teams_played">
                         <div class="card-header">Team Played By Player </div>
-                        <p class= "chart-comments"> On this chart we can see percentage of the time players <br>
+                        
+                        <div><p><span id="see-comments1"></span><span  class="comments-txt" id="comments1">
+                        On this chart we can see percentage of the time players <br>
                         spent in in each team they ever played. We can see Kobe's Bryant loyality to the team<br>
-                        as he only played for Los Angeles Lakers</p>
+                        as he only played for Los Angeles Lakers.
+                            </span></p>
+                            <button class= "read-more-btn" onclick="commentsFunction1()" id="points-comments1">See comments</button>
+                            
+                            
+                    </div>
+                        
                     </div>
                 </div>
+            </div>
+                
+                <!--- HIGHEST POINT CHART -->
                 
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points" id="highest-points-per-season">
                         <div class="card-header">Highest points in season </div>
-                        <p class= "chart-comments">This scattered chart shows players highest points in season.  <br>
+                        <div><p><span id="see-comments2"></span><span  class="comments-txt" id="comments2">
+                        This scattered chart shows players highest points in season.  <br>
                         An abolute winner is Kobe Bryant as he scored staggering 81 points in 2006 against Toronto Raptors.
-                        </p>
+                            </span></p>
+                            <button class= "read-more-btn" onclick="commentsFunction2()" id="points-comments2">See comments</button>
+                            
+                            
                     </div>
+                    </div>
+                    
+                    <!--- SALARY  CHART -->
+                    
                     <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary" id="salary-vs-season">
                         <div class="card-header">Salary earned in season </div>
-                        <p class= "chart-comments">
+                        
+                            <div><p><span id="see-comments3"></span><span  class="comments-txt" id="comments3">
                             Here we have very intersting chart showing each player earnings<br>
                             for every season played. Clearly you can see Micheal Jordan was best paid<br>
                             player of all times making over 33 milion dollars in season 97-98.<br>
-                            Lebron James salary is very similar but... that is over 20 years later.
-                        </p>
+                            Lebron James salary is very similar but... that is over 20 years later..
+                            </span></p>
+                            <button class= "read-more-btn" onclick="commentsFunction3()" id="points-comments3">See comments</button>
+                            
+                            
+                    </div>
+                            
+                        
                     </div>
 
                 </div>
@@ -235,6 +277,7 @@
 
             </div>
             
+            <!--- MAIN STATS CHART -->
             
               <div class="horizontal-scroll-wrapper">
         

@@ -8,10 +8,52 @@ body {
 
 }
 
-.row, 
-.container {
-    margin: 0px;
-    padding: 0px;
+/*.row, */
+/*.container {*/
+/*    margin: 0px;*/
+/*    padding: 0px;*/
+/*}*/
+
+#button {
+    display: inline-block;
+    background-color: transparent;
+    color: #3959BA;
+    border: 2px solid #3959ba70;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 3px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 97;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+}
+
+#button:active {
+    color: #3959BA;
+    background-color: #3959ba70;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #3959ba70;
 }
 
 /*section {*/
@@ -114,7 +156,7 @@ body {
 
 .salary-chart {
   padding-right: 0;
-  background-color: #151307c2;
+  background-color: #151307db;
   
   
 }
@@ -141,7 +183,7 @@ body {
 
 
 .card-body-highest-points {
-  background-color: #151307c2;
+  background-color: #151307db;
   top: 140px;
   right: 40px;
   
@@ -165,16 +207,16 @@ body {
 }
 
 .card-body-MJ {
-  background-color: #151307c2;
+  background-color: #151307db;
   right: 40px;
 }
 
 .card-body-KB {
-  background-color: #151307c2;
+  background-color: #151307db;
 }
 
 .card-body-LJ {
-  background-color: #151307c2;
+  background-color: #151307db;
   left: 40px;
   right: 0;
 }
@@ -190,6 +232,11 @@ body {
 .portfolio-header {
   color: #FFFFFF;
   text-align: center;
+  margin-top: 40px;
+  padding-top: 80px;
+}
+.comments-txt{
+  color: #FFFFFF;
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
@@ -263,7 +310,8 @@ body {
     overflow-x: scroll;
     white-space: nowrap;
     display: flex;
-    margin-top: 250px
+    margin-top: 250px;
+    overflow-y:hidden;
 }
 
 
@@ -274,8 +322,7 @@ div.horizontal-scroll-wrapper {
 }
 
 div.horizontal-scroll-wrapper .scroll-chart {
-  ?
-  width: 70%;
+  width: 100%;
   padding-bottom: 40px;
 }
 
@@ -316,6 +363,32 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
 #more2 {
   display: none
+}
+
+
+/*---------------------------------SEE COMMENTS BUTTON-----------------------------------*/
+
+.see-comments-btn {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #164a7b;
+  padding: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 0px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.see-comments-btn:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  background-color: #2b98ff7a;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 /*---------------------------------TYPEWRITER FOR MJ QUOTE ON LANDING PAGE-----------------------------------*/
