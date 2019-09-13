@@ -13,15 +13,6 @@ body {
   background-size: cover;
 }
 
-/*.row, */
-
-/*.container {*/
-
-/*    margin: 0px;*/
-
-/*    padding: 0px;*/
-
-/*}*/
 
 #button {
   display: inline-block;
@@ -66,11 +57,7 @@ body {
   background-color: #3959ba70;
 }
 
-/*section {*/
 
-/*  width: 100%;*/
-
-/*}*/
 
 /*---------------------------------NAVBAR-----------------------------------*/
 
@@ -202,7 +189,7 @@ body {
 .card-body-salary {
   left: 0px;
   right: 40px;
-  top: 200px;
+  top: 120px;
   background-color: #151307c2;
   border-color: azure;
 
@@ -251,7 +238,6 @@ body {
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
-
 .players-row {
   margin-top: 30px;
 }
@@ -277,6 +263,9 @@ body {
 .portfolio-names {
   color: #FFFFFF;
   margin-bottom: 20px;
+}
+.comments{
+  padding-top: 120px;
 }
 
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
@@ -321,7 +310,7 @@ body {
 
 
 div.horizontal-scroll-wrapper {
-  overflow: auto;
+  overflow-x: scroll;
   white-space: nowrap;
 
 }
@@ -727,10 +716,23 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
   .card-body-highest-points {
     right: 0;
+    overflow-x: scroll;
   }
   .home-img {
     padding-top: 23px;
   }
+  
+  .row{
+  overflow-x: scroll
+}
+.comments{
+  padding-top: 140px;
+  
+}
+
+.comments1{
+  
+}
 }
 
 
@@ -791,6 +793,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
   #points-season-playoffs {
     padding-left: 170px;
   }
-
-  .pie-chart {}
+.row {
+  overflow-x: scroll
+}
+  .comments{
+    padding-top: 40px;
+  }
 }
