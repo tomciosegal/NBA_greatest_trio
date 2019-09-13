@@ -204,11 +204,11 @@ function commentsFunction3(){
 
   if (see_summary.style.display === "none") {
    see_summary.style.display = "inline";
-    btnSummary.innerHTML = "See comments"; 
+    btnSummary.innerHTML = "See summary"; 
     moreSummary.style.display = "none";
   } else {
     see_summary.style.display = "none";
-    btnSummary.innerHTML = "Hide comment"; 
+    btnSummary.innerHTML = "Hide summary"; 
     moreSummary.style.display = "inline";
   }
 }

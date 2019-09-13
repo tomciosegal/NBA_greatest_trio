@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -14,48 +14,53 @@ body {
 }
 
 /*.row, */
+
 /*.container {*/
+
 /*    margin: 0px;*/
+
 /*    padding: 0px;*/
+
 /*}*/
 
 #button {
-    display: inline-block;
-    background-color: transparent;
-    color: #3959BA;
-    border: 2px solid #3959ba70;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 3px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s,
-    opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 97;
+  display: inline-block;
+  background-color: transparent;
+  color: #3959BA;
+  border: 2px solid #3959ba70;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 3px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 97;
 }
 
 #button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
 }
 
 #button:active {
-    color: #3959BA;
-    background-color: #3959ba70;
+  color: #3959BA;
+  background-color: #3959ba70;
 }
 
 #button.show {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
+
 #button:hover {
   cursor: pointer;
   background-color: #3959ba70;
@@ -127,7 +132,7 @@ body {
 }
 
 .mobile-img {
-   width: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -146,22 +151,23 @@ body {
   padding-left: 300px;
 }
 
-.chart-comments{
-  color:#FFFFFF;
+.chart-comments {
+  color: #FFFFFF;
   text-align: justify;
 }
+
 /*---------------------------------CHARTS-----------------------------------*/
 
 .points-chart {
   padding-left: 0;
-  
+
 }
 
 .salary-chart {
   padding-right: 0;
   background-color: #151307db;
-  
-  
+
+
 }
 
 .total-points-piechart {
@@ -172,11 +178,11 @@ body {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0px;
-  
+
 }
 
 .teams-played-stakedchart {
- padding: 0px;
+  padding: 0px;
   top: 100px;
   background-color: #151307c2;
   padding-bottom: 80px;
@@ -189,7 +195,7 @@ body {
   background-color: #151307db;
   top: 140px;
   right: 40px;
-  
+
 
 }
 
@@ -238,13 +244,13 @@ body {
   margin-top: 40px;
   padding-top: 80px;
 }
-.comments-txt{
+
+.comments-txt {
   color: #FFFFFF;
+  background-color: #22150a;
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
-
-
 
 .players-row {
   margin-top: 30px;
@@ -305,23 +311,19 @@ body {
 
 /*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------*/
 
-/*.horizontal-scroll-wrapper {*/
-/*  margin-top: 250px;*/
-  
-/*}*/
 .horizontal-scroll-wrapper {
-    overflow-x: scroll;
-    white-space: nowrap;
-    display: flex;
-    margin-top: 250px;
-    overflow-y:hidden;
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  margin-top: 150px;
+  overflow-y: hidden;
 }
 
 
 div.horizontal-scroll-wrapper {
   overflow: auto;
   white-space: nowrap;
-  
+
 }
 
 div.horizontal-scroll-wrapper .scroll-chart {
@@ -330,6 +332,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
 }
 
 /*---------------------------------READ MORE BUTTON-----------------------------------*/
+
 .read-more-btn {
   color: #fff !important;
   text-transform: uppercase;
@@ -366,6 +369,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
 #more2 {
   display: none
+}
+
+#summary-comments {
+  margin-bottom: 40px;
 }
 
 
@@ -666,42 +673,35 @@ div.horizontal-scroll-wrapper .scroll-chart {
   .title {
     text-align: center;
     padding-top: 30px;
+    padding-left: 45px;
     color: #FFFFFF;
   }
- 
-body{
-           background: url('../images/mobile-bg.jpg') no-repeat center center fixed;
-           background-size: cover;
-           height: 100%;
-           background-attachment: fixed;
-           
-         }
 
-  /*.fixed-top {*/
-  /*  position: absolute;*/
+  body {
+    background: url('../images/mobile-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
 
   }
 
-
-  .profile{
+  .profile {
     max-width: 100%;
     min-width: 100%;
   }
-  
-  .total-points-piechart{
+
+  .total-points-piechart {
     right: 0;
   }
-  
-  #button{
+
+  #button {
     right: 10px;
   }
 
-  .footer-content{
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-
+  /*.footer-content {*/
+  /*  margin-left: 0;*/
+  /*  margin-right: 0;*/
+  /*}*/
   .footer-copyright {
     text-align: center;
   }
@@ -711,22 +711,26 @@ body{
   .data-source-footer {
     text-align: center;
   }
-  .mobile-bg{
+  .mobile-bg {
     top: 40px;
   }
-  .total-points-piechart{
+  .total-points-piechart {
     width: 100%;
 
-}
-.salary-chart{
-  overflow-x: scroll;
-}
-.points-chart{
-  overflow-x: scroll;
-}
+  }
+  .salary-chart {
+    overflow-x: scroll;
+  }
+  .points-chart {
+    overflow-x: scroll;
+  }
 
-.card-body-highest-points{
-  right: 0;
+  .card-body-highest-points {
+    right: 0;
+  }
+  .home-img {
+    padding-top: 23px;
+  }
 }
 
 
@@ -736,46 +740,57 @@ body{
 
 /* ------------ MEDIUM DEVICES ----------*/
 
- @media screen and (min-width:751px) and (max-width:900px) {
-  
-  body{
-           background: url('../images/basketball-bg.jpg');
-           background-size: cover;
-           height: 100%;
-           background-attachment: fixed;
-           
-         }
-  
+@media screen and (min-width:751px) and (max-width:900px) {
+
+  body {
+    background: url('../images/basketball-bg.jpg');
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+
+  }
+
   .title {
-    padding-top: 20px;
-    text-align: left;;
+    text-align: left;
+    ;
   }
   .stat-button {
-    top: 500px;
-    right: 0px;
-    left: 370px;
+    left: 279px;
+    top: 800px;
   }
   .card-body-highest-points {
     overflow-x: scroll;
-    
+
   }
   .MJ-quote {
     top: 650px;
     right: 20px;
     left: 20px;
-  
+
   }
-  .portfolio-header{
-    padding-top: 100px; 
+  .portfolio-header {
+    padding-top: 100px;
   }
-  .salary-chart{
-  overflow-x: scroll;
-}
-.points-chart{
-  overflow-x: scroll;
-}
- 
-}
+  .salary-chart {
+    overflow-x: scroll;
+  }
+  .points-chart {
+    overflow-x: scroll;
+    top: 45px;
+    left: 0px;
+    right: 0px;
+    padding-left: 20px;
+  }
 
+  .players-row {
+    padding-left: 175px;
+  }
+  .profile {
+    width: 450px;
+  }
+  #points-season-playoffs {
+    padding-left: 170px;
+  }
 
-
+  .pie-chart {}
+}

@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description"
           content="Dashboard with statistics on NBA three greatest stars, featuring graphs made using D3, DC.js, and crossfilter.js">
+          
     <title>NBA Greatest Hero</title>
+    
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css"/>
-    <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -32,9 +33,11 @@
 <body>
 
 <!-- Back to top button -->
+
 <a id="button"></a>
 
 <!-- BEGIN NAVBAR -->
+
 <div class="container-fluid navbar-container">
     <nav class="navbar navbar-light bg-light fixed-top navbar-expand" id="navbar">
 
@@ -45,7 +48,7 @@
 
             <ul class="navbar-nav nav-fill w-100" id="menuButtons">
                 <li class="active nav-item mr-2" id="navHome">
-                    <div class="nav-link hvr-bounce-in d-none d-lg-block"><a>
+                    <div class="nav-link hvr-bounce-in"><a>
                         <img src="static/images/basketball.png" class="img-fluid home-img" alt="basketball-icon">
                         <p>HOME</p></a>
                     </div>
@@ -65,6 +68,7 @@
     </nav>
 
     <!-- start of loading page -->
+    
     <div class="loading-page ">
         <div class="MJ-quote" id="mj-quote ">
             <div class="css-typing d-none d-lg-block">
@@ -101,18 +105,24 @@
 
     </div>
     <!-- end of loading page -->
+    
     <!-- BEGIN LANDING PAGE -->
 
     <section class="main">
         <div class="content-container background dashboard-container">
 
             <div class="container">
+                
                 <!--- PLAYERS PORTFOLIO -->
                 <div>
+                    
                     <h3 class="portfolio-header" align="center">Players Portfolio</h3>
                 </div>
                 <div class="row players-row ">
                     <div class="col-lg-4 col-md-12 col-sm-12 ">
+                        
+                         <!--- MICHEAL JORDAN  -->
+                         
                         <div class="portfolio-MJ profile" id="totalNumberOfGamesPlayedMJ">
                             <div><span class="MJ-facts portfolio-names">Micheal Jordan</span><br>Date of Birth:February
                                 17, 1963
@@ -133,6 +143,9 @@
                     </div>
 
                     <div class="col-lg-4 col-md-12 col-sm-12 ">
+                        
+                         <!--- KOBE BRYANT -->
+                         
                         <div class="portfolio-KB profile" id="totalNumberOfGamesPlayedKB">
                             <div><span class="KB-facts portfolio-names">Kobe Bryant</span><br>Date of Birth:August 23,
                                 1978
@@ -150,7 +163,11 @@
                             <img src="static/images/kobe.jpg" alt="jordan" width="100" height="160" </img> Games Played:
                         </div>
                     </div>
+                    
                     <div class="col-lg-4 col-md-12 col-sm-12 ">
+                        
+                         <!--- LEBRON JAMES -->
+                         
                         <div class="portfolio-LJ profile" id="totalNumberOfGamesPlayedLJ">
                             <div><span class="LJ-facts portfolio-names">Lebron James</span><br>Date of Birth:December 30
                                 1984
@@ -170,9 +187,11 @@
                         </div>
                     </div>
                 </div>
-                <!--- TOTAL POINTS SCORED CHART -->
+                
+                <!--- TOTAL POINTS SCORED PIECHART -->
+                
                 <div class="row jusify-content-center my-4">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="card-header">Total Points Scorred</div>
                         <br>
 
@@ -186,20 +205,25 @@
                         </button>
                     </div>
                     
-                    <div class="col-lg-6">
+                     <!--- TEAM PLAYED CHART -->
+                     
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="card-header">Team Played By Player</div>
                         <div><p><span id="see-comments1"></span><span class="comments-txt" id="comments1" style="display:none;">
                         On this chart we can see percentage of the time players <br>
                         spent in in each team they ever played. We can see Kobe's Bryant loyality to the team<br>
                         as he only played for Los Angeles Lakers.
                             </span></p>
-                            <div id="show_teams_played"></div>
-                            <button class="read-more-btn" onclick="commentsFunction1()" id="points-comments1">See
+                            <div id="show_teams_played" class="pie-chart"></div>
+                            
+                        </div>
+                        <button class="read-more-btn" onclick="commentsFunction1()" id="points-comments1">See
                                 comments
                             </button>
-                        </div>
                     </div>
+                    
                     <!--- HIGHEST POINT CHART -->
+                    
                     <div class="row" style="overflow-x: scroll;">
                         <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points"
                              id="">
@@ -209,13 +233,16 @@
                         An abolute winner is Kobe Bryant as he scored staggering 81 points in 2006 against Toronto Raptors.
                             </span></p>
                             <div id="highest-points-per-season"></div>
-                                <button class="read-more-btn" onclick="commentsFunction2()" id="points-comments2">See
-                                    comments
-                                </button>
+                                
 
                             </div>
+                            <button class="read-more-btn" onclick="commentsFunction2()" id="points-comments2">See
+                                    comments
+                                </button>
                         </div>
+                        
                         <!--- SALARY  CHART -->
+                        
                         <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary">
                             <div class="card-header">Salary earned in season</div>
                             <div><p><span id="see-comments3"></span><span class="comments-txt" id="comments3" style="display:none;">
@@ -226,17 +253,20 @@
                             </span></p>
                                 <div id="salary-vs-season"></div>
 
-                                <button class="read-more-btn" onclick="commentsFunction3()" id="points-comments3">See
-                                    comments
-                                </button>
+                                
 
                             </div>
+                            <button class="read-more-btn" onclick="commentsFunction3()" id="points-comments3">See
+                                    comments
+                                </button>
 
                         </div>
                     </div>
 
                 </div>
+                
                 <!--- MAIN STATS CHART -->
+                
                 <div class="horizontal-scroll-wrapper">
                     <div class="total-points-piechart card-body-MJ" id="show_points_over_career_MJ">
                         <div class="card-header">Micheal Jordan Total Assists, Blocks, Steals</div>
@@ -252,21 +282,10 @@
 
                 </div>
                  <div><p><span id="see-summary"></span><span class="comments-txt" id="summary" style="display:none;">
-                            Michael Jordan won pretty much every honor there was to be won. His Bulls won their 
-                            6th title and their second three peat with Jordan. Jordan won the Regular season MVP 
-                            and the Finals MVP. He was also voted to the All-NBA 1st Team and All-Defensive 1st team 
-                            (which might be the most impressive stat of everything discussed, as defense is the 
-                            first thing that goes when a player ages.)<br>
-                            
-                            Kobe Bryant did everything in his power to take his crew of Nash Howard Gasol and MWP 
-                            to the playoffs, including coming out with a torn achilles to hit free throws that took 
-                            the Lakers to the playoffs, where they got swept by the Spurs without Bryant. 
-                            He was voted to the All-NBA First Team for his efforts.<br>
-                            
-                            LeBron has yet to finish his season, but having missed the playoffs, MVP award is 
-                            certainly out of his reach despite great statistical numbers. His defense can win 
-                            awards, but only if they had Razzies for the NBA. He will certainly make an All-NBA Team, 
-                            although if thats a first second or third is yet to be seen.
+                            Now, you have all the stats, whichever stat you prefer, you can select to decide 
+                            which player had the best season. However if you look at individual and team honors, 
+                            which are kind of the point of the NBA, Jordan had an ultra successful season capped 
+                            with an MVP and a title, two things neither Kobe nor LeBron can will have from their seasons.
                             
                          
                             </span></p>
