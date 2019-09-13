@@ -193,6 +193,26 @@ function commentsFunction3(){
   }
 }
 
+/**
+ * Function see summary button
+ */
+ function summaryFunction(){
+  
+  var see_summary = document.getElementById("see-summary");
+  var moreSummary = document.getElementById("summary");
+  var btnSummary = document.getElementById("summary-comments");
+
+  if (see_summary.style.display === "none") {
+   see_summary.style.display = "inline";
+    btnSummary.innerHTML = "See comments"; 
+    moreSummary.style.display = "none";
+  } else {
+    see_summary.style.display = "none";
+    btnSummary.innerHTML = "Hide comment"; 
+    moreSummary.style.display = "inline";
+  }
+}
+ 
 
 
 
