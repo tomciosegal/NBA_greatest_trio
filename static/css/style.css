@@ -11,6 +11,12 @@ body {
   background-attachment: fixed;
   /*overflow-x: hidden;*/
   background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  width: 100%;
 }
 
 
@@ -24,8 +30,6 @@ body {
   text-align: center;
   border-radius: 3px;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
   transition: background-color .3s,
   opacity .5s, visibility .5s;
   opacity: 0;
@@ -92,13 +96,11 @@ body {
 }
 
 .stat-button {
-  top: 50%;
-  position: fixed;
-  left: 50%;
   border-color: none;
   border-radius: 30%;
   background-color: #b5421369;
-
+  width:300px;
+  margin:50% auto;
 }
 
 .loading-page-text {
@@ -107,7 +109,7 @@ body {
 
 .loading-page {
   position: fixed;
-
+  width:100%;
 }
 
 .loading-img {
@@ -129,7 +131,6 @@ body {
   position: fixed;
   color: #FFFFFF;
   top: 150px;
-  right: 16px;
   font-family: Great Vibes;
   font-size: 30px;
 }
@@ -158,8 +159,6 @@ body {
 }
 
 .total-points-piechart {
-  top: 100px;
-  right: 60px;
   width: 100%;
   background-color: #151307c2;
   padding-left: 0;
@@ -170,7 +169,6 @@ body {
 
 .teams-played-stakedchart {
   padding: 0px;
-  top: 100px;
   background-color: #151307c2;
   padding-bottom: 80px;
 }
@@ -180,16 +178,12 @@ body {
 
 .card-body-highest-points {
   background-color: #151307db;
-  top: 140px;
-  right: 40px;
+  
 
 
 }
 
 .card-body-salary {
-  left: 0px;
-  right: 40px;
-  top: 120px;
   background-color: #151307c2;
   border-color: azure;
 
@@ -204,7 +198,6 @@ body {
 
 .card-body-MJ {
   background-color: #151307db;
-  right: 40px;
 }
 
 .card-body-KB {
@@ -213,16 +206,12 @@ body {
 
 .card-body-LJ {
   background-color: #151307db;
-  left: 40px;
-  right: 0;
 }
 
 .profile {
-  min-height: 450px;
-
-  min-width: 350px;
-  max-width: 350px;
+  height:515px;
   display: inline-block;
+  width: 100%;
 }
 
 .portfolio-header {
@@ -238,6 +227,19 @@ body {
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
+.card-header-scroll-MJ{
+  background-color: #e22b22bf;
+}
+
+.card-header-scroll-KB{
+   background-color: #151307db;
+}
+
+.card-header-scroll-LJ{
+  background-color: #151307db; 
+}
+
+
 .players-row {
   margin-top: 30px;
 }
@@ -252,8 +254,6 @@ body {
 
 .portfolio-LJ {
   background-color: #13a3547d;
-  left: 40px;
-  right: 0;
 }
 
 .portfolio-row {
@@ -265,14 +265,12 @@ body {
   margin-bottom: 20px;
 }
 .comments{
-  padding-top: 120px;
+  margin-top: 151px
 }
 
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
 .footer-container {
-  bottom: 0;
-  left: 0;
   background-color: #164a7b;
   width: 100%;
 }
@@ -335,7 +333,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
   border: none;
   transition: all 0.4s ease 0s;
 }
-
 .read-more-btn:hover {
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   background-color: #2b98ff7a;
@@ -363,7 +360,9 @@ div.horizontal-scroll-wrapper .scroll-chart {
 #summary-comments {
   margin-bottom: 40px;
 }
-
+#show_teams_played{
+  Height: 425px;
+}
 
 /*---------------------------------SEE COMMENTS BUTTON-----------------------------------*/
 
@@ -654,10 +653,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
 
   .stat-button {
-    top: 500px;
-    left: 45px;
     position: fixed;
-    right: 60px;
   }
   .title {
     text-align: center;
@@ -680,11 +676,9 @@ div.horizontal-scroll-wrapper .scroll-chart {
   }
 
   .total-points-piechart {
-    right: 0;
   }
 
   #button {
-    right: 10px;
   }
 
   /*.footer-content {*/
@@ -701,7 +695,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
     text-align: center;
   }
   .mobile-bg {
-    top: 40px;
   }
   .total-points-piechart {
     width: 100%;
@@ -715,7 +708,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
   }
 
   .card-body-highest-points {
-    right: 0;
     overflow-x: scroll;
   }
   .home-img {
@@ -757,17 +749,13 @@ div.horizontal-scroll-wrapper .scroll-chart {
     ;
   }
   .stat-button {
-    left: 279px;
-    top: 800px;
   }
   .card-body-highest-points {
     overflow-x: scroll;
 
   }
   .MJ-quote {
-    top: 650px;
-    right: 20px;
-    left: 20px;
+    
 
   }
   .portfolio-header {
@@ -778,9 +766,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
   }
   .points-chart {
     overflow-x: scroll;
-    top: 45px;
-    left: 0px;
-    right: 0px;
     padding-left: 20px;
   }
 
@@ -794,9 +779,12 @@ div.horizontal-scroll-wrapper .scroll-chart {
     padding-left: 170px;
   }
 .row {
-  overflow-x: scroll
+  overflow-x: scroll;
 }
   .comments{
     padding-top: 40px;
   }
+}
+.row{
+  margin:0;
 }

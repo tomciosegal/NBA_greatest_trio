@@ -231,8 +231,8 @@ function show_total_points(ndx2) {
     var was = teamByPlayers(dim, "WAS");
 
     dc.barChart("#show_teams_played")
-        .width(650)
-        .height(700)
+        .height(400)
+        .width(500)
         .dimension(dim)
         .group(chi, "CHI")
         .stack(cle, "CLE")
@@ -247,7 +247,6 @@ function show_total_points(ndx2) {
             chart.select("svg")
                 .attr("height", "100%")
                 .attr("width", "100%")
-                .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
@@ -269,8 +268,8 @@ function show_total_points(ndx2) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(580).y(-20).itemHeight(25).gap(15))
-        .margins({top: 10, right: 100, bottom: 130, left: 50});
+        .legend(dc.legend().x(450).y(20).itemHeight(25).gap(15))
+        .margins({top: 10, right: 100, bottom: 20, left: 50});
 }
 
 
@@ -383,8 +382,8 @@ function show_main_stats_career_MJ(totalsForMJ) {
     let composite = dc.compositeChart("#show_points_over_career_MJ");
 
     composite
-        .width(640)
-        .height(310)
+        .width(740)
+        .height(410)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
         .elasticY(true)
@@ -480,8 +479,8 @@ function show_main_stats_career_KB(totalsForKB) {
     let composite = dc.compositeChart("#show_points_over_career_KB");
 
     composite
-        .width(640)
-        .height(310)
+        .width(740)
+        .height(410)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
         .elasticY(true)
@@ -581,8 +580,8 @@ function show_main_stats_career_LJ(totalsForLJ) {
     let composite = dc.compositeChart("#show_points_over_career_LJ");
 
     composite
-        .width(640)
-        .height(310)
+        .width(740)
+        .height(410)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
         .elasticY(true)
@@ -604,7 +603,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
             chart.select("svg")
                 .attr("height", "100%")
                 .attr("width", "130%")
-                .attr("viewBox", "0 0 840 340");
+                .attr("viewBox", "0 0 840 540");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
@@ -616,7 +615,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".line")
                 .style("stroke-width", "2.5");
-        })
+        }).legend(dc.legend().x(450).y(20).itemHeight(25))
         .compose([
             dc.lineChart(composite)
             .group(ast, "Assist")
