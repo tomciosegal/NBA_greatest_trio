@@ -15,7 +15,7 @@ body {
   padding: 0;
 }
 
-.main{
+.main {
   width: 100%;
 }
 
@@ -35,6 +35,8 @@ body {
   opacity: 0;
   visibility: hidden;
   z-index: 97;
+  margin-left: 93%;
+  margin-top: 50%;
 }
 
 #button::after {
@@ -99,8 +101,8 @@ body {
   border-color: none;
   border-radius: 30%;
   background-color: #b5421369;
-  width:300px;
-  margin:50% auto;
+  width: 300px;
+  margin: 38% auto;
 }
 
 .loading-page-text {
@@ -109,7 +111,7 @@ body {
 
 .loading-page {
   position: fixed;
-  width:100%;
+  width: 100%;
 }
 
 .loading-img {
@@ -130,9 +132,10 @@ body {
 .MJ-quote {
   position: fixed;
   color: #FFFFFF;
-  top: 150px;
   font-family: Great Vibes;
   font-size: 30px;
+  margin-left: 61%;
+  margin-top: 14%;
 }
 
 .MJ-signat {
@@ -144,10 +147,23 @@ body {
   text-align: justify;
 }
 
+.comments {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.comments-txt {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+
+
 /*---------------------------------CHARTS-----------------------------------*/
 
 .points-chart {
   padding-left: 0;
+  margin-top: 40px;
 
 }
 
@@ -178,7 +194,7 @@ body {
 
 .card-body-highest-points {
   background-color: #151307db;
-  
+
 
 
 }
@@ -198,20 +214,24 @@ body {
 
 .card-body-MJ {
   background-color: #151307db;
+  margin-right: 60px;
 }
 
 .card-body-KB {
   background-color: #151307db;
+  margin-right: 60px;
 }
 
 .card-body-LJ {
   background-color: #151307db;
+  margin-right: 60px;
 }
 
 .profile {
-  height:515px;
+  height: 515px;
   display: inline-block;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .portfolio-header {
@@ -224,19 +244,21 @@ body {
 .comments-txt {
   color: #FFFFFF;
   background-color: #22150a;
+
 }
 
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
-.card-header-scroll-MJ{
+
+.card-header-scroll-MJ {
   background-color: #e22b22bf;
 }
 
-.card-header-scroll-KB{
-   background-color: #151307db;
+.card-header-scroll-KB {
+  background-color: #151307db;
 }
 
-.card-header-scroll-LJ{
-  background-color: #151307db; 
+.card-header-scroll-LJ {
+  background-color: #151307db;
 }
 
 
@@ -264,9 +286,12 @@ body {
   color: #FFFFFF;
   margin-bottom: 20px;
 }
-.comments{
-  margin-top: 151px
-}
+
+
+
+/*  margin-top: 151px*/
+
+/*}*/
 
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
 
@@ -280,7 +305,7 @@ body {
   color: #7FB7BE;
   font-size: 2em;
   transition: all .2s ease-in-out;
-  padding-left: 80px;
+  
 }
 
 .github-logo:focus,
@@ -302,8 +327,8 @@ body {
   overflow-x: scroll;
   white-space: nowrap;
   display: flex;
-  margin-top: 150px;
   overflow-y: hidden;
+  margin-bottom: 40px;
 }
 
 
@@ -333,6 +358,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   border: none;
   transition: all 0.4s ease 0s;
 }
+
 .read-more-btn:hover {
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
   background-color: #2b98ff7a;
@@ -360,7 +386,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
 #summary-comments {
   margin-bottom: 40px;
 }
-#show_teams_played{
+
+#show_teams_played {
   Height: 425px;
 }
 
@@ -378,6 +405,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   display: inline-block;
   border: none;
   transition: all 0.4s ease 0s;
+
 }
 
 .see-comments-btn:hover {
@@ -444,8 +472,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
   opacity: 0;
   -webkit-animation: type3 3s steps(40, end);
   animation: type3 3s steps(40, end);
-  -webkit-animation-delay: 12.5s;
-  animation-delay: 12.5s;
+  -webkit-animation-delay: 13s;
+  animation-delay: 13s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -455,8 +483,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
   opacity: 0;
   -webkit-animation: type6 4s steps(40, end);
   animation: type6 4s steps(40, end);
-  -webkit-animation-delay: 16.5s;
-  animation-delay: 16.5s;
+  -webkit-animation-delay: 15.5s;
+  animation-delay: 15.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -674,28 +702,27 @@ div.horizontal-scroll-wrapper .scroll-chart {
     max-width: 100%;
     min-width: 100%;
   }
-
-  .total-points-piechart {
+  
+  .stat-button {
+    margin: 133% auto;
+    margin-left: 12%;
+    width: 250px;
   }
 
-  #button {
-  }
-
-  /*.footer-content {*/
-  /*  margin-left: 0;*/
-  /*  margin-right: 0;*/
-  /*}*/
   .footer-copyright {
     text-align: center;
   }
   .github-logo {
-    padding-left: 160px;
+    margin-left: 44%;
+    
   }
   .data-source-footer {
     text-align: center;
   }
   .mobile-bg {
+    background-size: cover;
   }
+  
   .total-points-piechart {
     width: 100%;
 
@@ -713,24 +740,16 @@ div.horizontal-scroll-wrapper .scroll-chart {
   .home-img {
     padding-top: 23px;
   }
-  
-  .row{
-  overflow-x: scroll
+
+  .row {
+    overflow-x: scroll;
+  }
+  .stacked-chart{
+    overflow-x: scroll;
+    margin-top: 40px;
+  }
+
 }
-.comments{
-  padding-top: 140px;
-  
-}
-
-.comments1{
-  
-}
-}
-
-
-
-
-
 
 /* ------------ MEDIUM DEVICES ----------*/
 
@@ -748,16 +767,13 @@ div.horizontal-scroll-wrapper .scroll-chart {
     text-align: left;
     ;
   }
-  .stat-button {
-  }
+  
+  
   .card-body-highest-points {
     overflow-x: scroll;
 
   }
-  .MJ-quote {
-    
-
-  }
+  .MJ-quote {}
   .portfolio-header {
     padding-top: 100px;
   }
@@ -778,13 +794,29 @@ div.horizontal-scroll-wrapper .scroll-chart {
   #points-season-playoffs {
     padding-left: 170px;
   }
-.row {
-  overflow-x: scroll;
-}
-  .comments{
-    padding-top: 40px;
+  .row {
+    overflow-x: scroll;
   }
+  
+  .stat-button {
+    width: 300px;
+    margin: 110% auto;
+  }
+  
+  .staked-chart{
+    margin-top: 40px;
+  }
+  .footer-copyright{
+    margin-top: 35px;
+  }
+  .github-logo{
+    margin-left: 60px;
+    margin-top: 27px;
+  }
+  
+
 }
-.row{
-  margin:0;
+
+.row {
+  margin: 0;
 }
