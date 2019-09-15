@@ -272,98 +272,6 @@ function show_total_points(ndx2) {
         .margins({top: 10, right: 100, bottom: 20, left: 50});
 }
 
-
-// function show_teams_played(ndx2) {
-
-//     function teamByPlayers(dimension, player) {
-//         return dimension.group().reduce(
-//             function(p, v) {
-//                 p.total++;
-
-//                 if (v.Player == player) {
-//                     p.match++;
-//                 }
-//                 return p;
-//             },
-//             function(p, v) {
-//                 p.total--;
-//                 if (v.Player == player) {
-//                     p.match--;
-//                 }
-//                 return p;
-//             },
-//             function() {
-//                 return { total: 0, match: 0 };
-//             }
-//         );
-//     }
-
-//     var playerColors = d3.scale.ordinal()
-//         .domain(["Michael Jordan", "Kobe Bryant", "Lebron James"])
-//         .range(["#e22b22bf", "#ffe854b5", "#13a3547d"]);
-
-//     var dim = ndx2.dimension(dc.pluck("Tm"));
-
-//     var mj = teamByPlayers(dim, "Michael Jordan");
-//     var kb = teamByPlayers(dim, "Kobe Bryant");
-//     var lj = teamByPlayers(dim, "Lebron James");
-
-
-//     dc.barChart("#show_teams_played")
-//         .width(600)
-//         .height(500)
-//         .colors(playerColors)
-//         .dimension(dim)
-//         .xAxisLabel("Teams")
-//         .group(mj, "Micheal Jordan")
-//         .stack(kb, "Kobe Bryant")
-//         .stack(lj, "Lebron James")
-//         .on("pretransition", function(chart) {
-//             chart.selectAll("g.y text")
-//                 .style("font-size", "12px");
-//             chart.selectAll("g.x text")
-//                 .style("font-size", "12px");
-//             chart.select("svg")
-//                 .attr("height", "100%")
-//                 .attr("width", "130%")
-//                 .attr("viewBox", "0 0 840 340");
-//             chart.selectAll(".dc-chart text")
-//                 .attr("fill", "#E5E5E5");
-//             chart.selectAll(".dc-legend-item text")
-//                 .attr("font-size", "15px")
-//                 .attr("fill", "white");
-//             chart.selectAll("line")
-//                 .style("stroke", "#E5E5E5");
-//             chart.selectAll(".domain")
-//                 .style("stroke", "#E5E5E5");
-//             chart.selectAll(".line")
-//                 .style("stroke-width", "2.5");
-//         })
-        
-
-
-//     .valueAccessor(function(d) {
-//             if (d.value.total > 0) {
-//                 return parseFloat(parseFloat((d.value.match / d.value.total) * 100).toFixed(2));
-//             }
-//             else {
-//                 return 0;
-//             }
-//         })
-//         .x(d3.scale.ordinal())
-//         .xUnits(dc.units.ordinal)
-//         .legend(dc.legend().x(400).y(-100).itemHeight(15).gap(20)
-//         )
-        
-//         .margins({ top: 10, right: 100, bottom: 120, left: 40 })
-        
-
-//     ;
-
-
-
-// }
-
 function show_main_stats_career_MJ(totalsForMJ) {
 
 
@@ -382,8 +290,8 @@ function show_main_stats_career_MJ(totalsForMJ) {
     let composite = dc.compositeChart("#show_points_over_career_MJ");
 
     composite
-        .width(740)
-        .height(410)
+        .width(640)
+        .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
         .elasticY(true)
@@ -479,8 +387,8 @@ function show_main_stats_career_KB(totalsForKB) {
     let composite = dc.compositeChart("#show_points_over_career_KB");
 
     composite
-        .width(740)
-        .height(410)
+        .width(640)
+        .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
         .elasticY(true)
@@ -580,8 +488,8 @@ function show_main_stats_career_LJ(totalsForLJ) {
     let composite = dc.compositeChart("#show_points_over_career_LJ");
 
     composite
-        .width(740)
-        .height(410)
+        .width(640)
+        .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
         .elasticY(true)
@@ -603,7 +511,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
             chart.select("svg")
                 .attr("height", "100%")
                 .attr("width", "130%")
-                .attr("viewBox", "0 0 840 540");
+                .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
             chart.selectAll(".dc-legend-item text")
@@ -615,7 +523,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".line")
                 .style("stroke-width", "2.5");
-        }).legend(dc.legend().x(450).y(20).itemHeight(25))
+        })
         .compose([
             dc.lineChart(composite)
             .group(ast, "Assist")
