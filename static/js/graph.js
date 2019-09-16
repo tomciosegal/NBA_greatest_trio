@@ -312,7 +312,7 @@ function show_main_stats_career_MJ(totalsForMJ) {
                 .style("font-size", "12px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "130%")
+                .attr("width", "100%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
@@ -409,7 +409,7 @@ function show_main_stats_career_KB(totalsForKB) {
                 .style("font-size", "12px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "130%")
+                .attr("width", "100%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
@@ -510,7 +510,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
                 .style("font-size", "12px");
             chart.select("svg")
                 .attr("height", "100%")
-                .attr("width", "130%")
+                .attr("width", "100%")
                 .attr("viewBox", "0 0 840 340");
             chart.selectAll(".dc-chart text")
                 .attr("fill", "#E5E5E5");
