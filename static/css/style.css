@@ -19,6 +19,7 @@ body {
   width: 100%;
 }
 
+/*---------------------------------BUTTONS-----------------------------------*/
 
 #button {
   display: inline-block;
@@ -35,8 +36,8 @@ body {
   opacity: 0;
   visibility: hidden;
   z-index: 97;
-  margin-left: 93%;
-  margin-top: 50%;
+  margin-left: 80%;
+  margin-top: 30%;
 }
 
 #button::after {
@@ -98,7 +99,6 @@ body {
 }
 
 .stat-button {
-  border-color: none;
   border-radius: 30%;
   background-color: #b5421369;
   width: 300px;
@@ -789,7 +789,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
     overflow-x: scroll;
 
   }
-  .MJ-quote {}
+  
   .portfolio-header {
     padding-top: 100px;
   }

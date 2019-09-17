@@ -55,7 +55,7 @@ $("#main-btn").mouseleave(function(){
   $(this).css ("background-color", "");
 });
 $('footer').load('.loading-page', function() {
-      $(this).hide();})
+      $(this).hide();});
       
       $('#main-btn').click(function(){
        $('footer').show();
@@ -69,7 +69,7 @@ $('footer').load('.loading-page', function() {
 });
 
 function myFunction() {
-  var mj
+  var mj;
   var MJ_facts = document.getElementById("MJ-facts");
   var moreText = document.getElementById("more");
   var btnText = document.getElementById("mjBtn");
@@ -86,7 +86,7 @@ function myFunction() {
 }
 
 function myFunction1() {
-  var kb
+  var kb;
   var KB_facts = document.getElementById("KB-facts");
   var moreText1 = document.getElementById("more1");
   var btnText1 = document.getElementById("kbBtn");
@@ -103,7 +103,7 @@ function myFunction1() {
 }
 
 function myFunction2() {
-  var lj
+  var lj;
   var LJ_facts = document.getElementById("LJ-facts");
   var moreText2 = document.getElementById("more2");
   var btnText2 = document.getElementById("ljBtn");
