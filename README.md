@@ -7,7 +7,8 @@ get famialiar with the NBA heroes that developer wanted to present.
 Firstly when you will see loading page
 where css typewriter kicks off and you will see one the most famous Micheal Jordan quotes.
 The See stats button will take u down to actual charts, where all the fun begins.
-[Wireframes] (https://github.com/tomciosegal/NBA_greatest_trio/tree/master/wireframes)for the dashboard can be found in the assets folder of the repository.
+[Wireframes](https://github.com/tomciosegal/NBA_greatest_trio/tree/master/wireframes) 
+for the dashboard can be found in the assets folder of the repository.
 A live desktop demo can be found [here](https://tomciosegal.github.io/NBA_greatest_trio/).
 
 
@@ -66,7 +67,7 @@ On mobile and tablet devices this feature is not avilible.
 After clicking "See stats" button you will be taken strait to the site with graphs.
 Simple easy to navigate and hassleless.
 
-The backgroung for large screens was uploaded from [Pixabay] (https://pixabay.com/) and makes feel you really want to play basketball.
+The backgroung for large screens was uploaded from [Pixabay](https://pixabay.com/) and makes feel you really want to play basketball.
 
 ##### Portfolio
 The Portfolio section features all three players that are given different backgrounds, so later they will be identify with these colors.
@@ -82,14 +83,25 @@ This section is sort of introduction to the viewers, so they have a picture who'
 
 ##### Charts
 
-Strait  after that an actaul charts with stats will show along with a scroll up arrow which will come up
-while reaching to 
-there apart from a wide selection of beers.
-When u scroll  further down you will see who will be hosting the venue this year. When you click
-on the logo you will be directed to a new window with and actual beer producer. 
-This section is visible for large screen users only.
+Strait  after that an actaul charts with stats will show, along with a scroll up arrow which will come up
+while reaching to end of first charts.This allow viewer quick navigation on the website.
+When u scroll  further down you will be able to compare players highest point in the season during entire carrier,
+and the salary that they were earning during that time.
+On the very bottom the page you will find three horizontal scrolling charts that show asssits, blocks and steals
+gained in every year. Every player has his own chart in this row.
+Most importantly under every single chart viewer has "See comment" button. It will give you some brief info 
+about every single chart.
+The very last button is sort of summary, and leave a viewier with an impresion that you can choose your own
+player as a winner.
 
-Enough information to satisfy curiosity without overwhelming the user.
+##### Footer
+Small brief footer with as little info as possible just becouse this is not most important for this sort ofwebsite.
+The only features you is:
+- copyright
+- Github link to developers respositories
+- lastly the link to the source that data was used from
+
+In overall enough information to satisfy curiosity without overwhelming the user with all data presented.
 
 
 ## Technologies Used
@@ -118,5 +130,63 @@ The project uses jQuery to reference Javascript needed for the button hovering, 
 
 - [queue.js (v 1.0.7)](https://www.npmjs.com/package/queue)
     - The project uses Queue.js in order to bind to the external datasets in the Data folder, as well as to defer the rendering of the charts until all of the required datasets are fully imported.
-    
+  
+
+## Testing
+
+It tested continually as I developed it, in Firefox Developer and Chrome, 
+using both Firefox and Chromium developer tools, and nearing the conclusion of 
+the project also on other physical devices. Also before deployment i checked also in
+Opera and Safari.
+I used responsive mode in the dev tools and resizing the viewport to find unwanted 
+behavior  so as to correct it. I also periodically checked the appearance on both my 
+phone and tablet (both Android) in Chrome. 
+I continually  tested code in the [W3C HTML Validator](https://validator.w3.org/)
+in order to get rid of errors. 
+Testing my CSS in the [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) revealed few errors that I cloud identify and fix. 
+
+vocabulary checked!!!!!
+
+## Deployment
+
+This project was developed using the Cloud9 IDE, committed to git and pushed to GitHub using the built in function within cloud9.
+
+To deploy this page to GitHub Pages from its [GitHub repository](https://github.com/tomciosegal/craft-beer-festival)
+
+I pushed my local git repo of code, images and media to a Github repository, and 
+enabled Github Pages for it. There is only one branch, master. URL of Home Page is  [here]( https://tomciosegal.github.io/craft-beer-festival/)  https://tomciosegal.github.io/craft-beer-festival/ 
+
+
+
+### Content
+- The text for "about" section copied from the [Dublin Beer Festival](https://www.irishcraftbeerfestival.ie/)
+- The text for "why you should care" section copied from the [big grill festival](https://www.biggrillfestival.com/)
+- The text for "partnership section copied from the  [brew fest partners](https://brewfestpartners.com/)
+
+### Media
+The photos used in this site were obtained from 
+-  [Pixabay](https://pixabay.com/) 
+-  [Unsplashfoto](https://unsplash.com/)
+-  [Pexels](https://www.pexels.com/)
+
+The Videos used in this site were obtained from:
+- [Youtube](https://www.youtube.com/)
+- [Pixabay](https://pixabay.com/)
+
+
+
+### Acknowledgements
+I have availed of many resources around the web to help me learn. The following is 
+far from a complete list, but it covers those which were most important for me.
+
+- [Stack Overflow](https://stackoverflow.com/users/5656369/john)
+- [W3schools](https://www.w3schools.com/)
+- [CSS_TRICKS](https://css-tricks.com/)
+- [Rachel Andrew's tutorials](https://www.rachelandrew.co.uk/)
+- The code-institute-room at [Slack](https://slack.com/intl/en-ie/)
+- [Codedrops](https://tympanus.net/codrops/)
+- [Awwwards](https://www.awwwards.com/)
+
+I received inspiration for this project from Dublin [beer festival](https://www.irishcraftbeerfestival.ie/).
+I wanted to see how would I recommend that festival to already existing website.  
 
