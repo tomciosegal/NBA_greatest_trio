@@ -75,7 +75,7 @@ The Portfolio section features all three players that are given different backgr
  The Portfolio section also includes some brief info 
  about every player like:
 - Date of birth
-- Titles
+- Titles won by player
 - Team played
 - Total games played
 
@@ -134,27 +134,31 @@ The project uses jQuery to reference Javascript needed for the button hovering, 
 
 ## Testing
 
-It tested continually as I developed it, in Firefox Developer and Chrome, 
+It was tested continually as I developed it, in Firefox Developer and Chrome, 
 using both Firefox and Chromium developer tools, and nearing the conclusion of 
 the project also on other physical devices. Also before deployment i checked also in
-Opera and Safari.
+Opera and Safari. The only issue that i have noticed is the scroll down arrow that renders as 
+completle not edited squere cube, and on every other divices looks like my concept arrow.
 I used responsive mode in the dev tools and resizing the viewport to find unwanted 
 behavior  so as to correct it. I also periodically checked the appearance on both my 
 phone and tablet (both Android) in Chrome. 
 I continually  tested code in the [W3C HTML Validator](https://validator.w3.org/)
 in order to get rid of errors. 
-Testing my CSS in the [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) revealed few errors that I cloud identify and fix. 
 
-vocabulary checked!!!!!
+Testing my CSS in the [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) revealed few errors that I  identify and fixed. 
+
+Java Script codes were validated using [jshint](https://jshint.com/) reveling 3 errors that were fixed.
+
+Vocabulary and grammar was checked on [Spell chacker](http://www.reverso.net/spell-checker/english-spelling-grammar/)
 
 ## Deployment
 
-This project was developed using the Cloud9 IDE, committed to git and pushed to GitHub using the built in function within cloud9.
+This project was developed using the AWS Cloud9 IDE, committed to git and pushed to GitHub using the built in function within AWS.
 
-To deploy this page to GitHub Pages from its [GitHub repository](https://github.com/tomciosegal/craft-beer-festival)
+To deploy this page to GitHub Pages from its [GitHub repository](https://github.com/tomciosegal/NBA_greatest_trio)
 
 I pushed my local git repo of code, images and media to a Github repository, and 
-enabled Github Pages for it. There is only one branch, master. URL of Home Page is  [here]( https://tomciosegal.github.io/craft-beer-festival/)  https://tomciosegal.github.io/craft-beer-festival/ 
+enabled Github Pages for it. There is only one branch, master. URL of Home Page is  [here](https://tomciosegal.github.io/NBA_greatest_trio/) 
 
 
 
