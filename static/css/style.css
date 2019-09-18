@@ -75,12 +75,6 @@ body {
 }
 
 
-
-#navHome {
-  width: 2vh;
-
-}
-
 .img-fluid {
   width: 80px;
 }
@@ -102,7 +96,6 @@ body {
   border-radius: 30%;
   background-color: #b5421369;
   width: 300px;
-  margin: 38% auto;
 }
 
 .loading-page-text {
@@ -110,8 +103,12 @@ body {
 }
 
 .loading-page {
-  position: fixed;
   width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .loading-img {
@@ -127,6 +124,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+
 }
 
 .MJ-quote {
@@ -180,7 +178,7 @@ body {
 }
 
 .total-points-piechart {
-  width: 100%;
+  width: 1000px;
   background-color: #151307c2;
   padding-left: 0;
   padding-right: 0;
@@ -336,19 +334,13 @@ body {
 /*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------*/
 
 .horizontal-scroll-wrapper {
-  overflow-x: scroll;
-  white-space: nowrap;
+  width: 3180px;
   display: flex;
   overflow-y: hidden;
   margin-bottom: 40px;
 }
 
 
-div.horizontal-scroll-wrapper {
-  overflow-x: scroll;
-  white-space: nowrap;
-
-}
 
 div.horizontal-scroll-wrapper .scroll-chart {
   width: 100%;
@@ -692,9 +684,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
 
-  .stat-button {
-    position: fixed;
-  }
   .title {
     text-align: center;
     margin-left: 40px;
@@ -708,6 +697,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
     background-size: cover;
     height: 100%;
     background-attachment: fixed;
+    background-position-y: 86px;
 
   }
 
@@ -717,8 +707,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
   }
 
   .stat-button {
-    margin: 133% auto;
-    margin-left: 12%;
     width: 250px;
   }
 
@@ -738,8 +726,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   }
 
   .total-points-piechart {
-    width: 100%;
-    height: max-content;
+    width: 1000px;
 
   }
   .salary-chart {
@@ -816,7 +803,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
   .stat-button {
     width: 300px;
-    margin: 110% auto;
   }
 
   .staked-chart {

@@ -118,6 +118,7 @@ function show_highest_points(ndx) {
             chart.selectAll(".line")
                 .style("stroke-width", "2.5");
         });
+       
 }
 
 function show_salaries(ndx1) {
@@ -183,7 +184,7 @@ function show_total_points(ndx2) {
 
     dc.pieChart('#points-season-playoffs')
         .height(400)
-        .width(320)
+        .width(300)
         .radius(450)
         .colors(playerColors)
         .transitionDuration(1500)
@@ -258,6 +259,9 @@ function show_total_points(ndx2) {
                 .style("stroke", "#E5E5E5");
             chart.selectAll(".line")
                 .style("stroke-width", "2.5");
+                
+
+                
         })    
         .valueAccessor(function(d) {
             if(d.value.total > 0) {
@@ -269,7 +273,7 @@ function show_total_points(ndx2) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .legend(dc.legend().x(450).y(20).itemHeight(25).gap(15))
-        .margins({top: 10, right: 100, bottom: 20, left: 50});
+        .margins({top: 10, right: 100, bottom: 20, left: 50})
 }
 
 function show_main_stats_career_MJ(totalsForMJ) {
@@ -290,7 +294,7 @@ function show_main_stats_career_MJ(totalsForMJ) {
     let composite = dc.compositeChart("#show_points_over_career_MJ");
 
     composite
-        .width(640)
+        .width(885)
         .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
@@ -387,7 +391,7 @@ function show_main_stats_career_KB(totalsForKB) {
     let composite = dc.compositeChart("#show_points_over_career_KB");
 
     composite
-        .width(640)
+        .width(885)
         .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)
@@ -488,7 +492,7 @@ function show_main_stats_career_LJ(totalsForLJ) {
     let composite = dc.compositeChart("#show_points_over_career_LJ");
 
     composite
-        .width(640)
+        .width(885)
         .height(310)
         .margins({ top: 10, right: 60, bottom: 50, left: 45 })
         .dimension(dim)

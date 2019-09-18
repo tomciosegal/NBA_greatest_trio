@@ -50,11 +50,8 @@
                 <li class="active nav-item mr-2 mt-0 mb-0" id="navGen">
                     <h3 class="title">NBA Greatest Trio Stats</h3>
                 </li>
-                <li class="active nav-item mr-2 d-none d-lg-block" id="Navreset">
-                    <a class="hvr-bounce-in btn-lg nav-link active d-inline-block nav-text"
-                       href="javascript: dc.filterAll(); dc.redrawAll();" data-step="5"
-                       data-intro="All graphs on the entire dashboard are connected. To reset them to default, click the redraw button."
-                       aria-pressed="true" id="resetLink"><i class="fas fa-redo-alt"></i> Reset Graphs</a>
+                <li class="active nav-item mr-2" id="Navreset">
+                    <a class="hvr-bounce-in btn-lg nav-link active d-inline-block nav-text" onclick="location.reload();"><i class="fas fa-redo-alt"></i> Reset Graphs</a>
                 </li>
             </ul>
         </div>
@@ -207,7 +204,13 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 stacked-chart">
                         <div class="card-header">Team Played By Player</div>
                         
-                        <div id="show_teams_played" class="pie-chart"></div>
+                        <div style="width: 100%; overflow-x: scroll">
+                            <div style="width: 525px">
+                                <div id="show_teams_played" class="pie-chart"></div>
+        
+                            </div>
+                        </div>
+                        
                         
                         <div><p><span id="see-comments1"></span><span class="comments-txt" id="comments1" style="display:none;">
                         On this chart we can see percentage of the time players <br>
@@ -225,13 +228,15 @@
                     
                     <!--- HIGHEST POINT CHART -->
                     
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points">
+                    <div class="row" style="overflow: scroll">
+                        <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points"  style="width: 100%; overflow: scroll">
                             <div class="card-header">Highest points in season</div>
                            
                             
-                            
-                            <div id="highest-points-per-season"></div>
+                            <div style="width: 100%; overflow: scroll">
+                                 <div id="highest-points-per-season"></div>
+                            </div>
+                           
                                 
 
                             
@@ -248,10 +253,14 @@
                         
                         <!--- SALARY  CHART -->
                         
-                        <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary">
+                        <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary"  style="width: 100%; overflow: scroll">
                             <div class="card-header">Salary earned in season</div>
                             
                                 <div id="salary-vs-season"></div>
+                                <div class="salary-vs-season-legend">
+                                    <span style="width: 10px; height: 10px; border-radius: 50%; background: yellow; display: inline-block;"></span>
+                                    <span style="color: #fff">Jordan</span>
+                                </div>
                         </div>
                           
                     </div>
@@ -270,31 +279,39 @@
                 
                 <!--- MAIN STATS CHART -->
                 
-                <div class="horizontal-scroll-wrapper">
-                    <div class="total-points-piechart card-body-MJ" id="show_points_over_career_MJ">
-                        <div class="card-header">Assists, Blocks, Steals</div>
+                <div style="width: 100%; overflow-x: scroll">
+                
+                    <div class="horizontal-scroll-wrapper">
+                        <div class="total-points-piechart card-body-MJ">
+                            <div class="card-header">Assists, Blocks, Steals</div>
+                            <div id="show_points_over_career_MJ"></div>
+                           <p class="names">Micheal Jordan</p>
+                        </div>
+    
+                        <div class="total-points-piechart card-body-KB">
+                            <div class="card-header">Assists, Blocks, Steals</div>
+                            <div id="show_points_over_career_KB"></div>
+                            <p class="names">Kobe Bryant</p>
+                        </div>
+    
+                        <div class="total-points-piechart card-body-LJ">
+                            <div class="card-header"> Assists, Blocks, Steals</div>
+                            <div id="show_points_over_career_LJ"></div>
+                            <p class="names">LeBron James</p>
+                        </div>
                     </div>
-
-                    <div class="total-points-piechart card-body-KB" id="show_points_over_career_KB">
-                        <div class="card-header">Assists, Blocks, Steals</div>
-                    </div>
-
-                    <div class="total-points-piechart card-body-LJ" id="show_points_over_career_LJ">
-                        <div class="card-header"> Assists, Blocks, Steals</div>
-                    </div>
-                    
-
+                
                 </div>
                 
                 <div class="row">
                         
-                        <div class="col-md-4"><p class="names">Micheal Jordan</p></div>
+                        
                     
                     
-                     <div class="col-md-4"><p class="names">Kobe Bryant</p></div>
+                     
                     
                     
-                     <div class="col-md-4"><p class="names">LeBron James</p></div>
+                     
                 </div>    
                 
                     
