@@ -27,7 +27,7 @@
 
 <!-- Back to top button -->
 
-<a id="button"></a>
+<a id="button"><i class="fa fa-chevron-up"></i></a>
 
 <!-- BEGIN NAVBAR -->
 
@@ -204,7 +204,7 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 stacked-chart">
                         <div class="card-header">Team Played By Player</div>
                         
-                        <div style="width: 100%; overflow-x: scroll">
+                        <div>
                             <div style="width: 525px">
                                 <div id="show_teams_played" class="pie-chart"></div>
         
@@ -228,14 +228,25 @@
                     
                     <!--- HIGHEST POINT CHART -->
                     
-                    <div class="row" style="overflow: scroll">
-                        <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points"  style="width: 100%; overflow: scroll">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 points-chart card-body-highest-points">
                             <div class="card-header">Highest points in season</div>
                            
                             
-                            <div style="width: 100%; overflow: scroll">
-                                 <div id="highest-points-per-season"></div>
-                            </div>
+                                <div>
+                                     <div id="highest-points-per-season"></div>
+                                    <div class="salary-vs-season-legend">
+                                        <span class="mj_legend"></span>
+                                        <span class="legend_name">Jordan</span>
+                                        
+                                        <span class="kb_legend"></span>
+                                        <span class="legend_name">Bryant</span>
+                                        
+                                        <span class="lj_legend"></span>
+                                        <span class="legend_name">James</span>
+                                    </div>
+                                     
+                                </div>
                            
                                 
 
@@ -253,13 +264,19 @@
                         
                         <!--- SALARY  CHART -->
                         
-                        <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary"  style="width: 100%; overflow: scroll">
+                        <div class="col-lg-12 col-md-12 col-sm-12 salary-chart card-body-salary">
                             <div class="card-header">Salary earned in season</div>
                             
                                 <div id="salary-vs-season"></div>
                                 <div class="salary-vs-season-legend">
-                                    <span style="width: 10px; height: 10px; border-radius: 50%; background: yellow; display: inline-block;"></span>
-                                    <span style="color: #fff">Jordan</span>
+                                    <span class="mj_legend"></span>
+                                    <span class="legend_name">Jordan</span>
+                                    
+                                    <span class="kb_legend"></span>
+                                    <span class="legend_name">Bryant</span>
+                                    
+                                    <span class="lj_legend"></span>
+                                    <span class="legend_name">James</span>
                                 </div>
                         </div>
                           

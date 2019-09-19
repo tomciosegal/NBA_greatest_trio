@@ -25,7 +25,7 @@ body {
   display: inline-block;
   background-color: transparent;
   color: #3959BA;
-  border: 2px solid #3959ba70;
+  border: 4px solid #3959BA;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -36,17 +36,23 @@ body {
   opacity: 0;
   visibility: hidden;
   z-index: 97;
-  margin-left: 80%;
-  margin-top: 30%;
+  top: 50%;
+  right: 10px;
+}
+
+#button i{
+  font-size: 30px;
+  margin-top: 5px;
 }
 
 #button::after {
-  content: "\f077";
+ /* content: "\f077";
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
   line-height: 50px;
+  */
 }
 
 #button:active {
@@ -132,8 +138,9 @@ body {
   color: #FFFFFF;
   font-family: Great Vibes;
   font-size: 30px;
-  margin-left: 61%;
-  margin-top: 14%;
+  top: 20%;
+  right: 55px;
+  
 }
 
 .MJ-signat {
@@ -205,6 +212,8 @@ body {
 .card-body-salary {
   background-color: #151307c2;
   border-color: azure;
+  width: 100%;
+  overflow: scroll;
 
 }
 
@@ -250,6 +259,10 @@ body {
 
 }
 
+#points-season-playoffs {
+  text-align: center;
+}
+
 /*---------------------------------PLAYERS FACTS-----------------------------------*/
 
 .card-header-scroll-MJ {
@@ -290,8 +303,36 @@ body {
   margin-bottom: 20px;
 }
 
+.mj_legend {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e22b22bf;
+  display: inline-block;
 
+}
 
+.kb_legend {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffe854b5;
+  display: inline-block;
+
+}
+
+.lj_legend {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #13a3547d;
+  display: inline-block;
+
+}
+
+.legend_name {
+  color: #FFFFFF;
+}
 
 
 /* -------------------------------------------------- FOOOTER ------------------------------------------------*/
@@ -427,7 +468,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
   border-right: .15em solid orange;
   font-size: 30px;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .css-typing p:nth-child(1) {
@@ -683,13 +723,21 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
 
+  #navbar {
+    padding-top: 28px;
+  }
+
+  .nav-text {
+    font-size: 15px;
+
+  }
 
   .title {
     text-align: center;
     margin-left: 40px;
     padding-bottom: 40px;
     color: #FFFFFF;
-    font-size: 22px;
+    font-size: 15px;
   }
 
   body {
@@ -738,6 +786,11 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
   .card-body-highest-points {
     overflow-x: scroll;
+    margin-right: 20px;
+  }
+
+  .card-body-salary {
+    margin-right: 20px;
   }
   .home-img {
     padding-top: 23px;
@@ -749,6 +802,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
   .stacked-chart {
     overflow-x: scroll;
     margin-top: 40px;
+    margin-right: 10px;
   }
 
 }
@@ -765,18 +819,28 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
   }
 
+  #navbar {
+    padding-top: 22px;
+  }
+
+  .nav-text {
+    padding-top: 25px;
+  }
+
   .title {
     text-align: center;
-    font-size: 24px;
-    padding-left: 80px;
+    margin-top: 19px;
+    margin-left: 20px;
+    font-size: 23px;
   }
 
 
   .card-body-highest-points {
     overflow-x: scroll;
 
+
   }
-  
+
   .portfolio-header {
     padding-top: 100px;
   }
@@ -788,15 +852,6 @@ div.horizontal-scroll-wrapper .scroll-chart {
     padding-left: 20px;
   }
 
-  .players-row {
-    padding-left: 175px;
-  }
-  .profile {
-    width: 450px;
-  }
-  #points-season-playoffs {
-    padding-left: 170px;
-  }
   .row {
     overflow-x: scroll;
   }
@@ -817,8 +872,18 @@ div.horizontal-scroll-wrapper .scroll-chart {
   }
 
 
+
 }
 
 .row {
   margin: 0;
+}
+
+@media screen and (min-width:525px) and (max-width:900px) {
+  .title {
+    text-align: center;
+    margin-top: 33px;
+    margin-left: 20px;
+    font-size: 23px;
+  }
 }

@@ -272,8 +272,8 @@ function show_total_points(ndx2) {
         })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-        .legend(dc.legend().x(450).y(20).itemHeight(25).gap(15))
-        .margins({top: 10, right: 100, bottom: 20, left: 50})
+        .legend(dc.legend().x(450).y(10).itemHeight(25).gap(10))
+        .margins({top: 10, right: 80, bottom: 20, left: 50})
 }
 
 function show_main_stats_career_MJ(totalsForMJ) {
