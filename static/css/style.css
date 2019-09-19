@@ -213,9 +213,7 @@ body {
   background-color: #151307c2;
   border-color: azure;
   width: 100%;
-  overflow: scroll;
-
-}
+  }
 
 
 .card-header {
@@ -468,6 +466,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
   border-right: .15em solid orange;
   font-size: 30px;
   white-space: nowrap;
+  overflow: hidden;
+  padding-right: 10px;
 }
 
 .css-typing p:nth-child(1) {

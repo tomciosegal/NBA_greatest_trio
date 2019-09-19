@@ -184,7 +184,7 @@ function show_total_points(ndx2) {
 
     dc.pieChart('#points-season-playoffs')
         .height(400)
-        .width(300)
+        .width(280)
         .radius(450)
         .colors(playerColors)
         .transitionDuration(1500)
