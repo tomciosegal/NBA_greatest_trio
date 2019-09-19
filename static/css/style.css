@@ -21,6 +21,10 @@ body {
 
 /*---------------------------------BUTTONS-----------------------------------*/
 
+/*by clicking this button viewer will be able to go on top of the page.very usefull, specially on mobile and tablet.
+idea found on codepen. adjustment was needed as chevron style arrow was not displaying on Mac and my own Samsung mobie,
+it was shoiwnig an envelope style icon,so it wouldn't be obvoius for users what the button is for*/
+
 #button {
   display: inline-block;
   background-color: transparent;
@@ -45,16 +49,6 @@ body {
   margin-top: 5px;
 }
 
-#button::after {
- /* content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  */
-}
-
 #button:active {
   color: #3959BA;
   background-color: #3959ba70;
@@ -68,6 +62,84 @@ body {
 #button:hover {
   cursor: pointer;
   background-color: #3959ba70;
+}
+
+/*---------------------------------READ MORE BUTTON-----------------------------------*/
+
+/*a button that allows viewer to open and check extra info about every player availible in portfolio.
+code and idea take from css tricks. again codes and functions in JS were made for one button only.
+developer had to add extra lines of codes in html and JS*/
+
+.read-more-btn {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #164a7b;
+  padding: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 0px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+.read-more-btn:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  background-color: #2b98ff7a;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+#more {
+  display: none
+}
+
+#more1 {
+  display: none
+}
+
+#more2 {
+  display: none
+}
+
+#summary-comments {
+  margin-bottom: 40px;
+}
+
+#show_teams_played {
+  Height: 425px;
+}
+
+/*---------------------------------SEE COMMENTS BUTTON-----------------------------------*/
+
+/*button that will enable viewer to check developer additinal comments to charts
+styling animations were taken from animejs.com and code pen/*/
+
+.see-comments-btn {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #164a7b;
+  padding: 20px;
+  width: 200px;
+  height: 70px;
+  border-radius: 0px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+
+}
+
+.see-comments-btn:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  background-color: #2b98ff7a;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 
@@ -117,6 +189,8 @@ body {
   align-content: center;
 }
 
+/*a loading page image that displays on large and medium devices*/
+
 .loading-img {
   width: 100%;
   background-repeat: no-repeat;
@@ -125,6 +199,9 @@ body {
 
 }
 
+/*an additional image that displays on mobiles only and gives better impresion rather then a basket ball
+an image was not perfeclty aligned, and additional styling was needed as we can see in media section*/
+
 .mobile-img {
   width: 100%;
   background-repeat: no-repeat;
@@ -132,6 +209,8 @@ body {
   background-size: cover;
 
 }
+
+/*in below lines we can see styiling for the quote "typewriter" that comes up on loading page */
 
 .MJ-quote {
   position: fixed;
@@ -169,7 +248,9 @@ body {
 
 
 
-/*---------------------------------CHARTS-----------------------------------*/
+                        /*---------------------------------CHARTS-----------------------------------*/
+                        
+/*in this part we can see all charts styled individually to gat better impression to the visitors*/
 
 .points-chart {
   padding-left: 0;
@@ -214,6 +295,9 @@ body {
   border-color: azure;
   width: 100%;
   }
+
+
+                          /*-----------------CARD HEADERS-----------------------------------------------------*/
 
 
 .card-header {
@@ -261,10 +345,10 @@ body {
   text-align: center;
 }
 
-/*---------------------------------PLAYERS FACTS-----------------------------------*/
+          /*---------------------------------SCROLL CHART HEADERS-----------------------------------*/
 
 .card-header-scroll-MJ {
-  background-color: #e22b22bf;
+  background-color: #151307db;
 }
 
 .card-header-scroll-KB {
@@ -279,6 +363,10 @@ body {
 .players-row {
   margin-top: 30px;
 }
+
+                /*---------------------------------PORTFOLIO-----------------------------------*/
+                
+/*in portfolio  every single player has individual color  assigned, this way you can identify them just by that fact*/
 
 .portfolio-MJ {
   background-color: #e22b22bf;
@@ -300,6 +388,11 @@ body {
   color: #FFFFFF;
   margin-bottom: 20px;
 }
+
+                    /*----------------------PLAYERS LEGEND ------------------------------*/
+                    
+/*in this part developer used extra legend for salary and highest points charts so a potential visitor
+will see an  player's color without scrooling up and checking again*/
 
 .mj_legend {
   width: 10px;
@@ -370,7 +463,9 @@ body {
 
 
 
-/*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------*/
+/*---------------------------------HORIZONTAL WRAPPER FOR LAST THRE CHARTS-----------------------------------
+an idea and code taken from css-tricks.com just one line of code was availible so developer had to adujst all the rows and divs
+to fit three charts*/
 
 .horizontal-scroll-wrapper {
   width: 3180px;
@@ -386,81 +481,13 @@ div.horizontal-scroll-wrapper .scroll-chart {
   padding-bottom: 40px;
 }
 
-/*---------------------------------READ MORE BUTTON-----------------------------------*/
 
-.read-more-btn {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #164a7b;
-  padding: 20px;
-  width: 200px;
-  height: 70px;
-  border-radius: 0px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
-}
-
-.read-more-btn:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  background-color: #2b98ff7a;
-  letter-spacing: 3px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
-}
-
-
-
-
-#more {
-  display: none
-}
-
-#more1 {
-  display: none
-}
-
-#more2 {
-  display: none
-}
-
-#summary-comments {
-  margin-bottom: 40px;
-}
-
-#show_teams_played {
-  Height: 425px;
-}
-
-/*---------------------------------SEE COMMENTS BUTTON-----------------------------------*/
-
-.see-comments-btn {
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #164a7b;
-  padding: 20px;
-  width: 200px;
-  height: 70px;
-  border-radius: 0px;
-  display: inline-block;
-  border: none;
-  transition: all 0.4s ease 0s;
-
-}
-
-.see-comments-btn:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-  background-color: #2b98ff7a;
-  letter-spacing: 3px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.4s ease 0s;
-}
 
 /*---------------------------------TYPEWRITER FOR MJ QUOTE ON LANDING PAGE-----------------------------------*/
+
+/*TYPEWRITER will start typing inn quote on landing page. idea and code from Code Pen, just had to be edited to my needs,had to adjust time
+of annimation,delays. code was originally made for one line(child) so in this case having 6 lines an additional editing was needed,
+without styling all 6 lines were typed in at same time*/
 
 .css-typing p {
   border-right: .15em solid orange;
@@ -472,8 +499,8 @@ div.horizontal-scroll-wrapper .scroll-chart {
 
 .css-typing p:nth-child(1) {
   width: 100%;
-  -webkit-animation: type 3s steps(40, end);
-  animation: type 3s steps(40, end);
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -482,9 +509,9 @@ div.horizontal-scroll-wrapper .scroll-chart {
   width: 100%;
   opacity: 0;
   -webkit-animation: type2 3s steps(40, end);
-  animation: type2 3s steps(40, end);
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -492,10 +519,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(3) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type3 3s steps(40, end);
-  animation: type3 3s steps(40, end);
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
+  -webkit-animation: type3 2.5s steps(40, end);
+  animation: type3 2.5s steps(40, end);
+  -webkit-animation-delay: 3.8s;
+  animation-delay: 3.8s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -503,10 +530,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(4) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type3 3s steps(40, end);
-  animation: type3 3s steps(40, end);
-  -webkit-animation-delay: 10.5s;
-  animation-delay: 10.5s;
+  -webkit-animation: type3 2.5s steps(40, end);
+  animation: type3 2.5s steps(40, end);
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -514,10 +541,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(5) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type3 3s steps(40, end);
-  animation: type3 3s steps(40, end);
-  -webkit-animation-delay: 13s;
-  animation-delay: 13s;
+  -webkit-animation: type3 2s steps(40, end);
+  animation: type3 2s steps(40, end);
+  -webkit-animation-delay: 9.5s;
+  animation-delay: 9.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -525,10 +552,10 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .css-typing p:nth-child(6) {
   width: 100%;
   opacity: 0;
-  -webkit-animation: type6 4s steps(40, end);
-  animation: type6 4s steps(40, end);
-  -webkit-animation-delay: 15.5s;
-  animation-delay: 15.5s;
+  -webkit-animation: type6 2s steps(40, end);
+  animation: type6 2s steps(40, end);
+  -webkit-animation-delay: 11.5s;
+  animation-delay: 11.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
@@ -878,6 +905,7 @@ div.horizontal-scroll-wrapper .scroll-chart {
 .row {
   margin: 0;
 }
+/*an additional styling for title was needed to provide a smooth resizing of the screen*/
 
 @media screen and (min-width:525px) and (max-width:900px) {
   .title {
