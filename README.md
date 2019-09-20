@@ -178,7 +178,7 @@ The project uses jQuery to reference Javascript needed for the button hovering, 
 - [queue.js (v 1.0.7)](https://www.npmjs.com/package/queue)
     - The project uses Queue.js in order to bind to the external datasets in the Data folder, as well as to defer the rendering of the charts until all of the required datasets are fully imported.
   
-
+- [fontawesome](https://fontawesome.com/)
 
 ## Testing
 
