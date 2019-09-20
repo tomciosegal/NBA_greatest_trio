@@ -40,7 +40,7 @@ it was shoiwnig an envelope style icon,so it wouldn't be obvoius for users what 
   opacity: 0;
   visibility: hidden;
   z-index: 97;
-  top: 50%;
+  top: 60%;
   right: 10px;
 }
 
@@ -217,7 +217,7 @@ an image was not perfeclty aligned, and additional styling was needed as we can 
   color: #FFFFFF;
   font-family: Great Vibes;
   font-size: 30px;
-  top: 20%;
+  top: 13%;
   right: 55px;
   
 }

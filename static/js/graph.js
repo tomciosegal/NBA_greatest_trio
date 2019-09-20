@@ -3,7 +3,10 @@ queue()
     .defer(d3.csv, "data/salaries.csv")
     .defer(d3.csv, "data/totals_stats.csv")
     .await(makeGraphs);
+    
+   
 
+    
 function makeGraphs(error, game_stats, salaries, totals) {
     var ndx = crossfilter(game_stats);
     var ndx1 = crossfilter(salaries);
@@ -32,8 +35,9 @@ function makeGraphs(error, game_stats, salaries, totals) {
             k = k + 1;
         }
     });
-
-    show_player_selector(ndx, ndx1);
+ // Call functions for each individual chart
+ 
+    
     show_highest_points(ndx);
     show_salaries(ndx1);
     show_total_points(ndx2);
@@ -49,6 +53,9 @@ function makeGraphs(error, game_stats, salaries, totals) {
 
 }
 
+
+// Const for the to provide currency to the salary chart
+
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -56,16 +63,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 })
 
 
-function show_player_selector(ndx, ndx1, ndx2) {
-    var dim = ndx.dimension(dc.pluck('Player'));
-    var group = dim.group();
-    var dim1 = ndx1.dimension(dc.pluck('Player'));
-    var group1 = dim1.group();
-
-    dc.selectMenu("#player-selector")
-        .dimension(dim)
-        .group(group)
-}
+//This function shows players highest points achived during carrier
 
 function show_highest_points(ndx) {
     var playerColors = d3.scale.ordinal()
@@ -120,6 +118,8 @@ function show_highest_points(ndx) {
         });
        
 }
+
+//This function will show players salary every season they played
 
 function show_salaries(ndx1) {
     var playerColors = d3.scale.ordinal()
@@ -197,6 +197,8 @@ function show_total_points(ndx2) {
 
 
 }
+//This function uses data that will show percentage of the time every player spent in each team
+//unfortunatelly developer was not able to provide a "%" sign next to numbers
 
  function show_teams_played(ndx2) {
 
@@ -275,6 +277,15 @@ function show_total_points(ndx2) {
         .legend(dc.legend().x(450).y(10).itemHeight(25).gap(10))
         .margins({top: 10, right: 80, bottom: 20, left: 50})
 }
+
+
+/**
+ * This composite line charts presents  total number of assists, blocks, steals that every player scored in etire carrier
+ * This function sums each category and groups them
+ * Shared title was disabled to display unique titles for each data category (assists, blocks, steals)
+ * Oveflow x-scroll implemented for mobile and tablet to provide large size of the chart
+ * charts are stacked next to each other in horizontal scroll
+  */
 
 function show_main_stats_career_MJ(totalsForMJ) {
 
@@ -469,11 +480,6 @@ function show_main_stats_career_KB(totalsForKB) {
 }
 
 
-
-
-
-
-
 function show_main_stats_career_LJ(totalsForLJ) {
 
 
@@ -570,6 +576,8 @@ function show_main_stats_career_LJ(totalsForLJ) {
 }
 
 
+//this small function was made to show total number of games played by every player.
+//this number can be found in players portfolio
 
 function showTotalNumberOfGamesPlayedMJ(totalsForMJ) {
     let ndx2 = crossfilter(totalsForMJ);

@@ -1,14 +1,8 @@
 $(document).ready(function () {
 
-    // ------------------------------------- NAVBAR ------------------------------------
+  
 
-    // Hide all sections apart from the main one.
-
-    $(function () {
-        $(".dashboard-container").hide();
-    });
-
-    // Upon clicking upon the landing page button, should show the stats
+    /** Upon clicking upon the landing page button, should show the stats*/
 
     $(function () {
         $(".stat-button").on("click", function () {
@@ -18,12 +12,13 @@ $(document).ready(function () {
     }); 
     
     
-    
+  
     // Back to top button
 
 /**
  * Function implements smooth scrolling back to top after clicking the button
- */
+ great solution specially for small devices. Idea taken from codepen*/
+ 
     let btn = $('#button');
 
 $(window).scroll(function() {
@@ -39,7 +34,9 @@ btn.on('click', function(d) {
   $('html, body').animate({scrollTop:0}, '300');
 });
 
-   // Upon clicking upon the home button, should take to landing page
+// -------------------------------------------------------------------------
+   /** Upon clicking upon the home button, should take to landing page. Type of bounce hover found
+   in api.jquery.com */
 
     $(function () {
         $("#navHome").on("click", function () {
@@ -63,7 +60,8 @@ $('footer').load('.loading-page', function() {
     
 
 /**
- * Function read more button
+ * Function read more facts button will allow you to open extra info related to every player,you  can find them
+ * under every portfolio. The animation found on speckyboy.com and that was edited to developer needs.
  */
 
 });
@@ -119,10 +117,12 @@ function myFunction2() {
   }
 }
 
-
+/**=============================================================================*/
 
 /**
- * Function see comments button
+ * Function see comments button will allow you to open extra info related to every single chart
+ * animation found on speckyboy.com was for one button so additional work was done to adjust it
+ * for the four buttons that developer wanted to implement
  */
 
 function commentsFunction(){
@@ -193,8 +193,11 @@ function commentsFunction3(){
   }
 }
 
+
+
 /**
- * Function see summary button
+ * Function see summary button. This button can be found on the very bottom of the page to see summary about 
+ * all the charts. Animation was found on speckyboy.com
  */
  function summaryFunction(){
   
