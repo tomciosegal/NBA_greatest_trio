@@ -8,7 +8,7 @@ Firstly you will see landing page
 where css typewriter starts and you will see one the most famous Micheal Jordan quotes.
 The See stats button will take you down to actual charts, where all the fun begins.
 [Wireframes](https://github.com/tomciosegal/NBA_greatest_trio/tree/master/wireframes) 
-for the dashboard can be found in the assets folder of the repository.
+for the dashboard can be found in separate folder of the repository.
 A live desktop demo can be found [here](https://tomciosegal.github.io/NBA_greatest_trio/).
 
 
@@ -241,6 +241,7 @@ The project was published on Code Institute Slack code-peer-review channel where
 the site, reviewed the code and provided a useful feedback that was then implemented.
 
 Many thanks to **Sean Murphy** probably Code Institute best Java Script expert,for useful comments, sugestions and help on writting codes for charts.
+
 
 I decided for that project for my own curiosity as an NBA fan, as all other websites were really overloaded with data.  
 
