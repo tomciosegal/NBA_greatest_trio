@@ -44,16 +44,24 @@ btn.on('click', function(d) {
             $(".loading-page").fadeIn(300);
             $("footer").hide();
         });
+        
+        $("#Navreset").on("click", function () {
+          $(".dashboard-container").hide();
+            $(".loading-page").fadeIn(300);
     }); 
+    /** stat button hovering, it is located on landing page */
+    
     $("#main-btn").mouseenter(function(){
   $(this).css ("background-color", "#E47041");
 });
 $("#main-btn").mouseleave(function(){
   $(this).css ("background-color", "");
 });
+
+ /** footer will hide on landing page */
 $('footer').load('.loading-page', function() {
       $(this).hide();});
-      
+      /** footer will show on clicking stat button */
       $('#main-btn').click(function(){
        $('footer').show();
     });
