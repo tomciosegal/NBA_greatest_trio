@@ -69,6 +69,17 @@ The following user stories were used to design this data dashboard:
 
 **User Story 3:**  As a new visitor I want to understand phenomenon of the players achivements.
 
+### Mockups & Wireframes
+
+The following wireframe sketches were created to design the dashboard layout options:
+
+- [Mobile display](https://github.com/tomciosegal/NBA_greatest_trio/blob/master/wireframes/mobile.jpg)
+   
+- [Medium display](https://github.com/tomciosegal/NBA_greatest_trio/blob/master/wireframes/tablet.jpg)
+
+- [Desktop display 1](https://github.com/tomciosegal/NBA_greatest_trio/blob/master/wireframes/Lg%20screen1.jpg)
+- [Desktop display 2](https://github.com/tomciosegal/NBA_greatest_trio/blob/master/wireframes/Lg%20screen%202.jpg)
+- [Loading Page](https://github.com/tomciosegal/NBA_greatest_trio/blob/master/wireframes/Landing%20page.jpg)
 
 
 ### Existing Features
@@ -88,6 +99,12 @@ The dashboard consists of the following features:
 - **Refresh Graph** - feature that will take you to home page and graph will be refreshed;
 
 - **Footer** - simple footer containing link to the original  dataset and link to the data copyrights.
+
+
+### Features left to implement
+
+- Add arrows at the end of x and y axis for both line charts;
+- A survey where you can vote for your best player;
 
 
 ##### Loading Page
@@ -205,11 +222,6 @@ The photos used in this site were obtained from
 -  [Unsplashfoto](https://unsplash.com/)
 -  [Pexels](https://www.pexels.com/)
 
-The Videos used in this site were obtained from:
-- [Youtube](https://www.youtube.com/)
-- [Pixabay](https://pixabay.com/)
-
-
 
 ### Acknowledgements
 I have availed of many resources around the web to help me learn. The following is 
@@ -222,6 +234,13 @@ far from a complete list, but it covers those which were most important for me.
 - [Codedrops](https://tympanus.net/codrops/)
 - [Awwwards](https://www.awwwards.com/)
 - [Codepen](https://codepen.io/)
+
+Many thanks to **Simen Daehlin** mentor at Code Institute for useful comments, sugestions and help on my project.
+
+The project was published on Code Institute Slack code-peer-review channel where other students and mentors tested 
+the site, reviewed the code and provided a useful feedback that was then implemented.
+
+Many thanks to **Sean Murphy** probably Code Institute best Java Script expert,for useful comments, sugestions and help on writting codes for charts.
 
 I decided for that project for my own curiosity as an NBA fan, as all other websites were really overloaded with data.  
 
